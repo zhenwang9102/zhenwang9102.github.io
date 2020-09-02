@@ -20,12 +20,12 @@ Work Experience
 * 2018–Present: Research Assistant
   * The Ohio State University Columbus, OH, USA
   * Dept. of Computer Science & Engineering
-  * Advisor: Prof. Huan Sun
+  * Advisor: [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/)
   
 * Summer 2020: Research Intern
   * NEC Labs America Princeton, NJ, USA
   * Data Science & System Security Summer 2020
-  * Mentor: Dr. Bo Zong
+  * Mentor: [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/)
   
 * Autumn 2017: Teaching Assistant
   * The Ohio State University Columbus, OH, USA
