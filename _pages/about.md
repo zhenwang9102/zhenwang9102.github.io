@@ -16,13 +16,13 @@ My research interest lies in the intersection of natural language processing, da
 Publications
 ======
 2020
-- **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf). In Proceedings of ACL 2020, Seattle, USA (Long) ([Code]("https://github.com/zhenwang9102/X-MedRELA"), [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf"), [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics"))
+- **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf). In Proceedings of ACL 2020, Seattle, USA (Long) [[Code]("https://github.com/zhenwang9102/X-MedRELA"), [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf"), [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics")]
 
 - Xiang Yue, **Zhen Wang**, Jingong Huang, Srinivasan Parthasarathy, Soheil Moosavinasab, Yungui Huang, Simon Lin, Wen Zhang, Ping
-Zhang, Huan Sun, [Graph Embedding on Biomedical Networks: Methods, Applications, and Evaluations]("https://arxiv.org/abs/1906.05017"), In Bioinformatics, Volume 36, Issue 4, 15 February 2020, Pages 1241-1251 ([Code]("https://github.com/xiangyue9607/BioNEV"))
+Zhang, Huan Sun, [Graph Embedding on Biomedical Networks: Methods, Applications, and Evaluations]("https://arxiv.org/abs/1906.05017"), In Bioinformatics, Volume 36, Issue 4, 15 February 2020, Pages 1241-1251 [[Code]("https://github.com/xiangyue9607/BioNEV")]
 
 2019
-- **Zhen Wang**,  Xiang Yue, Soheil Moosavinasab, Yungui Huang, Simon Lin, Huan Sun, [SurfCon: Synonym Discovery on Privacy-Aware Clinical Data]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_paper.pdf"), In Proceedings of KDD 2019, Anchorage, Alaska, USA (Reseach Track, Oral, Top 9.2%), ([Code]("https://github.com/zhenwang9102/SurfCon"), [Slides]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_Slides.pdf"), [Poster]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_Poster.pdf"))
+- **Zhen Wang**,  Xiang Yue, Soheil Moosavinasab, Yungui Huang, Simon Lin, Huan Sun, [SurfCon: Synonym Discovery on Privacy-Aware Clinical Data]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_paper.pdf"), In Proceedings of KDD 2019, Anchorage, Alaska, USA (Reseach Track, Oral, Top 9.2%), [[Code]("https://github.com/zhenwang9102/SurfCon"), [Slides]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_Slides.pdf"), [Poster]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_Poster.pdf")]
           
 Before 2019
 
