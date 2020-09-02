@@ -16,7 +16,7 @@ main:
 #     url: /year-archive/
     
   - title: "CV"
-    url: /cv/
+    url: "https://zhenwang9102.github.io/files/ZW_CV.pdf"
     
 #   - title: "Guide"
 #     url: /markdown/
