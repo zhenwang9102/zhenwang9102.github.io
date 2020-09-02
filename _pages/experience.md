@@ -13,7 +13,6 @@ Education
 ======
 * Ph.D. student in Dept. of Computer Science & Engineering, The Ohio State University, 2016–Present
 * Visiting Student in Polytech Nice-Sophia, Universit´e Nice Sophia Antipolis Nice, 2014–2015
-  * Individual Study with Prof. Lionel Fillatre & Michel Barlaud
 * B.S. in Electronic Information Engineering, China University of Petroleum, 2015
 
 Work Experience
