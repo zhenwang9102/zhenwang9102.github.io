@@ -81,9 +81,9 @@ analytics:
 # Site Author
 author:
   name             : "Zhen Wang"
-  avatar           : "images/bio-photo-2.JPG"
+  avatar           : "/images/bio-photo-2.JPG"
   bio              : "Follow Your Heart."
-  location         : "Location"
+  location         : "Columbus, OH"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
