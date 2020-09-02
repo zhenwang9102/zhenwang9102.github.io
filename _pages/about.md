@@ -38,4 +38,4 @@ Awards
 
 Service
 =====
-- Conference Reviewer: ICDM 2018, ACL 2018, KDD 2019, KDD 2020, NLPCC 2020.
+- Conference Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020), NLPCC 2020.
