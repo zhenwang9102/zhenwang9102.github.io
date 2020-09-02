@@ -15,13 +15,9 @@ My research interest lies in the intersection of natural language processing, da
 
 Publications
 ======
-1. Rationalizing Medical Relation Prediction from Corpus-level Statistics
--  **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun
-- ACL 2020, Seattle, USA (Long)
-          [Paper](https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf)
-          [Code]("https://github.com/zhenwang9102/X-MedRELA")
-          [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf")
-          [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics")
+2020
+- **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level] Statistics(https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf). In ACL 2020, Seattle, USA (Long)([Code]("https://github.com/zhenwang9102/X-MedRELA"), [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf"), [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics"))
+
 2. SurfCon: Synonym Discovery on Privacy-Aware Clinical Data
 - **Zhen Wang**,  Xiang Yue, Soheil Moosavinasab, Yungui Huang, Simon Lin, Huan Sun
 - KDD 2019, Anchorage, Alaska, USA (Reseach Track, Oral, Top 9.2%)
@@ -34,7 +30,7 @@ Publications
 - Xiang Yue, **Zhen Wang**, Jingong Huang, Srinivasan Parthasarathy, Soheil Moosavinasab, Yungui Huang, Simon Lin, Wen Zhang, Ping
 Zhang, Huan Sun
 - Bioinformatics, Volume 36, Issue 4, 15 February 2020, Pages 1241-1251
-          (Paper)("https://arxiv.org/abs/1906.05017")
+          [Paper]("https://arxiv.org/abs/1906.05017")
           [Code]("https://github.com/xiangyue9607/BioNEV")
 
 4. A Comprehensive Study of StaQC for Deep Code Summarization
