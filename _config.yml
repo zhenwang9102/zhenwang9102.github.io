@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zhen Wang (王震)"
+title                    : "Wang, Zhen (王震)"
 title_separator          : "-"
 name                     : &name "Zhen Wang"
 description              : &description "personal description"
