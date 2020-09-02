@@ -24,9 +24,9 @@ Work Experience
   
 * Summer 2020: Research Intern
   * NEC Labs America Princeton, NJ, USA
-  * Data Science & System Security Summer 2020
+  * Data Science & System Security
   * Mentor: [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/)
   
 * Autumn 2017: Teaching Assistant
   * The Ohio State University Columbus, OH, USA
-  * Dept. of Computer Science & Engineering, Autumn 2017
+  * Dept. of Computer Science & Engineering
