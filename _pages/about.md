@@ -16,7 +16,7 @@ My research interest lies in the intersection of natural language processing, da
 Publications
 ======
 2020
-- **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level] Statistics(https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf). In ACL 2020, Seattle, USA (Long)([Code]("https://github.com/zhenwang9102/X-MedRELA"), [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf"), [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics"))
+- **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf). In ACL 2020, Seattle, USA (Long)([Code]("https://github.com/zhenwang9102/X-MedRELA"), [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf"), [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics"))
 
 2. SurfCon: Synonym Discovery on Privacy-Aware Clinical Data
 - **Zhen Wang**,  Xiang Yue, Soheil Moosavinasab, Yungui Huang, Simon Lin, Huan Sun
