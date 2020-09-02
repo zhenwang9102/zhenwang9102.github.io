@@ -14,6 +14,10 @@ main:
         
 #   - title: "Blog Posts"
 #     url: /year-archive/
+
+  - title: "Experience"
+    url: /experience/
+
     
   - title: "CV"
     url: "https://zhenwang9102.github.io/files/ZW_CV.pdf"
