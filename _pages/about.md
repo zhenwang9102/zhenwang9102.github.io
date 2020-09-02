@@ -15,33 +15,48 @@ My research interest lies in the intersection of natural language processing, da
 
 Publications
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+1. Rationalizing Medical Relation Prediction from Corpus-level Statistics
+-  **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun
+- ACL 2020, Seattle, USA (Long)
+          [Paper](https://zhenwang9102.github.io/pdf/ACL2020_ZW_X_MedRELA.pdf)
+          [Code]("https://github.com/zhenwang9102/X-MedRELA")
+          [Slides]("https://zhenwang9102.github.io/pdf/ACL2020-X-MedRELA-ZW-Slides.pdf")
+          [Video]("https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics")
+2. SurfCon: Synonym Discovery on Privacy-Aware Clinical Data
+- **Zhen Wang**,  Xiang Yue, Soheil Moosavinasab, Yungui Huang, Simon Lin, Huan Sun
+- KDD 2019, Anchorage, Alaska, USA (Reseach Track, Oral, Top 9.2%)
+          [Paper]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_paper.pdf")
+          [Code]("https://github.com/zhenwang9102/SurfCon")
+          [Slides]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_Slides.pdf")
+          [Poster]("https://zhenwang9102.github.io/pdf/KDD2019_ZW_SurfCon_Poster.pdf")
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+3. Graph Embedding on Biomedical Networks: Methods, Applications, and Evaluations
+- Xiang Yue, **Zhen Wang**, Jingong Huang, Srinivasan Parthasarathy, Soheil Moosavinasab, Yungui Huang, Simon Lin, Wen Zhang, Ping
+Zhang, Huan Sun
+- Bioinformatics, Volume 36, Issue 4, 15 February 2020, Pages 1241-1251
+          (Paper)("https://arxiv.org/abs/1906.05017")
+          [Code]("https://github.com/xiangyue9607/BioNEV")
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+4. A Comprehensive Study of StaQC for Deep Code Summarization
+- Jayavardhan Reddy Peddamail, Ziyu Yao, *Zhen Wang*, Huan Sun
+- KDD 2018 Deep Learning Day, London, UK (SPOTLIGHT)
+          [Paper]("http://web.cse.ohio-state.edu/~yao.470/paper/StaQC_DLDay18.pdf")
+          
+5. Hessian Regularized Sparse Coding for Human Action Recognition
+- Weifeng Liu, **Zhen Wang**,  Dapeng Tao, Jun Yu
+- MMM'15, Sydney, Australia
+          [Paper]("https://link.springer.com/chapter/10.1007/978-3-319-14442-9_55")
 
-**Markdown generator**
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+Awards
+=====
+1. KDD 2019 Student Travel Awards, 2019
+2. China Scholarship Council (CSC) Scholarship for a half-year exchange program in France, 2015
+3. National Scholarship, 2014
+4. Soong Ching Ling Foundation (SCLF) Scholarship, 2013
+5. National Endeavor Scholarship, 2012
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+Service
+=====
+- Conference Reviewer: ICDM 2018, ACL 2018, KDD 2019, KDD 2020, NLPCC 2020.
