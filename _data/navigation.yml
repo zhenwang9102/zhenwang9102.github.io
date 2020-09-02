@@ -15,6 +15,9 @@ main:
 #   - title: "Blog Posts"
 #     url: /year-archive/
 
+  - title: "Home"
+    url: "https://zhenwang9102.github.io"
+
   - title: "Experience"
     url: /experience/
 
