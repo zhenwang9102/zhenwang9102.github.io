@@ -7,11 +7,11 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hi! My name is Zhen Wang, a PhD student at [Department of Computer Science and Engineering](https://cse.osu.edu/) of [The Ohio State University](https://www.osu.edu/) advised by [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/).
+Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and Engineering](https://cse.osu.edu/) of [The Ohio State University](https://www.osu.edu/) advised by [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/).
 
 Research Interests
 ======
-My research interest lies in the intersection of natural language processing, data mining, and machine learning, with the emphasis on (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs, interpretable deep learning, and low-resource domains. Broadly, I'm interested in knowledge and information extraction, integration, representation, transfer and reasoning, and downstream application system development.
+My research interest lies in the intersection of natural language processing, data mining, and machine learning, with the emphasis on (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs, interpretable deep learning, and low-resource domains. Broadly, I'm interested in knowledge and information extraction, integration, representation, transfer and reasoning, and downstream application system development. I'm currently looking for internships of NLP, ML, DM in USA and if you're interested into my background, please feel free to [drop me an email](wang.9215@osu.edu)!
 
 Publications
 ======
