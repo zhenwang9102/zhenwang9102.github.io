@@ -23,8 +23,8 @@ Work Experience
   * Advisor: [Dr. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/)
   
 * Summer 2020: Research Intern
-  * NEC Labs America, Princeton, NJ, USA
-  * Data Science & System Security
+  * [NEC Labs America](http://www.nec-labs.com/), Princeton, NJ, USA
+  * [Data Science & System Security](http://www.nec-labs.com/research-departments/data-science-system-security/data-science-systems-research-home)
   * Mentor: [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/)
   
 * Autumn 2017: Teaching Assistant
