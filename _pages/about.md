@@ -9,11 +9,25 @@ redirect_from:
 ---
 Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and Engineering](https://cse.osu.edu/) of [The Ohio State University](https://www.osu.edu/) advised by [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/).
 
+
 Research Interests
 ======
-My research interest lies in the intersection of natural language processing, data mining, and machine learning, with the emphasis on (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs, interpretable deep learning, and low-resource domains. Broadly, I'm interested in knowledge and information extraction, integration, representation, transfer and reasoning, and downstream application system development. 
+My research interests lie in natural language processing, data mining, and machine learning with the emphasis on information extraction, representation learning, interpretable machine learning. Particularly, I'm interested in {reasoning over structured and unstructured data}, building interpretable systems powered by multi-hop reasoning, (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs. 
 
 I'm currently looking for internships of NLP, ML, DM in USA, and if you're interested in my background, please feel free to [drop me an email](mailto:wang.9215@osu.edu)!
+
+
+# News
+
+- 07/2020: Attend ACL 2020 Virtually and present our paper via QA sessions
+- 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/) on Commonsense Reasoning for NLU
+- 04/2020: 1 long paper has been accepted by ACL 2020
+- 09/2019: 1 jornal paper has been accepted by Bioinformatics
+- 08/2019: Attend KDD 2019 in Anchorage, Alaska and present our work in an oral talk
+- 04/2019: 1 long oral paper has been accepted by KDD 2019
+- 08/2018: 1 paper has been accepted by KDD 2018, Deep Learning Day
+- 06/2018: Attend NAACL 2018 in New Orleans, LA
+
 
 Publications
 ======
