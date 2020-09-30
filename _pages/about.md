@@ -10,8 +10,7 @@ redirect_from:
 Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and Engineering](https://cse.osu.edu/) of [The Ohio State University](https://www.osu.edu/) advised by [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/).
 
 
-Research Interests
-======
+# Research Interests
 My research interests lie in natural language processing, data mining, and machine learning with the emphasis on information extraction, representation learning, interpretable machine learning. Particularly, I'm interested in {reasoning over structured and unstructured data}, building interpretable systems powered by multi-hop reasoning, (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs. 
 
 I'm currently looking for internships of NLP, ML, DM in USA, and if you're interested in my background, please feel free to [drop me an email](mailto:wang.9215@osu.edu)!
@@ -19,7 +18,7 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 
 # News
 
-- 07/2020: Attend ACL 2020 Virtually and present our paper via QA sessions
+- 07/2020: Attend ACL 2020 virtually and present our paper via QA sessions
 - 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/) on Commonsense Reasoning for NLU
 - 04/2020: 1 long paper has been accepted by ACL 2020
 - 09/2019: 1 jornal paper has been accepted by Bioinformatics
@@ -29,8 +28,7 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 - 06/2018: Attend NAACL 2018 in New Orleans, LA
 
 
-Publications
-======
+# Publications
 ### 2020
 - **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf). In Proceedings of ACL 2020, Seattle, USA (Long) [[Code](https://github.com/zhenwang9102/X-MedRELA), [Slides](https://zhenwang9102.github.io/files/ACL2020-X-MedRELA-ZW-Slides.pdf), [Video](https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics)]
 - Xiang Yue, **Zhen Wang**, Jingong Huang, Srinivasan Parthasarathy, Soheil Moosavinasab, Yungui Huang, Simon Lin, Wen Zhang, Ping
@@ -43,8 +41,7 @@ Zhang, Huan Sun, [Graph Embedding on Biomedical Networks: Methods, Applications,
 - Jayavardhan Reddy Peddamail, Ziyu Yao, **Zhen Wang**, Huan Sun, [A Comprehensive Study of StaQC for Deep Code Summarization](http://web.cse.ohio-state.edu/~yao.470/paper/StaQC_DLDay18.pdf), In KDD 2018 Deep Learning Day, London, UK (SPOTLIGHT)
 - Weifeng Liu, **Zhen Wang**,  Dapeng Tao, Jun Yu, [Hessian Regularized Sparse Coding for Human Action Recognition](https://link.springer.com/chapter/10.1007/978-3-319-14442-9_55), In Proceedings of MMM'15, Sydney, Australia
 
-Awards
-=====
+# Awards
 - KDD 2019 Student Travel Awards, 2019
 - China Scholarship Council (CSC) Scholarship for a half-year exchange program in France, 2015
 - National Scholarship, 2014
@@ -52,6 +49,5 @@ Awards
 - National Endeavor Scholarship, 2012
 
 
-Service
-=====
+# Service
 - Conference Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020), NLPCC 2020.
