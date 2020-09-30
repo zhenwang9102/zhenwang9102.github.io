@@ -18,14 +18,14 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 
 # News
 
-- 07/2020: Attend ACL 2020 virtually and present our paper via QA sessions
+- 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recored video
 - 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/) on Commonsense Reasoning for NLU
 - 04/2020: 1 long paper has been accepted by ACL 2020
 - 09/2019: 1 jornal paper has been accepted by Bioinformatics
-- 08/2019: Attend KDD 2019 in Anchorage, Alaska and present our work in an oral talk
+- 08/2019: Attended KDD 2019 in Anchorage, Alaska and presented our work in an oral talk
 - 04/2019: 1 long oral paper has been accepted by KDD 2019
 - 08/2018: 1 paper has been accepted by KDD 2018, Deep Learning Day
-- 06/2018: Attend NAACL 2018 in New Orleans, LA
+- 06/2018: Attended NAACL 2018 in New Orleans, LA
 
 
 # Publications
