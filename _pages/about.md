@@ -11,7 +11,7 @@ Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and
 
 
 # Research Interests
-My research interests lie in natural language processing, data mining, and machine learning with the emphasis on information extraction, representation learning, interpretable machine learning. Particularly, I'm interested in {reasoning over structured and unstructured data}, building interpretable systems powered by multi-hop reasoning, (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs. 
+My research interests lie in natural language processing, data mining, and machine learning with the emphasis on information extraction, representation learning, interpretable machine learning. Particularly, I'm interested in reasoning over structured and unstructured data, building interpretable systems powered by multi-hop reasoning, (structured) knowledge acquisition for text mining, representation learning for knowledge and graphs. 
 
 I'm currently looking for internships of NLP, ML, DM in USA, and if you're interested in my background, please feel free to [drop me an email](mailto:wang.9215@osu.edu)!
 
