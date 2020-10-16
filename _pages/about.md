@@ -18,13 +18,13 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 
 # News
 
-- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021
+- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (Acceptance Rate: 18.6%)
 - 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video
 - 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/) on Commonsense Reasoning for NLU
-- 04/2020: 1 [long paper](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf) about building self-interpretable deep learning model has been accepted by ACL 2020
+- 04/2020: 1 [long paper](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf) about building self-interpretable deep learning model has been accepted by ACL 2020 (Acceptance Rate: 22.7%)
 - 09/2019: 1 [jornal paper](https://arxiv.org/abs/1906.05017) about graph representation learning has been accepted by Bioinformatics
 - 08/2019: Attended KDD 2019 in Anchorage, Alaska and presented our work in an oral talk
-- 04/2019: 1 [long oral paper](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf) about knowledge extraction from text has been accepted by KDD 2019
+- 04/2019: 1 [long paper](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf) about knowledge extraction from text has been accepted by KDD 2019 (Research Track, Acceptance Rate 14.2%, Oral)
 - 08/2018: 1 [paper](http://web.cse.ohio-state.edu/~yao.470/paper/StaQC_DLDay18.pdf) has been accepted by KDD 2018, Deep Learning Day
 - 06/2018: Attended NAACL 2018 in New Orleans, LA
 
