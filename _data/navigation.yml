@@ -1,7 +1,5 @@
 # main links links
 main:
-#   - title: "Publications"
-#     url: /publications/
 
 #   - title: "Talks"
 #     url: /talks/    
@@ -17,6 +15,9 @@ main:
 
   - title: "Home"
     url: "https://zhenwang9102.github.io"
+
+  - title: "Publications"
+    url: /publications/
 
   - title: "Experience"
     url: /experience/
