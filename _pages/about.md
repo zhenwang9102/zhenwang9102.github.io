@@ -18,6 +18,7 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 
 # News
 
+- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021
 - 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video
 - 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/) on Commonsense Reasoning for NLU
 - 04/2020: 1 [long paper](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf) about building self-interpretable deep learning model has been accepted by ACL 2020
@@ -29,6 +30,9 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 
 
 # Publications
+### 2021
+- **Zhen Wang**, Bo Zong, Huan Sun, [Modeling Context Pair Interaction for Pairwise Tasks on Graphs](https://zhenwang9102.github.io/). In Proceedings of WSDM 2021, Jerusalem, Israel (Long) [[Code](https://zhenwang9102.github.io/), [Slides](https://zhenwang9102.github.io/)]
+
 ### 2020
 - **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf). In Proceedings of ACL 2020, Seattle, USA (Long) [[Code](https://github.com/zhenwang9102/X-MedRELA), [Slides](https://zhenwang9102.github.io/files/ACL2020-X-MedRELA-ZW-Slides.pdf), [Video](https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics)]
 - Xiang Yue, **Zhen Wang**, Jingong Huang, Srinivasan Parthasarathy, Soheil Moosavinasab, Yungui Huang, Simon Lin, Wen Zhang, Ping
