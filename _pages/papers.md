@@ -7,6 +7,8 @@ redirect_from:
   - /resume
 ---
 
+{% if author.googlescholar %} You can also find my articles on my Google Scholar profile. {% endif %}
+
 {% include base_path %}
 
 
