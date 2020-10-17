@@ -12,7 +12,7 @@ redirect_from:
 {% include base_path %}
 
 
-# Publications
+# Publications ([Google Scholar](https://scholar.google.com/citations?user=asBaytUAAAAJ&hl=en))
 ### 2021
 - **Zhen Wang**, Bo Zong, Huan Sun, [Modeling Context Pair Interaction for Pairwise Tasks on Graphs](https://zhenwang9102.github.io/). In Proceedings of WSDM 2021, Jerusalem, Israel (Long) [[Code](https://zhenwang9102.github.io/), [Slides](https://zhenwang9102.github.io/)]
 
