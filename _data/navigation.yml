@@ -16,8 +16,8 @@ main:
   - title: "Home"
     url: "https://zhenwang9102.github.io"
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Papers"
+    url: /papers/
 
   - title: "Experience"
     url: /experience/
