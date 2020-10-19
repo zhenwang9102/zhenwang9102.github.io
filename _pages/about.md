@@ -15,10 +15,13 @@ My research interests lie in natural language processing, data mining, and machi
 
 I'm currently looking for internships of NLP, ML, DM in USA, and if you're interested in my background, please feel free to [drop me an email](mailto:wang.9215@osu.edu)!
 
+<span style="color:blue">some *blue* text</span>
+
+<span style="color:red">cardinals</span>
 
 # News
 
-- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (Acceptance Rate: 18.6%)
+- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (Acceptance Rate: 18.6%) 
 - 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video
 - 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://sites.cs.ucsb.edu/~bzong/) on Commonsense Reasoning for NLU
 - 04/2020: 1 [long paper](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf) about building self-interpretable deep learning model for relation prediction has been accepted by ACL 2020 (Acceptance Rate: 22.7%)
