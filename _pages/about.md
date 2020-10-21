@@ -37,4 +37,5 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 
 
 # Service
-- Conference Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020), NLPCC 2020.
+- Program Committee: NLPCC 2020, NAACL-HLT 2021
+- External Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020)
