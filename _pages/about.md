@@ -28,6 +28,11 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 - 06/2018: Attended NAACL 2018 in New Orleans, LA
 
 
+# Service
+- Program Committee: NLPCC 2020, NAACL-HLT 2021
+- External Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020)
+
+
 # Awards
 - KDD 2019 Student Travel Awards, 2019
 - China Scholarship Council (CSC) Scholarship for a half-year exchange program in France, 2015
@@ -35,7 +40,3 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 - Soong Ching Ling Foundation (SCLF) Scholarship, 2013
 - National Endeavor Scholarship, 2012
 
-
-# Service
-- Program Committee: NLPCC 2020, NAACL-HLT 2021
-- External Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020)
