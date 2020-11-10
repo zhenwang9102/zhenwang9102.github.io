@@ -40,3 +40,4 @@ I'm currently looking for internships of NLP, ML, DM in USA, and if you're inter
 - Soong Ching Ling Foundation (SCLF) Scholarship, 2013
 - National Endeavor Scholarship, 2012
 
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs"></script>
