@@ -19,7 +19,7 @@ My research interests lie in natural language processing, machine learning, and 
 
 3. Learning robust representations for knowledge and graphs [[Bioinformatics'20](https://arxiv.org/abs/1906.05017)].
 
-<ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to [drop me an email](mailto:wang.9215@osu.edu)!</ins>
+<ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)!
 
 # News
 
