@@ -23,6 +23,7 @@ My research interests lie in natural language processing, machine learning, and 
 
 # News
 
+- 10/2020: Invited to serve as a PC member of NAACL 2021.
 - 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (<span style="color:red">Acceptance Rate: 18.6%</span>) 
 - 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video
 - 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://bzong.github.io/) on Commonsense Reasoning for NLU
