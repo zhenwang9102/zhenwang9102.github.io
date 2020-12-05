@@ -37,7 +37,7 @@ My research interests lie in natural language processing, machine learning, and 
 
 
 # Service
-- Program Committee: NLPCC 2020, NAACL-HLT 2021
+- Program Committee: NLPCC 2020, NAACL-HLT 2021, ACL-IJCNLP 2021
 - External Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020)
 
 
