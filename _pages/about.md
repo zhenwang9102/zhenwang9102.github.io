@@ -49,4 +49,4 @@ My research interests lie in natural language processing, machine learning, and 
 - Soong Ching Ling Foundation (SCLF) Scholarship, 2013
 - National Endeavor Scholarship, 2012
 
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=150&t=tt&d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs"></script>
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs"></script>
