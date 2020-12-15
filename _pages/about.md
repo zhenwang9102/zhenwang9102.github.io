@@ -13,11 +13,11 @@ Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and
 # Research Interests
 My research interests lie in natural language processing, machine learning, and data mining with the emphasis on **building trustworthy ML models powered by interpretable and robust knowledge representation and reasoning**. Particularly, my current research focuses on: 
 
-1. Reasoning over structured/unstructured data to build neural-symbolic interpretable systems [[ACL'20](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf), [WSDM'21](https://zhenwang9102.github.io/)]; 
+1.  Automating knowledge reasoning for interpretable neural-symbolic systems [[ACL'20](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf), [WSDM'21](https://zhenwang9102.github.io/)]; 
 
-2. Integrating structured knowledge into NLP tasks, such as information extraction, with better text understanding [[KDD'19](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf)]; 
+2. Distilling knowledge from structured and unstructured data [[KDD'19](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf)]; 
 
-3. Learning robust representations for knowledge and graphs [[Bioinformatics'20](https://arxiv.org/abs/1906.05017)].
+3.  Learning robust and transferable knowledge representations [[Bioinformatics'20](https://arxiv.org/abs/1906.05017)].
 
 <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)!
 
