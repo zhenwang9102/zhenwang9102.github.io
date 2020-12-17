@@ -23,7 +23,7 @@ My research interests lie in natural language processing, machine learning, and 
 
 # News
 
-- 12/2020: Honored to be selected to the [Rising Stars in Data Science](https://cdac.uchicago.edu/rising-stars/) Workshop hosted by the [University of Chicago Center for Data and Computing](https://cdac.uchicago.edu/) (CDAC).
+- 12/2020: Honored to be selected to the [Rising Stars in Data Science](https://cdac.uchicago.edu/rising-stars/) Workshop hosted by the [University of Chicago Center for Data and Computing (CDAC)](https://cdac.uchicago.edu/).
 - 12/2020: Invited to serve as a PC member of ACL 2021.
 - 10/2020: Invited to serve as a PC member of NAACL 2021.
 - 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (<span style="color:red">Acceptance Rate: 18.6%</span>).
