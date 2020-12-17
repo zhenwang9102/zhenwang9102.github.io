@@ -38,16 +38,16 @@ My research interests lie in natural language processing, machine learning, and 
 - 06/2018: Attended NAACL 2018 in New Orleans, LA.
 
 
+# Awards
+- Rising Stars in Data Science, Center for Data and Computing (CDAC), University of Chicago, 2020
+- KDD 2019 Student Travel Awards funded by NSF and ACM SIGKDD, 2019
+- China Scholarship Council (CSC) Scholarship for a half-year visiting program in France, 2015
+- National Scholarship, China, 2014
+- Soong Ching Ling Foundation (SCLF) Scholarship, China, 2013
+- National Scholarship for Encouragement, China, 2012
+
 # Service
 - Program Committee: NLPCC 2020, NAACL-HLT 2021, ACL-IJCNLP 2021
 - External Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020)
-
-
-# Awards
-- KDD 2019 Student Travel Awards, 2019
-- China Scholarship Council (CSC) Scholarship for a half-year exchange program in France, 2015
-- National Scholarship, 2014
-- Soong Ching Ling Foundation (SCLF) Scholarship, 2013
-- National Endeavor Scholarship, 2012
 
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs"></script>
