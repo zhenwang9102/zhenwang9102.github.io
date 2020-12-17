@@ -23,18 +23,19 @@ My research interests lie in natural language processing, machine learning, and 
 
 # News
 
+- 12/2020: Honored to be selected to the [Rising Stars in Data Science Workshop](https://cdac.uchicago.edu/rising-stars/) hosted by University of Chicago [Center for Data and Computing](https://cdac.uchicago.edu/) (CDAC).
 - 12/2020: Invited to serve as a PC member of ACL 2021.
 - 10/2020: Invited to serve as a PC member of NAACL 2021.
-- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (<span style="color:red">Acceptance Rate: 18.6%</span>) 
-- 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video
-- 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://bzong.github.io/) on Commonsense Reasoning for NLU
-- 04/2020: 1 [long paper](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf) about building self-interpretable deep learning model for relation prediction has been accepted by ACL 2020 (<span style="color:red">Acceptance Rate: 22.7%</span>)
+- 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (<span style="color:red">Acceptance Rate: 18.6%</span>).
+- 07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video.
+- 06/2020: Started Research Intern at [NEC Labs America](http://www.nec-labs.com/)! Excited to work with [Dr. Bo Zong](https://bzong.github.io/) on Commonsense Reasoning for NLU.
+- 04/2020: 1 [long paper](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf) about building self-interpretable deep learning model for relation prediction has been accepted by ACL 2020 (<span style="color:red">Acceptance Rate: 22.7%</span>).
 - 04/2020: Invited to serve as a PC member of NLPCC 2020.
-- 09/2019: 1 [jornal paper](https://arxiv.org/abs/1906.05017) about graph representation learning has been accepted by Bioinformatics
-- 08/2019: Attended KDD 2019 in Anchorage, Alaska and presented our work in an oral talk
-- 04/2019: 1 [long paper](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf) about knowledge extraction from text has been accepted by KDD 2019 (Research Track, <span style="color:red">Acceptance Rate: 14.2%</span>, Oral)
-- 08/2018: 1 [paper](http://web.cse.ohio-state.edu/~yao.470/paper/StaQC_DLDay18.pdf) has been accepted by KDD 2018, Deep Learning Day
-- 06/2018: Attended NAACL 2018 in New Orleans, LA
+- 09/2019: 1 [jornal paper](https://arxiv.org/abs/1906.05017) about graph representation learning has been accepted by Bioinformatics.
+- 08/2019: Attended KDD 2019 in Anchorage, Alaska and presented our work in an oral talk.
+- 04/2019: 1 [long paper](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf) about knowledge extraction from text has been accepted by KDD 2019 (Research Track, <span style="color:red">Acceptance Rate: 14.2%</span>, Oral).
+- 08/2018: 1 [paper](http://web.cse.ohio-state.edu/~yao.470/paper/StaQC_DLDay18.pdf) has been accepted by KDD 2018, Deep Learning Day.
+- 06/2018: Attended NAACL 2018 in New Orleans, LA.
 
 
 # Service
