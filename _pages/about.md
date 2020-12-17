@@ -38,7 +38,7 @@ My research interests lie in natural language processing, machine learning, and 
 - 06/2018: Attended NAACL 2018 in New Orleans, LA.
 
 
-# Awards
+# Honors and Awards
 - Rising Stars in Data Science, Center for Data and Computing (CDAC), University of Chicago, 2020
 - KDD 2019 Student Travel Awards funded by NSF and ACM SIGKDD, 2019
 - China Scholarship Council (CSC) Scholarship for a half-year visiting program in France, 2015
