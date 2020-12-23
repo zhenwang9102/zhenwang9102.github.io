@@ -19,6 +19,7 @@ My research interests lie in natural language processing, machine learning, and 
 <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)!
 
 # News
+- 01/2021: Attend **CDAC Rising Stars in Data Science Workshop** with the agenda [here](https://cdac.uchicago.edu/events/risingstars2021).
 - 12/2020: Honored to be selected to the [Rising Stars in Data Science](https://cdac.uchicago.edu/rising-stars/) workshop hosted by the [Center for Data and Computing (CDAC) at the University of Chicago](https://cdac.uchicago.edu/).
 - 12/2020: Invited to serve as a PC member of ACL 2021.
 - 10/2020: Invited to serve as a PC member of NAACL 2021.
