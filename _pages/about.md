@@ -19,6 +19,7 @@ My research interests lie in natural language processing, machine learning, and 
 <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)!
 
 # News
+- 01/2021: Receive SIGIR Student Travel Grant for WSDM 2021.
 - 01/2021: Attend **CDAC Rising Stars in Data Science Workshop** with the agenda [here](https://cdac.uchicago.edu/events/risingstars2021).
 - 12/2020: Honored to be selected to the [Rising Stars in Data Science](https://cdac.uchicago.edu/rising-stars/) workshop hosted by the [Center for Data and Computing (CDAC) at the University of Chicago](https://cdac.uchicago.edu/).
 - 12/2020: Invited to serve as a PC member of ACL 2021.
@@ -30,14 +31,16 @@ My research interests lie in natural language processing, machine learning, and 
 - 04/2020: Invited to serve as a PC member of NLPCC 2020.
 - 09/2019: 1 [jornal paper](https://arxiv.org/abs/1906.05017) about graph representation learning has been accepted by Bioinformatics.
 - 08/2019: Attend KDD 2019 in Anchorage, Alaska and presented our work in an oral talk.
+- 06/2019: Receive SIGKDD Student Travel Award for KDD 2019.
 - 04/2019: 1 [long paper](https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf) about knowledge extraction from text has been accepted by KDD 2019 (Research Track, <span style="color:red">Acceptance Rate: 14.2%</span>, Oral).
 - 08/2018: 1 [paper](http://web.cse.ohio-state.edu/~yao.470/paper/StaQC_DLDay18.pdf) has been accepted by KDD 2018, Deep Learning Day.
 - 06/2018: Attend NAACL 2018 in New Orleans, LA.
 
 
 # Honors and Awards
+- **SIGIR Student Travel Grant**, 2021
 - **Rising Stars in Data Science**, Center for Data and Computing (CDAC), University of Chicago, 2020
-- **KDD 2019 Student Travel Awards** funded by NSF and ACM SIGKDD, 2019
+- **SIGKDD Student Travel Award**, 2019
 - **China Scholarship Council (CSC) Scholarship** for a fully funded half-year visiting program in France, 2015
 - **National Scholarship**, China, 2014
 - Soong Ching Ling Foundation (SCLF) Scholarship, China, 2013
