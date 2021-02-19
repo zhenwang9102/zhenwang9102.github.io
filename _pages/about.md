@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and Engineering](https://cse.osu.edu/) of [The Ohio State University](https://www.osu.edu/) advised by [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/).
+Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and Engineering](https://cse.osu.edu/) of [The Ohio State University](https://www.osu.edu/) advised by [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/). Thanks for stopping by!
 
 
 # Research Interests
