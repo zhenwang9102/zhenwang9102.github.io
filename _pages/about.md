@@ -19,6 +19,7 @@ My research interests lie in natural language processing, machine learning, and 
 <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)!
 
 # News
+- 02/2021: Panelist on the panel discussion in Department of Astronomy, "[2001: A Space Odyssey - Science Fiction vs Science Fact](https://astronomy.osu.edu/events/monthly-movie-night-2001-space-odyssey-science-fiction-vs-science-fact)" discussing Artificial Intelligence, Life in Universe, Time & Relativity and Anthropology. 
 - 01/2021: Receive SIGIR Student Travel Grant for WSDM 2021.
 - 01/2021: Attend **CDAC Rising Stars in Data Science Workshop** with the agenda [here](https://cdac.uchicago.edu/events/risingstars2021).
 - 12/2020: Honored to be selected to the [Rising Stars in Data Science](https://cdac.uchicago.edu/rising-stars/) workshop hosted by the [Center for Data and Computing (CDAC) at the University of Chicago](https://cdac.uchicago.edu/).
