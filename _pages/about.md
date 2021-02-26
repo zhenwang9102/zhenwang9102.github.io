@@ -11,7 +11,7 @@ Hi! My name is Zhen Wang, a Ph.D. student at [Department of Computer Science and
 
 
 # Research Interests
-My research interests lie in natural language processing, machine learning, and data mining with the emphasis on **building trustworthy ML models powered by interpretable and robust (structued/unstructured) knowledge representation and reasoning**. Particularly, my current research focuses on: 
+My research interests lie in natural language processing, machine learning, and data mining with the emphasis on **building trustworthy ML models powered by interpretable and robust (structured/unstructured) knowledge representation and reasoning**. Particularly, my current research focuses on: 
 1. Automating knowledge reasoning for interpretable neural-symbolic systems;
 2. Distilling knowledge from structured and unstructured data;
 3. Learning robust and transferable knowledge representations.
