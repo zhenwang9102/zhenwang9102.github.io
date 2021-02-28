@@ -22,7 +22,7 @@ My research interests lie in natural language processing, machine learning, and 
 - 02/2021: Panelist on the panel discussion in Department of Astronomy, "[2001: A Space Odyssey - Science Fiction vs Science Fact](https://astronomy.osu.edu/events/monthly-movie-night-2001-space-odyssey-science-fiction-vs-science-fact)" discussing Artificial Intelligence, Life in Universe, Time & Relativity and Anthropology. 
 - 01/2021: Receive SIGIR Student Travel Grant for WSDM 2021.
 - 01/2021: Attend CDAC Rising Stars in Data Science Workshop with the agenda [here](https://cdac.uchicago.edu/events/risingstars2021).
-- 12/2020: Honored to be selected to the [**Rising Stars in Data Science**](https://cdac.uchicago.edu/rising-stars/) workshop hosted by the [Center for Data and Computing (CDAC) at the University of Chicago](https://cdac.uchicago.edu/).
+- 12/2020: Honored to be selected to the [**Rising Stars in Data Science**](https://cdac.uchicago.edu/rising-stars/#rising-stars-profiles) workshop hosted by the [Center for Data and Computing (CDAC) at the University of Chicago](https://cdac.uchicago.edu/).
 - 12/2020: Invited to serve as a PC member of ACL 2021.
 - 10/2020: Invited to serve as a PC member of NAACL 2021.
 - 10/2020: 1 [long paper](https://zhenwang9102.github.io/) about graph pair modeling and representation learning has been accepted by WSDM 2021 (<span style="color:red">Acceptance Rate: 18.6%</span>).
