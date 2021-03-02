@@ -40,6 +40,7 @@ My research interests lie in natural language processing, machine learning, and 
 
 
 # Honors and Awards
+- Graduate Student Research Poster Award (Top 5), CSE, OSU, 2021
 - SIGIR Student Travel Grant, 2021
 - **Rising Stars in Data Science**, Center for Data and Computing (CDAC), University of Chicago, 2020
 - SIGKDD Student Travel Award, 2019
