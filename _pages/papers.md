@@ -14,7 +14,7 @@ redirect_from:
 
 # Publications ([Google Scholar](https://scholar.google.com/citations?user=asBaytUAAAAJ&hl=en))
 ### 2021
-- **Zhen Wang**, Bo Zong, Huan Sun, [Modeling Context Pair Interaction for Pairwise Tasks on Graphs](https://zhenwang9102.github.io/). In Proceedings of **WSDM 2021**, Jerusalem, Israel (Long) [[Code](https://zhenwang9102.github.io/), [Slides](https://zhenwang9102.github.io/)]
+- **Zhen Wang**, Bo Zong, Huan Sun, [Modeling Context Pair Interaction for Pairwise Tasks on Graphs](https://dl.acm.org/doi/10.1145/3437963.3441744). In Proceedings of **WSDM 2021**, Jerusalem, Israel (Long) [[Code](https://zhenwang9102.github.io/), [Slides](https://zhenwang9102.github.io/)]
 
 ### 2020
 - **Zhen Wang**, Jennifer Lee, Simon Lin, Huan Sun, [Rationalizing Medical Relation Prediction from Corpus-level Statistics](https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf). In Proceedings of **ACL 2020**, Seattle, USA (Long) [[Code](https://github.com/zhenwang9102/X-MedRELA), [Slides](https://zhenwang9102.github.io/files/ACL2020-X-MedRELA-ZW-Slides.pdf), [Video](https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics)]
