@@ -19,7 +19,7 @@ My research interests lie in natural language processing, machine learning, and 
 <!-- <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)! -->
 
 # News
-- 03/2021: Attend WSDM 2021 virtually and present our work on [modleing context pair interaction and learning graph pair emebddings](https://dl.acm.org/doi/10.1145/3437963.3441744). 
+- 03/2021: Attend WSDM 2021 virtually and present our work on [modeling context pair interaction and learning graph pair emebddings](https://dl.acm.org/doi/10.1145/3437963.3441744). 
 - 03/2021: Finalize the position of 2021 summer research intern in Microsoft Research to work with Dr. Nebojsa Jojic and Matthew Richardson this summer.
 - 03/2021: Honored to win Graduate Student Research Poster Award (Top 5) for 2021 Annual Student Research Poster Exhibition in the CSE department.
 - 02/2021: Panelist on the panel discussion in Department of Astronomy, "[2001: A Space Odyssey - Science Fiction vs Science Fact](https://astronomy.osu.edu/events/monthly-movie-night-2001-space-odyssey-science-fiction-vs-science-fact)" discussing Artificial Intelligence, Life in Universe, Time & Relativity and Anthropology.
