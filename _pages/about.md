@@ -53,7 +53,7 @@ My research interests lie in natural language processing, machine learning, and 
 - National Scholarship for Encouragement, China, 2012
 
 # Service
-- Program Committee: NLPCC 2020, NAACL-HLT 2021, ACL-IJCNLP 2021
-- External Reviewer: ICDM 2018, ACL 2018, KDD (2019, 2020)
+- Program Committee: EMNLP 2021, ACL-IJCNLP 2021, NAACL-HLT 2021, NLPCC 2020
+- External Reviewer: KDD (2019, 2020), ACL 2018, ICDM 2018
 
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs"></script>
