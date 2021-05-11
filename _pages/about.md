@@ -47,7 +47,7 @@ My research interests lie in natural language processing, machine learning, and 
 - SIGIR Student Travel Grant, 2021
 - **Rising Stars in Data Science**, Center for Data and Computing (CDAC), University of Chicago, 2020
 - SIGKDD Student Travel Award, 2019
-- **China Scholarship Council (CSC) Scholarship** for a fully funded half-year visiting program in France, 2015
+- **China Scholarship Council (CSC) Scholarship** for a fully funded half-year visiting program in Polytech Nice Sophia, Nice, France, 2015
 - **National Scholarship**, China, 2014
 - Soong Ching Ling Foundation (SCLF) Scholarship, China, 2013
 - National Scholarship for Encouragement, China, 2012
