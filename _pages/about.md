@@ -16,7 +16,9 @@ My research interests lie in natural language processing, machine learning, and 
 2. Distilling knowledge from structured and unstructured data;
 3. Learning robust and transferable knowledge representations.
 
-<!-- <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)! and Matthew Richardson  -->
+<!-- <ins>I'm currently looking for research internships of NLP, ML, DM, and if you're interested in my background, please feel free to</ins> [drop me an email](mailto:wang.9215@osu.edu)! and Matthew Richardson  
+Our team has been selected for the [Alexa Prize TaskBot Challenge](https://developer.amazon.com/alexaprize) as one of 10 teams over 125 applications initiated by teams in 15 countries! Looking forward to building a smart dialogue system to guide users for cooking and DIY tasks! 
+-->
 
 # News
 - 03/2021: Invited to serve as a PC member of EMNLP 2021.
