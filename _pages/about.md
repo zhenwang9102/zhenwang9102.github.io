@@ -21,6 +21,7 @@ Our team has been selected to participate in the [Alexa Prize TaskBot Challenge]
 -->
 
 # News
+- 05/2021: Start Research Intern at Microsoft Research! Excited to work with [Dr. Nebojsa Jojic](https://www.microsoft.com/en-us/research/people/jojic/) on Conditional Text Generation!
 - 03/2021: Invited to serve as a PC member of EMNLP 2021.
 - 03/2021: Attend WSDM 2021 virtually and present our work on [modeling context pair interaction and learning graph pair emebddings](https://dl.acm.org/doi/10.1145/3437963.3441744). 
 - 03/2021: Finalize the position of 2021 summer research intern in Microsoft Research to work with Dr. Nebojsa Jojic this summer.
