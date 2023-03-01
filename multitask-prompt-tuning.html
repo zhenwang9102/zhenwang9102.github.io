@@ -1,0 +1,252 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  .link2 {
+    text-decoration: none;
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .fakelink {
+    text-decoration: none;
+    /* cursor: pointer; */
+  }
+
+  element.style {
+    overflow: hidden;
+    display: block;
+  }
+  .pre-white-space {
+    white-space: pre;
+  }
+  .bibref {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+    font-size: 14px;
+    font-family: monospace;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+  <head>
+    <link rel="icon" type="image/png" href="resources/ucsd_logo.png">
+    <title>Multitask Prompt Tuning Enables Parameter-Efficient Transfer Learning </title>
+    <meta property='og:title' content='Multitask Prompt Tuning Enables Parameter-Efficient Transfer Learning' />
+    <meta property="og:description" content="Zhen Wang, Rameswar Panda, Leonid Karlinsky, Rogerio Feris, Huan Sun, Yoon Kim. Multitask Prompt Tuning Enables Parameter-Efficient Transfer Learning. In ICLR, 2023." />
+    <meta property='og:url' content='zhenwang9102.github.io/multitask-prompt-tuning.html' />
+  </head>
+  <body>
+        <br>
+        <center><span style="font-size:40px;font-weight:bold;color:#182B49">Multitask Prompt Tuning Enables <br/> Parameter-Efficient Transfer Learning</span></center>
+
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=180px>
+            <center><span style="font-size:20px"><a href="https://zhenwang9102.github.io/" target="_blank">Zhen Wang</a><sup>1</sup></span></center></td>
+            <td align=center width=180px>
+              <center><span style="font-size:20px"><a href="https://rpand002.github.io/" target="_blank">Rameswar Panda</a><sup>2</sup></span></center></td>
+            <td align=center width=180px>
+                <center><span style="font-size:20px"><a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en" target="_blank">Leonid Karlinsky</a><sup>2</sup></span></center></td>
+            <tr/>
+         </table>
+
+         <table align=center width=600px>
+            <tr>
+              <td align=center width=150px>
+                <center><span style="font-size:20px"><a href="http://rogerioferis.com/" target="_blank">Rogerio Feris</a><sup>2</sup></span></center></td>    
+              <td align=center width=150px>
+                <center><span style="font-size:20px"><a href="http://web.cse.ohio-state.edu/~sun.397/" target="_blank">Huan Sun</a><sup>1</sup></span></center></td>
+              <td align=center width=150px>
+                <center><span style="font-size:20px"><a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a><sup>3</sup></span></center></td>
+        <tr/>
+      </table>
+        <table align=center width=800px>
+          <tr>
+            <td align=center width=150px><center><sup>1 </sup><span style="font-size:18px">The Ohio State University</span></center></td>
+            <td align=center width=150px><center><sup>2 </sup><span style="font-size:18px">MIT-IBM Watson AI Lab</span></center></td>
+            <td align=center width=150px><center><sup>3 </sup><span style="font-size:18px">MIT</span></center></td>
+          <tr/>
+        </table> 
+        <table align=center width=400px>
+          <tr>
+            <td align=center width=150px>
+            <center><span style="font-size:24px"><a href="https://iclr.cc/Conferences/2023" target="_blank">ICLR 2023</a></span></center></td>
+          <tr/>
+        </table>
+        <table align=center width=200px>
+            <tr><td width=200px>
+              <center><a href="images/mpt_overview.png"><img src = "images/mpt_overview.png" width="900" height="300"></img></a><br></center>
+            </td></tr>
+        </table>
+
+        <center id="abstract"><h1>Abstract</h1></center>
+        Prompt tuning, in which a base pretrained model is adapted to each task via conditioning on learned prompt vectors, 
+        has emerged as a promising approach for the efficient adaptation of large language models to multiple downstream tasks. 
+        However, existing methods typically learn soft prompt vectors from scratch, 
+        and it has not been clear how to exploit the rich cross-task knowledge in task-specific prompt vectors to improve performance on target downstream tasks. 
+        In this paper, we propose multitask prompt tuning (MPT), 
+        which first learns a single transferable prompt by decomposing and distilling knowledge from multiple task-specific source prompts. 
+        We then learn multiplicative low rank updates to this shared prompt to efficiently adapt it to each downstream target task. 
+        Extensive experiments on 21 NLP datasets demonstrate that our proposed approach outperforms the state-of-the-art methods, 
+        including the full finetuning baseline in some cases, despite only tuning 0.035% as many task-specific parameters.      
+        <br>
+        <hr>
+
+        <center id="results0"><h1>Qualitative Results</h1></center>
+        <table align=center width=500px>
+            <tr><td width=500px>
+              <center><a href="images/mpt_results.png"><img src = "images/mpt_results.png" width="900" height="500"></img></a><br></center>
+            </td></tr>
+          </table>
+          <caption width=500px align="center">Qualitative examples showing the effectiveness of <strong>AdaMML</strong> in selecting the right modalities per video segment (marked by green borders)</caption>
+        <br>
+        <hr>
+        
+        <center id="sourceCode"><h1>Paper & Code</h1></center>
+
+
+        <table align=center width=900px>
+            <tr></tr>
+          <tr>
+            <td >
+        <a href="zhenwang9102.github.io/multitask-prompt-tuning.html"><img class="paperpreview" src="images/mpt_overview.png" width="250px"/></a>
+          </td>
+          <td></td>
+          <td width=700px > <span style="font-size:20px">
+            Zhen Wang, Rameswar Panda, Leonid Karlinsky, Rogerio Feris, Huan Sun, Yoon Kim<br/>
+              <a href="">
+                Multitask Prompt Tuning Enables Parameter-Efficient Transfer Learning</a> <br/> <i>International Conference on Learning Representations (ICLR)</i>, 2023 <br/>
+            [<a href="https://zhenwang9102.github.io/">PDF</a>]
+            <!-- [<a href="https://zhenwang9102.github.io/">Supp</a>] -->
+            <!--[<a href="">Video Presentation</a>]-->
+            [<a href="https://zhenwang9102.github.io/">Poster</a>]
+              [<a href="https://zhenwang9102.github.io/">Slides</a>]
+              [<a href="https://zhenwang9102.github.io/">Code</a>]
+
+</span>
+        </td>
+        </tr>
+
+      </table>
+
+      <br>
+      <hr>
+
+      <br/>
+
+    <br><br>
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</body>
+</html>
