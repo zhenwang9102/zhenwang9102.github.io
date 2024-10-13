@@ -1,0 +1,489 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  
+</head>
+
+  
+<style>
+.listbox{
+    position: static;
+    overflow-y: scroll;
+    height: 200px;
+    color: black;
+    background-color: #EAF4F7;
+/*     border: 2px solid black; */
+/*     padding: 20px 50px 0px 30px; */
+/*     font-size: 15px; */
+    }
+</style>
+
+<body>
+  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Publications</h2>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Preprint</h2>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+          <td style="padding:20px;width:25%;vertical-align:middle;">
+            <img src="/images/ArXiv_logo_2022.png" alt="ThinkSum" width="180" height="auto" style="border-style: none">
+          </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://zhenwang9102.github.io/">Dynamic Rewarding with Prompt Optimization Enables Tuning-free Self-Alignment of Language Models</a></h3>
+              <br>
+              Somanshu Singla*, <b>Zhen Wang</b>*, Tianyang Liu, Abdullah Ashfaq, Zhiting Hu, Eric P. Xing
+              <br>
+              <i><a href="https://zhenwang9102.github.io/">PDF (to appear in EMNLP 2024 Main)</a></i>
+              <br>
+              <br>
+              <h3><a href="https://arxiv.org/abs/2406.12034">Self-MoE: Towards Compositional Large Language Models with Self-Specialized Experts</a></h3>
+              <br>
+              Junmo Kang, Leonid Karlinsky, Hongyin Luo, <b>Zhen Wang</b>, Jacob Hansen, James Glass, David Cox, Rameswar Panda, Rogerio Feris, Alan Ritter              
+              <br>
+              <i><a href="https://arxiv.org/pdf/2406.12034">PDF</a></i>
+            </td>
+          </tr>
+          </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>2024</h2>
+            </td>
+          </tr>
+        </table>
+        
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/fig_llm-reasoner_colm2024.png" alt="llm-reasoners_colm2024" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2404.05221" style="color:red">LLM Reasoners: New Evaluation, Library, and Analysis of Step-by-Step Reasoning with Large Language Models</a></h3>
+              <br>
+              Shibo Hao*, Yi Gu*, Haotian Luo*, Tianyang Liu, Xiyan Shao, Xinyuan Wang, Shuhua Xie, Haodi Ma, Adithya Samavedhi, Qiyue Gao, <b>Zhen Wang</b>, Zhiting Hu           
+              <br>
+              <em><b>[COLM 2024]</b></em> <i>1st Conference on Language Modeling</i> 
+              <br>
+              Also presented at <a href="https://llmagents.github.io/">ICLR 2024 Workshop LLMAgents</a>
+              <br>
+              <a href="https://arxiv.org/pdf/2404.05221">PDF</a> / <a href="https://github.com/maitrix-org/llm-reasoners">Code</a> 
+              <p>LLM Reasoners is a library to enable LLMs to conduct complex reasoning, with advanced reasoning algorithms. It approaches multi-step reasoning as planning and searches for the optimal reasoning chain, which achieves the best balance of exploration vs exploitation with the idea of "World Model" and "Reward."</p>
+            </td>
+          </tr>
+        </table>
+
+
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/promptagent_iclr_2024.png" alt="promptagent_iclr2024" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2310.16427" style="color:red">PromptAgent: Strategic Planning with Language Models Enables Expert-level Prompt Optimization</a></h3>
+              <br>
+              Xinyuan Wang*, Chenxi Li*, <b>Zhen Wang</b>*, Fan Bai, Haotian Luo, Jiayou Zhang, Nebojsa Jojic, Eric Xing, Zhiting Hu
+              <br>
+              <em><b>[ICLR 2024]</b></em> <i>The Twelfth International Conference on Learning Representations</i> 
+              <br>
+              Also presented at <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a>
+              <br>
+              <a href="https://arxiv.org/pdf/2310.16427.pdf">PDF</a> / <a href="https://github.com/XinyuanWangCS/PromptAgent">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/files/promptagnet_poster_2023.pdf">Poster</a>
+              <p>Tired of manual prompt engineering? PromptAgent offers the first principled framework to formalize the problem of API-based prompt optimization (state, action, reward, etc); also the first to benchmark exploration efficiency and show the transferability of optimized prompts. Targeting for expert-level prompting, there are many exciting directions ahead of PromptAgent!</p>
+            </td>
+          </tr>
+        </table>
+
+        
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/fig_gpr_turing_machine.png" alt="gpr_turing_machine" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2303.14310">GPT Is Becoming a Turing Machine: Here Are Some Ways to Program It</a></h3>
+              <br>
+              Ana Jojic, <b>Zhen Wang</b>, Nebojsa Jojic
+              <br>
+              Appear at <a href="https://agiworkshop.github.io/">ICLR 2024 AGI Workshop</a>
+              <br>
+              <a href="https://arxiv.org/pdf/2303.14310">PDF</a> / <a href="https://zhenwang9102.github.io/">Code</a> 
+              <p>Through appropriate prompting, GPT models can be triggered to perform iterative behaviors necessary to execute (rather than just write or recall) programs that involve loops, including several popular algorithms found in computer science curricula, e.g., logical deduction, bubble sort, longest common subsequence, etc.</p>
+            </td>
+          </tr>
+        </table>
+
+        
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>2023</h2>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/rap_emnlp_2023.png" alt="rap_emnlp2023" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2305.14992">Reasoning with Language Model is Planning with World Model</a></h3>
+              <br>
+              Shibo Hao*, Yi Gu*, Haodi Ma, Joshua Jiahua Hong, <b>Zhen Wang</b>, Daisy Zhe Wang, Zhiting Hu              
+              <br>
+              <em><b>[EMNLP 2023] (Oral, Main)</b></em> <i>The 2023 Conference on Empirical Methods in Natural Language Processing</i>
+              <br>
+               Also presented at <a href="https://aair-lab.github.io/genplan23/">NeurIPS GenPlan'23 Workshop</a> / <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a>
+              <br>
+              <a href="https://arxiv.org/pdf/2305.14992.pdf">PDF</a> / <a href="https://github.com/Ber666/llm-reasoners">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a> / <a href="https://docs.google.com/presentation/d/156WpBF_rGvf4Ecg19oM1fyR51g4FAmHV3Zs0WLukrLQ/edit#slide=id.g24daeb7f4f0_0_3930" style="color:red"><b>Featured in State of AI Report 2023</b></a>
+              <p>LLMs lack internal world models for effective reasoning. Reasoning via Planning (RAP) reformulates LLM reasoning as a planning problem, thus incorporating an external world model and principled planning seamlessly. This is a new framework applicable across varying tasks and an exciting direction for LLM augmentation research.</p>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/toolkengpt_neurips_2023.png" alt="toolkengpt_neurips2023" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2305.11554">ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings</a></h3>
+              <br>
+              Shibo Hao, Tianyang Liu, <b>Zhen Wang</b>, Zhiting Hu
+              <br>
+              <em><b>[NeurIPS 2023] (Oral)</b></em> <i>Thirty-seventh Conference on Neural Information Processing Systems</i> 
+              <br>
+              Also presented at <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a>, <a style="color:red"><b>Best Paper Award</b></a>
+              <br>
+              <a href="https://arxiv.org/pdf/2305.11554.pdf">PDF</a> / <a href="https://github.com/Ber666/ToolkenGPT">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a>
+              <p>ToolkenGPT augments LLMs with massive tools/APIs by representing tools as tokens (“toolken”) and enabling tool calls in the same way as generating regular words. ToolkenGPT is super efficient for learning massive tools, as plugging in new tools is as easy as learning embeddings.</p>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/thinksum_acl_2023.png" alt="thinksum_acl2023" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2210.01293">ThinkSum: Probabilistic Reasoning Over Sets Using Large Language Models</a></h3>
+              <br>
+              Batu Ozturkler, Nikolay Malkin, <b>Zhen Wang</b>, Nebojsa Jojic
+              <br>
+              <em><b>[ACL 2023]</b></em> <i>The 61st Annual Meeting of the Association for Computational Linguistics</i> (Main)
+              <br>
+              <a href="https://arxiv.org/pdf/2210.01293.pdf">PDF</a> / <a href="http://zhenwang9102.github.io/">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a>
+              <p>We propose a two-stage probabilistic inference paradigm, ThinkSum, to improve LLMs' abilities of reasoning over multiple objects in two steps, Think (e.g., retrieval of associations) and Sum (e.g., aggregation of results), which beats chain-of-thought prompting in hard BIG-bench tasks.</p>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/mpt_overview.png" alt="mpt_iclr2023" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2303.02861">Multitask Prompt Tuning Enables Parameter-Efficient Transfer Learning</a></h3>
+              <br>
+              <b>Zhen Wang</b>, Rameswar Panda, Leonid Karlinsky, Rogerio Feris, Huan Sun, Yoon Kim
+              <br>
+              <em><b>[ICLR 2023]</b></em> <i>The Eleventh International Conference on Learning Representations</i>
+              <br>
+              <a href="https://arxiv.org/pdf/2303.02861.pdf">PDF</a> / <a href="http://zhenwang9102.github.io/">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a> / <a href="https://github.com/huggingface/peft/pull/400">Huggingface PEFT PR</a>
+              <p>We propose Multitask Prompt Tuning (MPT) to exploit the rich cross-task knowledge for more efficient and generalizable transfer learning. MPT learns a single transferrable soft prompt through the use of a novel combination of prompt decomposition and prompt distillation.</p>
+            </td>          
+          </tr>
+          </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/meet_eacl_2023.png" alt="meet_eacl2023" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2210.06444">Entity Tracking via Effective Use of Multi-Task Learning Models</a></h3>
+              <br>
+              Janvijay Singh, Fan Bai, <b>Zhen Wang</b>
+              <br>
+              <em><b>[EACL 2023]</b></em> <i>The 17th Conference of the European Chapter of the Association for Computational Linguistics</i> (Main)
+              <br>
+              <a href="https://arxiv.org/pdf/2210.06444.pdf">PDF</a> / <a href="https://github.com/iamjanvijay/MeeT">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a>
+              <p>How to transfer multi-task knowledge from pre-training to niche downstream tasks, such as entity tracking on the procedural text? We show that you can reach STOA performance by simply fine-tuning T5 but with specialized QA prompts and task-specific decoding.</p>
+            </td>
+          </tr>
+          </table>
+            
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>2022</h2>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/dissertation_2022.png" alt="dissertation" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://www.proquest.com/openview/16bbeab89e764c0f8fcc14c65df7fe9b/1?pq-origsite=gscholar&cbl=18750&diss=y">Toward Knowledge-Centric NLP: Acquisition, Representation, Transfer, and Reasoning</a></h3>
+              <br>
+              <b>Zhen Wang</b>
+              <br>
+              <i>The Ohio State University, Ph.D. Dissertation, 2022</i>
+              <br>
+              <a href="https://zhenwang9102.github.io/files/Zhen_Dissertation_2022.pdf">PDF</a>
+            </td>          
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/cb_acl_2022.png" alt="cb_acl2022" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2110.08294">Coherence Boosting: When Your Pretrained Language Model is <span style="color: #ff0000">Not</span> Paying Enough Attention</a></h3>
+              <br>
+              Nikolay Malkin, <b>Zhen Wang</b>, Nebojsa Jojic
+              <br>
+              <em><b>[ACL 2022]</b></em> <i>The 60th Annual Meeting of the Association for Computational Linguistics</i>
+              <br>
+              <a href="https://arxiv.org/pdf/2110.08294.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/coherence-boosting">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> <b>(Long Paper, Oral Presentation)</b>
+              <p>We demonstrate that large language models have insufficiently learned the effect of distant words on next-token prediction. We present Coherence Boosting, an inference procedure that increases an LM’s focus on a long context, which greatly improves NLG and NLU tasks.</p>
+            </td>          
+          </tr>
+          </table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/simultqa_2022.png" alt="SimultQA" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://aclanthology.org/2022.suki-1.7/">Knowledge Transfer between Structured and Unstructured Sources for Complex Question Answering</a></h3>
+              <br>
+              Lingbo Mo*, <b>Zhen Wang*</b>, Jie Zhao, Huan Sun
+              <br>
+              <em><a href="https://suki-workshop.github.io/"><b>[SUKI@NAACL 2022]</b></a></em> <i>NAACL 2022 Structured and Unstructured Knowledge Integration</i>
+              <br>
+              <a href="https://zhenwang9102.github.io/files/SimultQA_2022.pdf">PDF</a> / <a href="https://zhenwang9102.github.io/">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> *Equal contribution
+              <p>We study knowledge transfer for multi-hop reasoning processes between structured (Knowledge Base) and unstructured (text corpus) knowledge. We design SimultQA unifying KBQA and TextQA systems and leverage it to study how reasoning is transferred between two knowledge sources.</p>
+            </td>          
+          </tr>
+          </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>2021</h2>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/alexa_prize_figure.jpeg" alt="SimultQA" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2207.05223">Bootstrapping a User-Centered Task-Oriented Dialogue System</a></h3>
+              <br>
+              Shijie Chen, Ziru Chen, Xiang Deng, Ashley Lewis, Lingbo Mo, Samuel Stevens, <b>Zhen Wang</b>, Xiang Yue, Tianshu Zhang, Yu Su, Huan Sun
+              <br>
+              <em><a href="https://www.amazon.science/alexa-prize/taskbot-challenge"><b>[Alexa Prize TaskBot Challenge]</b></a></em> <i>1st Proceedings of Alexa Prize TaskBot (Alexa Prize 2021)</i>
+              <br>
+              <a href="https://assets.amazon.science/9a/30/5e4931ec41d78abad730707ce95a/bootstrapping-a-user-centered-task-oriented-dialogue-system.pdf">PDF</a> / <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge" style="color:red"><b>Third-place honor in the TaskBot Finals!</b></a>
+              <p>We build TacoBot, a task-oriented dialogue system for the inaugural Alexa Prize TaskBot Challenge, to assist users in multi-step cooking and home improvement tasks. We propose several data augmentation methods, such as GPT-3 simulation, to bootstrap neural dialogue systems into new domains and make them more robust to noise user initiatives.</p>
+            </td>          
+          </tr>
+          </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/conpi_wsdm_2021.png" alt="conpi_wsdm_2021" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://zhenwang9102.github.io/files/WSDM2021_ZW_ConPI.pdf">Modeling Context Pair Interaction for Pairwise Tasks on Graphs</a></h3>
+              <br>
+              <b>Zhen Wang</b>, Bo Zong, Huan Sun
+              <br>
+              <em><b>[WSDM 2021]</b></em> <i>The 14th ACM International Conference on Web Search and Data Mining</i>
+              <br>
+              <a href="https://zhenwang9102.github.io/files/WSDM2021_ZW_ConPI.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/ConPI">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> (Long Paper, Online Presentation)
+              <p>We propose to explicitly model context interactions for pairwise prediction tasks on graphs, which consist of two perspectives, node-centric and pair-centric. We also propose to pre-train pair embeddings to facilitate the pair-centric model.</p>
+            </td>          
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>2020</h2>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/x-clinrela_acl__2020.png" alt="x-clinrela_acl__2020" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/2005.00889">Rationalizing Medical Relation Prediction from Corpus-level Statistics</a></h3>
+              <br>
+              <b>Zhen Wang</b>, Jennifer Lee, Simon Lin, Huan Sun
+              <br>
+              <em><b>[ACL 2020]</b></em> <i>The 58th Annual Meeting of the Association for Computational Linguistics</i>
+              <br>
+              <a href="https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/X-MedRELA">Code</a> / <a href="https://zhenwang9102.github.io/files/ACL2020-X-MedRELA-ZW-Slides.pdf">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> / <a href="https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics">Video</a> (Long Paper, Online Presentation)
+              <p>We propose a self-interpretable framework to rationalize the neural relation prediction based on corpus-level statistics. This framework is inspired by human cognitive theory about recall and recognition, which provides structured knowledge triplets as rationales.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/graph_bioinformatics.png" alt="graph_bioinformatics" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/1906.05017">Graph Embedding on Biomedical Networks: Methods, Applications, and Evaluations</a></h3>
+              <br>
+              Xiang Yue, <b>Zhen Wang</b>, Jingong Huang, Srinivasan Parthasarathy, Soheil Moosavinasab, Yungui Huang, Simon Lin, Wen Zhang, Ping Zhang, Huan Sun
+              <br>
+              <em><b>[Bioinformatics]</b></em> <i>Volume 36, Issue 4, 15 February 2020, Pages 1241-1251</i>
+              <br>
+              <a href="https://academic.oup.com/bioinformatics/article/36/4/1241/5581350">PDF</a> / <a href="https://github.com/xiangyue9607/BioNEV">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a>
+              <p>We benchmark 11 representative graph embedding methods on five important biomedical tasks. We verify the effectiveness of recent graph embedding methods and provide general guidelines for their usage.</p>
+            </td>          
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>2019</h2>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/surfcon_kdd_2019.png" alt="surfcon_kdd_2019" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://arxiv.org/abs/1906.09285">SurfCon: Synonym Discovery on Privacy-Aware Clinical Data</a></h3>
+              <br>
+              <b>Zhen Wang</b>, Xiang Yue, Soheil Moosavinasab, Yungui Huang, Simon Lin, Huan Sun
+              <br>
+              <em><b>[KDD 2019]</b></em> <i>The 25th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</i>
+              <br>
+              <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/SurfCon">Code</a> / <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_Slides.pdf">Slides</a> / <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_Poster.pdf">Poster</a> (Research Track, Long Paper, Oral Presentation)
+              <p>We propose to discover structured knowledge--synonyms--from the privacy-aware text corpus and present a novel framework to leverage both surface form and context information to discover out-of-distribution synonyms.</p>
+            </td>          
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Before 2019</h2>
+            </td>
+          </tr>
+        </table>
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/code_kdd_2018_dlday.png" alt="code_kdd_2018_dlday" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://ziyuyao.org/paper/StaQC_DLDay18.pdf">A Comprehensive Study of StaQC for Deep Code Summarization</a></h3>
+              <br>
+               Jayavardhan Reddy Peddamail, Ziyu Yao, <b>Zhen Wang</b>, Huan Sun
+              <br>
+              <em><b>[KDD 2018 Deep Learning Day]</b></em> <i>The 24th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</i>
+              <br>
+              <a href="https://ziyuyao.org/paper/StaQC_DLDay18.pdf">PDF</a> / <a href="https://zhenwang9102.github.io/">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> (SPOTLIGHT)
+              <p>We examine three popular datasets mined from Stack Overflow on the code summarization task and show that StaQC (Stack Overflow Question-Code pairs) helps achieve substantially better results.</p>
+            </td>          
+          </tr>
+          
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle;">
+              <img src="/images/hessian_mmm_2015.png" alt="hessian_mmm_2015" width="180" height="auto" style="border-style: none">
+            </td>
+            <td style="width:75%;vertical-align:middle;">
+              <h3><a href="https://zhenwang9102.github.io/files/MMM2015_HessianSC.pdf">Hessian Regularized Sparse Coding for Human Action Recognition</a></h3>
+              <br>
+              Weifeng Liu, <b>Zhen Wang</b>, Dapeng Tao, Jun Yu
+              <br>
+              <em><b>[MMM 2015]</b></em> <i>The 21th International Conference on Multimedia Modeling</i>
+              <br>
+              <a href="https://zhenwang9102.github.io/files/MMM2015_HessianSC.pdf">PDF</a> / <a href="https://zhenwang9102.github.io/">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> /
+              <a onclick="if (document.getElementById(&quot;UAC-GANs&quot;).style.display==&quot;none&quot;) document.getElementById(&quot;UAC-GANs&quot;).style.display=&quot;block&quot;; else document.getElementById(&quot;UAC-GANs&quot;).style.display=&quot;none&quot;;">Bibtex</a>
+              <div class="BibtexExpand" id="UAC-GANs" style="display: none;">
+                  <pre>@inproceedings{liu2015hessian,
+                  title={Hessian regularized sparse coding for human action recognition},
+                  author={Liu, Weifeng and Wang, Zhen and Tao, Dapeng and Yu, Jun},
+                  booktitle={International Conference on Multimedia Modeling},
+                  pages={502--511},
+                  year={2015},
+                  organization={Springer}
+                  }
+                  </pre>
+              </div>
+              <p>We propose Hessian regularized sparse coding (HessianSC) for action recognition, which can preserve the local geometry well and steer the sparse coding varying linearly along the manifold of data distribution.</p>
+            </td>          
+          </tr>
+        </table>
+        
+
+
+        
+        
+      </td>
+    </tr>
+  </table>
+  
+  
+</body>
+  
+
+</html>
