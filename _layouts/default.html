@@ -12,16 +12,22 @@
   
   <style>
     :root {
-      --primary: #1a2639;
-      --accent: #c49a6c;
-      --accent-light: #dbb990;
+      --ucsd-navy: #182B49;
+      --ucsd-blue: #00629B;
+      --ucsd-yellow: #FFCD00;
+      --ucsd-gold: #C69214;
+      --ucsd-sand: #F5F0E6;
+      --primary: var(--ucsd-navy);
+      --accent: var(--ucsd-gold);
+      --accent-bright: var(--ucsd-yellow);
+      --secondary: var(--ucsd-blue);
       --text: #2d3748;
       --text-light: #4a5568;
-      --bg: #faf9f7;
+      --bg: #fafafa;
       --bg-card: #ffffff;
-      --border: #e8e4df;
-      --highlight-blue: #e8f4ff;
-      --highlight-gold: #fff8ed;
+      --border: #e2e8f0;
+      --highlight-blue: #e6f3fa;
+      --highlight-gold: #fff9e6;
     }
 
     * {
@@ -63,49 +69,46 @@
 
     /* Navigation */
     .nav {
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border);
+      background: var(--ucsd-navy);
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.95);
     }
 
     .nav-inner {
       display: flex;
       justify-content: center;
-      gap: 8px;
-      padding: 16px 0;
+      gap: 6px;
+      padding: 10px 0;
       flex-wrap: wrap;
     }
 
     .nav a {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
-      color: var(--text);
+      color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 6px;
+      padding: 6px 14px;
+      border-radius: 4px;
       transition: all 0.2s ease;
       letter-spacing: 0.02em;
     }
 
     .nav a:hover {
-      background: var(--primary);
-      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--ucsd-yellow);
     }
 
     /* Header Section */
     .header {
-      padding: 48px 0 32px;
+      padding: 32px 0 24px;
     }
 
     .header-top {
       display: flex;
       align-items: center;
-      gap: 32px;
-      margin-bottom: 28px;
+      gap: 28px;
+      margin-bottom: 20px;
     }
 
     .profile-photo {
@@ -116,8 +119,9 @@
       width: 140px;
       height: 140px;
       border-radius: 10px;
-      box-shadow: 0 6px 24px rgba(26, 38, 57, 0.12);
+      box-shadow: 0 6px 24px rgba(24, 43, 73, 0.15);
       object-fit: cover;
+      border: 3px solid var(--ucsd-yellow);
     }
 
     .header-intro {
@@ -143,7 +147,7 @@
 
     .tagline {
       font-size: 1.15rem;
-      color: var(--accent);
+      color: var(--ucsd-blue);
       font-weight: 500;
       margin-bottom: 12px;
       font-family: 'Crimson Pro', serif;
@@ -168,24 +172,24 @@
     }
 
     .contact-links a:hover {
-      color: var(--accent);
+      color: var(--ucsd-blue);
     }
 
     .contact-links a::before {
       content: '';
       width: 4px;
       height: 4px;
-      background: var(--accent);
+      background: var(--ucsd-gold);
       border-radius: 50%;
     }
 
     .header-bio {
       color: var(--text);
-      line-height: 1.75;
+      line-height: 1.7;
     }
 
     .header-bio p {
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .header-bio p:last-child {
@@ -197,27 +201,27 @@
     }
 
     .header-bio a {
-      color: var(--primary);
+      color: var(--ucsd-blue);
       text-decoration: none;
     }
 
     .header-bio a:hover {
-      color: var(--accent);
+      color: var(--ucsd-navy);
       text-decoration: underline;
     }
 
     /* Section Styling */
     .section {
-      padding: 48px 0;
+      padding: 28px 0;
       border-top: 1px solid var(--border);
     }
 
     .section-title {
       font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.75rem;
+      font-size: 1.6rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -226,8 +230,8 @@
     .section-title::before {
       content: '';
       width: 4px;
-      height: 28px;
-      background: var(--accent);
+      height: 24px;
+      background: var(--ucsd-yellow);
       border-radius: 2px;
     }
 
@@ -235,7 +239,7 @@
       font-size: 0.5em;
       font-family: 'Source Sans 3', sans-serif;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--ucsd-blue);
       text-decoration: none;
       margin-left: auto;
     }
@@ -247,15 +251,15 @@
     /* Research Overview */
     .research-overview {
       background: var(--bg-card);
-      border-radius: 12px;
-      padding: 32px;
+      border-radius: 10px;
+      padding: 20px 24px;
       border: 1px solid var(--border);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
     .research-overview p {
-      margin-bottom: 16px;
-      line-height: 1.8;
+      margin-bottom: 12px;
+      line-height: 1.7;
     }
 
     .research-overview p:last-child {
@@ -272,12 +276,12 @@
 
     .highlight-blue {
       background: var(--highlight-blue);
-      color: #2563eb;
+      color: var(--ucsd-blue);
     }
 
     .highlight-gold {
       background: var(--highlight-gold);
-      color: #b45309;
+      color: var(--ucsd-gold);
     }
 
     /* Honors List */
@@ -288,7 +292,7 @@
     }
 
     .honors-list li {
-      padding: 12px 0;
+      padding: 8px 0;
       border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
@@ -305,7 +309,7 @@
     }
 
     .honors-list .honor-year {
-      color: var(--accent);
+      color: var(--ucsd-blue);
       font-weight: 500;
       font-size: 15px;
       flex-shrink: 0;
@@ -314,9 +318,9 @@
     /* News Section */
     .news-container {
       background: var(--bg-card);
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid var(--border);
-      max-height: 400px;
+      max-height: 340px;
       overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: var(--border) transparent;
@@ -336,11 +340,11 @@
     }
 
     .news-item {
-      padding: 18px 24px;
+      padding: 12px 20px;
       border-bottom: 1px solid var(--border);
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 16px;
+      grid-template-columns: 72px 1fr;
+      gap: 14px;
       align-items: baseline;
       transition: background 0.2s;
     }
@@ -350,30 +354,30 @@
     }
 
     .news-item:hover {
-      background: rgba(196, 154, 108, 0.04);
+      background: rgba(0, 98, 155, 0.04);
     }
 
     .news-date {
       font-size: 13px;
       font-weight: 600;
-      color: var(--accent);
+      color: var(--ucsd-blue);
       font-family: 'Crimson Pro', serif;
     }
 
     .news-content {
-      font-size: 15px;
+      font-size: 14px;
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .news-content a {
-      color: var(--primary);
+      color: var(--ucsd-navy);
       text-decoration: none;
       font-weight: 500;
     }
 
     .news-content a:hover {
-      color: var(--accent);
+      color: var(--ucsd-blue);
       text-decoration: underline;
     }
 
@@ -384,13 +388,13 @@
 
     /* Footer */
     .footer {
-      padding: 40px 0;
+      padding: 28px 0;
       text-align: center;
       border-top: 1px solid var(--border);
     }
 
     .visitor-map {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       opacity: 0.8;
       transition: opacity 0.2s;
     }
@@ -410,7 +414,7 @@
     }
 
     .footer-credit a:hover {
-      color: var(--accent);
+      color: var(--ucsd-blue);
     }
 
     /* Responsive Design */
@@ -496,6 +500,9 @@
 </head>
 
 <body>
+  <!-- UCSD Gold accent bar -->
+  <div style="height: 4px; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold));"></div>
+  
   <nav class="nav">
     <div class="container nav-inner">
       <a href="/index.html">About</a>
@@ -816,7 +823,7 @@
         <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works&sortby=pubdate">Full List on Google Scholar →</a>
       </h2>
       <p style="color: var(--text-light);">
-        Visit my <a href="https://zhenwang9102.github.io/page_pubs.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">Publications page</a> for the complete list of papers and research contributions.
+        Visit my <a href="https://zhenwang9102.github.io/page_pubs.html" style="color: var(--ucsd-blue); text-decoration: none; font-weight: 500;">Publications page</a> for the complete list of papers and research contributions.
       </p>
     </section>
   </main>
