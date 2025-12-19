@@ -1,599 +1,849 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>{{ site.name }}</title>
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhen Wang | AI Reasoning & Scientific Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
   
-</head>
-
-  
-<style>
-.listbox{
-    position: static;
-    overflow-y: scroll;
-    height: 300px;
-    color: black;
-    background-color: #EAF4F7;
-/*     border: 2px solid black; */
-/*     padding: 20px 50px 0px 30px; */
-/*     font-size: 15px; */
+  <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a2e;
+      --text-secondary: #64748b;
+      --accent-gold: #b8860b;
+      --accent-gold-soft: rgba(184, 134, 11, 0.08);
+      --accent-blue: #2563eb;
+      --accent-red: #dc2626;
+      --border-subtle: rgba(0,0,0,0.08);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Source Sans 3', -apple-system, sans-serif;
     }
-</style>
 
-<style>
-  .navA{
-    display: inline-block;
-    margin-right: 13px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-    padding: 5px ;
-    border: #000 1px solid;
-  }
-  .navA:hover{
-    color: #fff;
-    background-color: #000;
-  }
-</style>
-  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Subtle gradient background */
+    .bg-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(ellipse at 20% 20%, rgba(184, 134, 11, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
+        var(--bg-primary);
+      z-index: -1;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.25rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Job Market Banner */
+    .job-market-banner {
+      background: linear-gradient(135deg, var(--accent-red) 0%, #b91c1c 100%);
+      color: white;
+      text-align: center;
+      padding: 0.75rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-top: 60px;
+    }
+
+    .job-market-banner a {
+      color: white;
+      text-decoration: underline;
+      margin-left: 0.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      padding: 3rem 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+      width: 100%;
+    }
+
+    /* Photo Section */
+    .hero-photo {
+      position: sticky;
+      top: 100px;
+    }
+
+    .photo-container {
+      width: 100%;
+    }
+
+    .photo-frame {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .photo-caption {
+      text-align: center;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      justify-content: center;
+    }
+
+    .social-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .doc-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .doc-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1rem;
+      background: var(--text-primary);
+      color: white;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .doc-links a:hover {
+      background: var(--accent-gold);
+    }
+
+    /* Hero Text */
+    .hero-text {
+      padding-top: 0.5rem;
+    }
+
+    .hero-intro {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: 2.75rem;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-chinese {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bio a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .hero-bio a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-bio strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Research Keywords */
+    .research-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .keyword {
+      background: var(--bg-secondary);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Awards Grid */
+    .awards-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.25rem;
+      background: var(--accent-gold-soft);
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .award-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .award-item .year {
+      font-weight: 600;
+      color: var(--accent-gold);
+    }
+
+    .award-item .title {
+      color: var(--text-primary);
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 2.5rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border-subtle);
+    }
+
+    .section-link {
+      font-size: 0.85rem;
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Research Statement */
+    .research-statement {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .research-statement strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* News Section */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .news-date {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .news-content {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .news-content a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .news-content a:hover {
+      color: var(--accent-blue);
+    }
+
+    .news-content .highlight {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    /* Publications */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.5rem;
+      padding: 1.25rem;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .pub-item:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .pub-image {
+      width: 100%;
+      height: 100px;
+      background: white;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .pub-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pub-venue {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .pub-venue .award {
+      color: var(--accent-gold);
+      margin-left: 0.5rem;
+    }
+
+    .pub-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .pub-authors {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+
+    .pub-links a {
+      font-size: 0.8rem;
+      color: var(--accent-blue);
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid var(--accent-blue);
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .pub-links a:hover {
+      background: var(--accent-blue);
+      color: white;
+    }
+
+    /* Education & Experience */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--border-subtle);
+    }
+
+    .timeline-period {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .timeline-content h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .timeline-content a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem;
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 2rem;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        position: relative;
+        top: 0;
+        max-width: 250px;
+        margin: 0 auto;
+      }
+
+      .pub-item {
+        grid-template-columns: 1fr;
+      }
+
+      .pub-image {
+        display: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.75rem;
+      }
+
+      .hero, .section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .hero-name {
+        font-size: 2rem;
+      }
+
+      .awards-inline {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-                Zhen Wang / 王震
-              </h1>
-              <p>
-                Hi! I'm Zhen, currently a postdoctoral researcher at UC San Diego, focusing on advancing AI reasoning systems and accelerating scientific discovery. I obtained my PhD from The Ohio State University, advised by Prof. <a href="https://cse.osu.edu/people/sun.397">Huan Sun</a>, where I developed foundational frameworks for knowledge-centric systems.
-              </p>
-              <p>
-                I've been honored with the <b>Gordon and Betty Moore Foundation Fellowship, OpenAI Agentic AI Research Grant, Rising Star in Data Science (UChicago), SoCal NLP 2023 Best Paper Award, Alexa Prize TaskBot Challenge 2022</b>, etc.
-                I work with premier industrial labs (e.g., <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Lab</a>, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">Microsoft Research</a>, <a href="https://www.nec-labs.com/">NEC Labs America</a>) and academic institutions (e.g., UCSD, CMU, MBZUAI).
-<!--                 These partnerships have advanced research frontiers in foundation models, efficient adaptation, and reliable AI systems. -->
-              </p>
-              <p>
-                Outside of research, you'll find me hiking, playing pickleball, or planning my next adventure in national parks. I'm also a passionate sports fan, cheering for the <a style="color:#BB0000;">Buckeyes</a>, <a style="color:#005596;">Dodgers</a>, <a style="color:#FDB927;">Lakers</a>, <a style="color:#F7B5CD;">Inter Miami</a>, and <a style="color:#E31837;">Chiefs</a>.
-              </p>
+  <div class="bg-gradient"></div>
 
-              <p style="text-align:center">
-                <a href="mailto:zhenwang9102@gmail.com">Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/zhenwang9102">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://twitter.com/zhenwang9102">Twitter</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> 
-<!--                 &nbsp;/&nbsp; -->
-<!--                 <a href="https://www.linkedin.com/in/zhenwang9102/">LinkedIn </a>  -->
-<!--                 &nbsp;/&nbsp; -->
-<!--                 <a href="https://www.semanticscholar.org/author/Zhen-Wang/47197370">Semantic Scholar</a> -->
-              </p>
-              
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/IMG_0023_S.png">
-              <figcaption><em>At a rooftop in Anchorage, Alaska 2019</em></figcaption>
-            </td>
-          </tr>
-        </table>
+  <nav>
+    <a href="/index.html" class="nav-name">Zhen Wang</a>
+    <div class="nav-links">
+      <a href="/page_research.html">Research</a>
+      <a href="/page_pubs.html">Publications</a>
+      <a href="/page_posts.html">Blog</a>
+      <a href="/page_news.html">News</a>
+    </div>
+  </nav>
 
+  <div class="job-market-banner">
+    🎯 <strong>I'm on the academic job market for Fall 2026!</strong> Please reach out if you think I'd be a good fit.
+    <a href="mailto:zhenwang9102@gmail.com">Contact me →</a>
+  </div>
 
-        <div class="navbar" style="padding-left: 18px;">
-          <a href="/index.html" class="navA">About</a>
-          <a href="/page_research.html" class="navA">Research Overview</a>
-          <a href="/page_pubs.html" class="navA">Publications</a>
-          <a href="/page_posts.html" class="navA">Blogs</a>
-          <a href="/page_honors_and_services.html" class="navA">Honors and Services</a>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <div class="photo-container">
+          <div class="photo-frame">
+            <img src="images/IMG_0023_S.png" alt="Zhen Wang">
+          </div>
+          <p class="photo-caption">Anchorage, Alaska — 2019</p>
+          
+          <div class="social-links">
+            <a href="mailto:zhenwang9102@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ">Scholar</a>
+            <a href="https://github.com/zhenwang9102">GitHub</a>
+            <a href="https://twitter.com/zhenwang9102">Twitter</a>
+          </div>
+
+          <div class="doc-links">
+            <a href="#">📄 CV</a>
+            <a href="#">📝 Research Statement</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <div class="hero-intro">Postdoctoral Researcher · UC San Diego</div>
+        <h1 class="hero-name">Zhen Wang</h1>
+        <p class="hero-chinese">王震</p>
+        
+        <p class="hero-bio">
+          I'm a postdoctoral researcher at <a href="https://ucsd.edu">UC San Diego</a>, focusing on advancing AI reasoning systems and accelerating scientific discovery. I obtained my PhD from <a href="https://osu.edu">The Ohio State University</a>, advised by Prof. <a href="https://cse.osu.edu/people/sun.397">Huan Sun</a>, where I developed foundational frameworks for knowledge-centric systems.
+        </p>
+
+        <p class="hero-bio">
+          My research sits at the intersection of <strong>advanced AI reasoning</strong> and <strong>accelerated discovery</strong> across science and society. I build AI systems that actively explore hypotheses, simulate possibilities, and generate new, verifiable knowledge—with novel discoveries including <strong>new cancer driver genes</strong>, <strong>new materials</strong>, and <strong>new scientific insights</strong>.
+        </p>
+
+        <div class="research-keywords">
+          <span class="keyword">LLM Reasoning</span>
+          <span class="keyword">AI Agents</span>
+          <span class="keyword">AI4Science</span>
+          <span class="keyword">Scientific Discovery</span>
+          <span class="keyword">Tool Learning</span>
+          <span class="keyword">Alignment</span>
         </div>
 
-        
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              
-              <h2 style="margin-top:0;color:#2c3e50;border-bottom:2px solid #e1e4e8;padding-bottom:0.5rem;">
-                Research Overview 
-                <span style="font-size:0.65em;font-weight:normal;color:#666;">
-                  (<a href="https://zhenwang9102.github.io/page_research.html" style="color:#0066cc;">Check More Here →</a>)
-                </span>
-              </h2>
-        
-              <p style="margin-bottom:0.9rem;line-height:1.3;">
-                My research sits at the emerging intersection of <span style="background-color:#e8f4ff;padding:2px 5px;font-weight:600;border-radius:3px;">advanced AI reasoning</span> and <span style="background-color:#fff2cc;padding:2px 5px;font-weight:600;border-radius:3px;">accelerated discovery</span> across science and society. This space extends traditional data‑driven discovery, calling for AI systems that <b>actively explore hypotheses</b>, <b>simulate possibilities</b>, and <b>generate new, verifiable knowledge</b> across disciplines.
-              </p>
-        
-              <p style="margin-bottom:0.9rem;line-height:1.3;">
-                I approach this field by identifying new foundational problems with rigorous, reproducible benchmarks and evaluation protocols (<a href="https://zhenwang9102.github.io/">scBench</a>, <a href="https://zhenwang9102.github.io/">FIRE‑Bench</a>, <a href="https://github.com/maitrix-org/llm-reasoners">LLM Reasoners</a>), and by building systems that reason, simulate, and interact directly with complex data, code, tools, literature, and human collaborators. I validate these systems end‑to‑end across biology, materials science, machine learning research, and human‑centered domains, with <b>novel discovery results</b> including but not limited to <span style="color:#0066cc;font-weight:500;">new cancer driver genes</span>, <span style="color:#0066cc;font-weight:500;">new materials</span>, and <span style="color:#0066cc;font-weight:500;">new scientific insights</span>.
-              </p>
-        
-              <p style="margin-bottom:0.9rem;line-height:1.3;">
-                        Together, these three pillars form a <b>unified research program</b> where <span style="background-color:#fff2cc;padding:1px 4px;border-radius:2px;font-weight:600;">AI reasoning drives discovery</span> across  <span style="background-color:#d4f5d4;padding:1px 4px;border-radius:2px;font-weight:600;">Science</span> and <span style="background-color:#ffe8e8;padding:1px 4px;border-radius:2px;font-weight:600;">Society</span>. My advances in structured reasoning (<a href="https://aclanthology.org/2023.emnlp-main.507/">RAP</a>, <a href="https://aclanthology.org/2023.acl-long.68/">ThinkSum</a>, <a href="https://arxiv.org/abs/2310.16427">PromptAgent</a>) supply the computational foundation for autonomous scientific exploration (<a href="https://neurips.cc/virtual/2025/poster/117633">scPilot</a>, <a href="https://zhenwang9102.github.io/">FIRE-Bench</a>, <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354">TaijiChat in T-cell programming, Nature</a>), while these same principles enable scalable governance and social simulation (<a href="https://aclanthology.org/2024.emnlp-main.1220/">Dynamic Rewarding</a>, <a href="https://arxiv.org/abs/2505.12808">Decentralized Arena</a>, <a href="https://zhenwang9102.github.io/">DeepPersona</a>). This integrated approach establishes a framework for <span style="color:#0066cc;font-weight:500;">reliable, verifiable, and human-guided discovery</span>.
-                <!-- My research agenda comprises three tightly integrated pillars: <span style="background-color:#e8f4ff;padding:1px 4px;border-radius:2px;font-weight:600;">Reasoning</span>, where I develop structured reasoning algorithms to enhance the generalizability and controllability of AI (<a href="https://aclanthology.org/2023.emnlp-main.507/">RAP</a>, EMNLP'23; <a href="https://aclanthology.org/2023.acl-long.68/">ThinkSum</a>, ACL'23; <a href="https://arxiv.org/abs/2310.16427">PromptAgent</a>, ICLR'24); <span style="background-color:#d4f5d4;padding:1px 4px;border-radius:2px;font-weight:600;">Science</span>, where I operationalize open‑ended discovery through scientific foundation models and autonomous research agents (<a href="https://neurips.cc/virtual/2025/poster/117633">scPilot</a>, NeurIPS'25; <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354">TaijiChat in T-cell programming, Nature</a>; <a href="https://zhenwang9102.github.io/">FIRE‑Bench</a>; <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">MutationProjector</a>); and <span style="background-color:#ffe8e8;padding:1px 4px;border-radius:2px;font-weight:600;">Society</span>, focused on scalable governance, human‑aligned AI behavior, and social simulations to ensure AI‑generated discoveries authentically advance societal goals (<a href="https://aclanthology.org/2024.emnlp-main.1220/">Dynamic Rewarding</a>, EMNLP'24; <a href="https://arxiv.org/abs/2505.12808">Decentralized Arena</a>; <a href="https://zhenwang9102.github.io/">DeepPersona</a>). -->
-              </p>
-        
-              <!-- <div style="background-color:#fef5f5;border-left:4px solid #d9534f;padding:0.8rem 1rem;border-radius:0 4px 4px 0;margin-top:1.2rem;">
-                <p style="margin:0;line-height:1.5;">
-                  <strong style="color:#d9534f;font-size:0.95rem;">🎯 Research Opportunities:</strong>
-                  <span style="color:#555;">
-                    I consistently seek highly motivated students, particularly from underrepresented groups, to join me in various research projects. If you are interested in <b>LLM augmentation</b> (reasoning, tool‑using, planning), <b>LLM agents</b>, and <b>AI4Science</b> research, please email me expressing your interest.
-                  </span>
-                </p>
-              </div> -->
-              
-            </td>
-          </tr>
-        </table>
+        <div class="awards-inline">
+          <div class="award-item"><span class="year">2025</span> <span class="title">Moore Foundation Fellowship</span></div>
+          <div class="award-item"><span class="year">2024</span> <span class="title">OpenAI Research Grant</span></div>
+          <div class="award-item"><span class="year">2023</span> <span class="title">SoCal NLP Best Paper</span></div>
+          <div class="award-item"><span class="year">2022</span> <span class="title">Rising Star (UChicago)</span></div>
+          <div class="award-item"><span class="year">2022</span> <span class="title">Alexa Prize Winner</span></div>
+        </div>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Selected Honors</h2>
-              <ul style="margin-top:0.5rem;line-height:1.6;">
-                <li><b>Gordon and Betty Moore Foundation Fellowship</b> (2025)</li>
-                <li><b>OpenAI Agentic AI Research Grant</b> (2024)</li>
-                <li><b>Rising Star in Data Science</b>, University of Chicago (2022)</li>
-                <li><b>Best Paper Award</b>, SoCal NLP Symposium (2023)</li>
-                <li><b>Top Reviewer Award</b>, NeurIPS (2023)</li>
-                <li><b>Amazon Alexa Prize Winner</b>, TaskBot Challenge (3rd place finish) (2022)</li>
-                <li><b>Graduate Research Award</b> (Mike Liu Scholarship), OSU (2022)</li>
-              </ul>
-            </td>
-          </tr>
-        </table>
+      </div>
+    </div>
+  </section>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>News</h2>
-              <p></p>
-              <div class="listbox">
-                 <ul>
-                 <li>
-                   12/2025: Honored to organize <a href="https://sites.google.com/view/law-2025">LAW 2025 workshop (Bridging Language, Agent, and World Models) at NeurIPS 2025</a>. Thanks to our amazing co-organizers, Ziqiao, Jessy, Melanie, Jianwen, Kelsey, Alane, Jacob, Tianmin and Zhiting; and speakers, Sherry, Chelsea, Francois, Eric, Danijar, Philop, Stephen, Ying Nian and Keyon. Check the recording of their talks <a href="https://neurips.cc/virtual/2025/loc/san-diego/workshop/109552">here</a> (with a NeurIPS registration); public videos will be released 30 days after the workshop.
-                 </li>
-                 <li>
-                   12/2025: Present two papers in NeurIPS 2025: <a>scPilot</a>, the first omics-native reasoning agents, and <a>DeepPersona</a>, a generative engine to scale up real-human personas for deep personalization and social simulation. 
-                 </li>
-                 <li>
-                   11/2025: Invited talk at UCSD CSE AI Seminar, "<a href="https://drive.google.com/file/d/1qq5farbBbHoRBvDPORIn1Tpa_NA7SQqa/view">Building AI That Discovers</a>."
-                 </li>
-                 <li>
-                   10/2025: Honored to receive the <a>Gordon and Betty Moore Foundation Fellowship for the Natural Sciences</a> to support my research on AI-driven scientific reasoning and discovery.
-                 </li>
-                 <li>
-                   09/2025: Happy to be part of <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354v6.abstract">this newly accepted Nature paper about multi-omics discovery</a>; our team contributes a Paper Copilot, TaijiChat, that converts the paper into an AI agent to answer any questions from readers.
-                 </li>
-                 <li>
-                   09/2025: <a style="color:red">scPilot (single-cell copilot)</a> was accepted to NeurIPS 2025. We proposed the omics-native reasoning for grounding LLMs in raw omics data.
-                 </li>
-                 <li>
-                   09/2025: Released a Medium blog, <a href="https://medium.com/@wangzhen_60071/why-the-current-agi-race-may-fail-us-all-2b1aaf163426">"Will the current AGI race fail us all?"</a>, reflecting the current mania of the AGI race, inspired by a story from Liu Cixin's Three-Body Problem.
-                 </li>                   
-                 <li>
-                   09/2025: Released the preprint of <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723v1.abstract">MutationProjector</a>, a cancer genomics foundation model that transforms tumor mutation profiles into a compact representation of cancer subtype.
-                 </li>
-                 <li>
-                   08/2025: Happy to attend the <a href="https://www.universityofcalifornia.edu/news/uc-awards-18-million-scale-ambition-and-impact-ai-science">UC-LEAP</a> Kick-off meeting at <a href="https://engineering.ucsb.edu/news/leap-forward-ai-enabled-materials-research">UCSB</a>. Excited to explore AI agents for Materials.
-                 </li>
-                 <li>
-                   07/2025: Happy to speak in <a href="https://xuanwang91.github.io/2025-ACL-BOF/">ACL 2025 BoF: Bridging Human Study and LLM Agents for Social Simulation</a>.
-                 </li>
-                 <li>
-                   07/2025: Happy to host <a href="https://sites.google.com/view/law-2025" style="color:red">LAW 2025 workshop (Bridging Language, Agent, and World Models) in NeurIPS 2025</a> at San Diego this December. Cannot wait to welcome everyone to San Diego in Dec!
-                 </li>
-                 <li>
-                   06/2025: Visited Berkeley for the <a href="https://dl4sci-school.lbl.gov/home">DL4SCI 2025</a>. Happy to dive into the latest AI (agents, simulation, world models, etc) for automated scientific discovery and swap ideas with brilliant minds!
-                 </li>
-                 <li>
-                   01/2025: Released the second consecutive blog along the ChatGPT/AI "twist" Reflection Series, <a href="https://www.notion.so/zhenwang/ChatGPT-s-Second-Year-10-Aha-Moments-of-2024-That-Rewired-2025-15a0404f81f58028adf6ed4d402187f5">ChatGPT's Second Year: 10 Aha Moments of 2024 That Rewired 2025</a>
-                 </li>
-                 <li>
-                   01/2025: <a href="https://arxiv.org/abs/2406.12034">Self-MoE</a> was accepted to <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a>! The first method to transform a monolithic LLM into modular self-specialized experts through synthetic data-driven specialization!
-                 </li>
-                 <li>
-                   10/2024: Excited to release <a href="https://de-arena.maitrix.org/">Decentralized Arena</a>, a decentralized and democratic LLM benchmarking system, where all LLMs participate in judging each other. It's an automated, fully transparent, faster, more scalable, and less biased version of Chatbot Arena. Check our <a href="https://huggingface.co/spaces/LLM360/de-arena">HF leaderboard</a>.
-                 </li>
-                 <li>
-                   10/2024: Happy to help release the <a href="https://huggingface.co/spaces/LLM360/TxT360">TxT360: A Top-Quality LLM Pre-training Dataset Requires the Perfect Blend</a>. It is the first dataset to globally deduplicate 99 CommonCrawl snapshots and 14 high-quality data sources. Download the dataset for your LLM pre-training <a href="https://huggingface.co/datasets/LLM360/TxT360">here</a>.
-                 </li>
-                 <li>
-                   09/2024: <a href="https://arxiv.org/abs/2411.08733">DRPO (Dynamic Rewarding with Prompt Optimization)</a> was accepted to the main conference of <a href="https://2024.emnlp.org/">EMNLP 2024</a>. It is the first tuning-free method to self-align LLMs with human preferences, without any model tuning or human preference annotations.
-                 </li>
-                 <li>
-                   07/2024: Excited to be selected to attend <a href="https://datascience.uchicago.edu/events/ai-science-summer-school-2024/">2024 AI+Science Summer School at the University of Chicago</a>!
-                 </li>
-                 <li>
-                   07/2024:  <a href="https://arxiv.org/abs/2404.05221">LLM Reasoners</a> has been accepted to <a href="https://colmweb.org/">COLM 2024</a>. Congrats to the LLM Reasoners team. Check out our brilliant +1k stars <a href="https://github.com/maitrix-org/llm-reasoners">GitHub package</a> for advanced reasoning with LLMs!
-                 </li>
-                 <li>
-                    02/2024: Received a research grant from OpenAI to support our research in agentic systems!
-                  </li>
-                  <li>
-                    01/2024: Released the blog, <a href="https://zhenwang.notion.site/Reflecting-on-ChatGPT-s-First-Year-Evolutions-Twists-and-Smooth-Directions-2381d752b5c94012bd21269f46d12a08?pvs=4">Reflecting on ChatGPT’s First Year: Evolutions, Twists, and Smooth Directions</a>, discussing recent NLP research directions heavily impacted by ChatGPT-related techniques. Welcome to any comments! 
-                  </li>
-                  <li>
-                    01/2024: Invited to serve as a Reviewer for <a href="https://kdd2024.kdd.org/">KDD 2024</a>, <a href="https://icml.cc/Conferences/2024">ICML 2024</a>, and <a href="https://colmweb.org/">COLM 2024</a> (The first conference on language modeling! Happy to contribute to making this a success!)
-                  </li>
-                  <li>
-                    01/2024: <a href="https://arxiv.org/abs/2310.16427" style="color:red">PromptAgent</a> was accepted to <a href="https://iclr.cc/Conferences/2024">ICLR 2024</a>! The first principled framework to formalize the problem of API-based discrete prompt optimization and benchmark the exploration efficiency and prompt transferability!
-                  </li>
-                  <li>
-                    12/2024: Attended <a href="https://nips.cc/Conferences/2023">NeurIPS 2023</a> at NOLA! Happy to meet many old and new friends! 
-                  </li>
-                  <li>
-                    11/2023: Honored to receive the <a href="https://neurips.cc/Conferences/2023/ProgramCommittee#top-reivewers"><b>Top Reviewer Award</b></a> of NeurIPS 2023. Thanks for the complimentary registration!
-                  </li>
-                  <li>
-                    11/2023: Honored to receive the <a style="color:red"><b>Best Paper Award</b></a> at <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a>.
-                  </li>
-                  <li>
-                    11/2023: Three papers, <a href="https://arxiv.org/abs/2305.14992">RAP</a>, <a href="https://arxiv.org/abs/2305.11554">ToolkenGPT</a>, and <a href="https://arxiv.org/abs/2310.16427">PromptAgent</a>, will be presented at <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a> at UCLA on Nov. 17th, 2023.
-                  </li>
-                  <li>
-                    10/2023: <a href="https://arxiv.org/abs/2305.14992">Reasoning via Planning</a> has been featured in the recently published <a href="https://www.stateof.ai/2023-report-launch" style="color:red">State of AI Report 2023</a>. Check the great report <a href="https://docs.google.com/presentation/d/156WpBF_rGvf4Ecg19oM1fyR51g4FAmHV3Zs0WLukrLQ/edit#slide=id.g24daeb7f4f0_0_3930" style="color:red">here</a>!
-                  </li>
-                  <li>
-                    10/2023: <a href="https://arxiv.org/abs/2305.14992" style="color:red">Reasoning via Planning</a> paper that augments LLM reasoning with external world models and principled planning was accepted to <a href="https://2023.emnlp.org/">the main conference of EMNLP 2023</a>!
-                  </li>
-                  <li>
-                    09/2023: <a href="https://arxiv.org/abs/2210.01293" style="color:red">ToolkenGPT</a> paper that augments LLMs with efficient and plug-and-play tool learning was accepted as <a href="https://nips.cc/Conferences/2023">an oral presentation of NeurIPS 2023</a>!
-                  </li>
-                  <li>
-                    08/2023: Invited to serve as a Reviewer for <a href="https://iclr.cc/Conferences/2024">ICLR 2024</a>.
-                  </li>
-                  <li>
-                    07/2023: Invited to serve as a PC member for <a href="https://aaai.org/aaai-conference/">AAAI 2024</a>.
-                  </li>
-                  <li>
-                    06/2023: Invited to give a talk at <b>George Mason University</b> on June 13th, 2023.
-                  </li>
-                  <li>
-                    06/2023: Invited to give a talk at <b>North Carolina State University</b> on June 3rd, 2023.
-                  </li>
-                  <li>
-                    06/2023: Invited to serve as a Reviewer for <a href="https://2023.emnlp.org/">EMNLP 2023</a>.
-                  </li>
-                  <li>
-                    05/2023: One paper about <a href="https://arxiv.org/abs/2210.01293" style="color:red">prompting LLMs with probabilistic reasoning</a> was accepted to <a href="https://2023.aclweb.org/">ACL 2023</a>!
-                  </li>
-                  <li>
-                    03/2023: Invited to serve as a Reviewer for <a href="https://nips.cc/Conferences/2023">NeurIPS 2023</a>.
-                  </li>
-                  <li>
-                    03/2023: Invited to serve as an Area Chair for <a href="http://tcci.ccf.org.cn/conference/2023/index.php">NLPCC 2023</a>.
-                  </li>
-                  <li>
-                    02/2023: Kicked off my postdoc adventure! 😎 Super stoked to work with the brilliant minds from UCSD, CMU, MBZUAI, and beyond to  push the boundaries of those incredible large language models and harness their power for human society and other scientific domains! 🚀🔬💡
-                  </li>
-                  <li>
-                    01/2023: One paper, <a href="https://arxiv.org/abs/2303.02861" style="color:red">Multitask Prompt Tuning</a>, was accepted to <a href="https://iclr.cc/">ICLR 2023</a>!
-                  </li>
-                  <li>
-                    01/2023: One paper, <a href="https://arxiv.org/abs/2210.06444" style="color:red">Entity Tracking via Effective Use of Multi-Task Learning Models</a>, was accepted to <a href="https://2023.eacl.org/">EACL 2023</a>!
-                  </li>
-                  <li>
-                    01/2023: Invited to serve as a Reviewer for <a href="https://icml.cc/Conferences/2023">ICML 2023</a>.
-                  </li>
-                  <li>
-                    12/2022: Invited to serve as a PC Member for <a href="https://kdd.org/kdd2023/">KDD 2023</a> Research Track.
-                  </li>
-                  <li>
-                    12/2022: Happy to finish my first in-person NLP course teaching, and I'm impressed by what students have achieved after learning the very advanced NLP techniques. Check out <a href="https://docs.google.com/presentation/d/1TA_Gf29CbGe0UV5NR_uPnaGr7dP7-ipNuz-BtNne3_0/edit?usp=sharing">this quick summary of their amazing final projects</a>!
-                  </li>
-                  <li>
-                    11/2022: Passed the Ph.D. dissertation defense, <a>Toward Knowledge-centric Natural Language Processing: Acquisition, Representation, Transfer, and Reasoning</a>. Thanks to all my committee members, Prof. Huan Sun, Srinivasan Parthasarathy, Yu Su, and Wei-Lun Chao. 
-                  </li>
-                  <li>
-                    08/2022: Will be teaching <a>CSE 5525: Foundations of Speech and Language Processing (Undergrad & Graduate)</a> as an instructor at OSU this fall.
-                  </li>
-                  <li>
-                    08/2022: Invited to serve as a PC member for <a href="https://aaai.org/Conferences/AAAI-23//">AAAI 2023</a>.
-                  </li>
-                  <li>
-                    07/2022: Attended NAACL 2022 in Seattle. Presented <a href="https://aclanthology.org/2022.suki-1.7.pdf">our CQA Knowledge Transfer paper</a>. Glad to meet all my old and new friends! 
-                  </li>
-                  <li>
-                    06/2022: Invited to serve as a PC member for <a href="https://2022.emnlp.org/">EMNLP 2022</a>.
-                  </li>
-                  <li>
-                    06/2022: Happy to give a talk about <a>Efficient Adaptation of Large Language Models</a> at the <a>MIT Summer Working Group on Large LMs</a>.
-                  </li>
-                  <li>
-                    06/2022: Our TacoBot earned the <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge" style="color:red">third-place honor in the inaugural Alexa Prize TaskBot Challenge</a>!
-                  </li>
-                  <li>
-                    06/2022: Happy to give a tutorial about natural language processing and large language models in <a href="https://tdai.osu.edu/events/tdai-foundations-cop-deep-learning-summer-school">TDAI Deep Learning Summer School</a> along with Prof. Huan Sun. Slides can be found <a href="https://tdai.osu.edu/sites/default/files/2022-06/2022-foundations-tutorial3-sunwang-deeplearning4nlp.pdf">here</a>.
-                  </li>
-                  <li>
-                    05/2022: Excited to join <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab</a> in Cambridge, Boston as a research intern working with <a href="https://rpand002.github.io/">Rameswar Panda</a> and <a href="https://people.csail.mit.edu/yoonkim/">Yoon Kim</a> on efficient adaptation/pruning for large language models.
-                  </li>
-                  <li>
-                    03/2022: Our team TacoBot moved forward to finals of the <a href="https://www.amazon.science/alexa-prize/taskbot-challenge">Alexa Prize TaskBot challenge</a>!
-                  </li>
-                  <li>
-                    03/2022: Honored to receive the <a>2022 Graduate Research Award</a> of the CSE department. 
-                  </li>
-                  <li>
-                    02/2022: One paper, <a href="https://arxiv.org/abs/2110.08294">Coherence boosting: When your pretrained language model is not paying enough attention</a>, was accepted to <a href="https://www.2022.aclweb.org/">ACL 2022</a>!
-                  </li>
-                  <li>
-                    02/2022: Our team TacoBot moved forward to the semifinals of the <a href="https://www.amazon.science/alexa-prize/taskbot-challenge">Alexa Prize TaskBot challenge</a>! Try "<a href="https://www.amazon.science/blog/alexa-assist-me-is-now-live">Alexa, let's work together</a>" or "Alexa, assist me" in your Alexa devices or the app when you want to do a DIY or cooking task!
-                  </li>
-                  <li>
-                    12/2021: Passed the Ph.D. candidacy exam with the proposal, "<a href="https://zhenwang9102.github.io/files/candidacy_abstract.txt">Knowledge-centric Natural Language Processing: Acquisition, Representation, and Reasoning</a>." Thanks to all my committee members, Prof. Huan Sun, Srinivasan Parthasarathy, Yu Su, and Wei-Lun Chao. 
-                  </li>
-                  <li>
-                    05/2021: Our team was selected to participate in the <a href="https://www.amazon.science/alexa-prize/taskbot-challenge/2021">Alexa Prize TaskBot Challenge</a> as one of 10 teams over 125 applications initiated from 15 countries! Looking forward to building a smart dialogue system to guide users through complex, multi-step plans (e.g., Cooking and DIY tasks) via multimodal interactions.
-                  </li>
-                  <li>
-                    05/2021: Started Research Intern at Microsoft Research! Excited to work with <a href="https://www.microsoft.com/en-us/research/people/jojic/">Nebojsa Jojic</a> and <a>Kolya Malkin</a> on Conditional Text Generation!
-                  </li>
-                  <li>
-                    03/2021: Invited to serve as a PC member of EMNLP 2021.
-                  </li>
-                  <li>
-                    03/2021: Attended WSDM 2021 virtually and presented our work on <a href="https://dl.acm.org/doi/10.1145/3437963.3441744">modeling context pair interaction and learning graph pair emebddings</a>.
-                  </li>
-                  <li>
-                    03/2021: Honored to win <a>Graduate Student Research Poster Award (Top 5)</a> for the 2021 Annual Student Research Poster Exhibition in our CSE department.
-                  </li>
-                  <li>
-                    02/2021: Panelist on the panel discussion in the Department of Astronomy, "<a href="https://astronomy.osu.edu/events/monthly-movie-night-2001-space-odyssey-science-fiction-vs-science-fact">2001: A Space Odyssey - Science Fiction vs. Science Fact</a>", discussing Science Fiction, Life in Universe, Time & Relativity and Anthropology.
-                  </li>
-                  <li>
-                    01/2021: Received SIGIR Student Travel Grant for WSDM 2021.
-                  </li>
-                  <li>
-                    01/2021: Attended CDAC Rising Stars in Data Science Workshop with the agenda <a href="https://cdac.uchicago.edu/events/risingstars2021">here</a>.
-                  </li>
-                  <li>
-                    12/2020: Honored to be selected to the <a href="https://datascience.uchicago.edu/rising-stars-alumni/" style="color:red">Rising Stars in Data Science</a> workshop hosted by the <a href="https://cdac.uchicago.edu/">Center for Data and Computing (CDAC) at the University of Chicago</a>.
-                  </li>
-                  <li> 
-                    12/2020: Invited to serve as a PC member of ACL 2021.
-                  </li>
-                  <li> 
-                    10/2020: Invited to serve as a PC member of NAACL 2021.
-                  </li>
-                  <li>
-                    10/2020: One paper, <a href="https://zhenwang9102.github.io/files/WSDM2021_ZW_ConPI.pdf">Modeling Context Pair Interaction for Pairwise Tasks on Graphs</a>, was accepted to WSDM 2021 (<a style="color:red">Acceptance Rate: 18.6%</a>).
-                  </li>
-                  <li>
-                    07/2020: Attended ACL 2020 virtually and presented our paper via QA sessions and pre-recorded video.
-                  </li>
-                  <li>
-                    05/2020: Started Research Intern at <a href="http://www.nec-labs.com/">NEC Labs America</a>! Excited to work with <a href="https://bzong.github.io/">Dr. Bo Zong</a> on Commonsense Reasoning for NLU.
-                  </li>
-                  <li>
-                    04/2020: One paper, <a href="https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf">Rationalizing Medical Relation Prediction from Corpus-level Statistics</a>, about building self-interpretable deep learning model for relation prediction was accepted by <a href="https://acl2020.org/"></a>ACL 2020 (<a style="color:red">Acceptance Rate: 22.7%</a>).
-                  </li>
-                  <li>
-                    04/2020: Invited to serve as a PC member of NLPCC 2020.
-                  </li>
-                  <li>
-                    09/2019: One paper, <a href="https://academic.oup.com/bioinformatics/article/36/4/1241/5581350">Graph Embedding on Biomedical Networks: Methods, Applications, and Evaluations</a>, was accepted by <a href="https://academic.oup.com/bioinformatics">Bioinformatics</a>.
-                  </li>
-                  <li>
-                    08/2019: Attended KDD 2019 in Anchorage, Alaska, and presented our work in an oral talk.
-                  </li>
-                  <li>
-                    06/2019: Received SIGKDD Student Travel Award for KDD 2019.
-                  </li>
-                  <li>
-                    04/2019: One paper, <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf">SurfCon: Synonym Discovery on Privacy-Aware Clinical Data</a>, about knowledge extraction from text was accepted by <a href="https://www.kdd.org/kdd2019/">KDD 2019</a> (Research Track, <a style="color:red">Acceptance Rate: 14.2%</a>, Oral).
-                  </li>
-                  <li>
-                    08/2018: One paper about <a href="https://ziyuyao.org/paper/StaQC_DLDay18.pdf">Code Summarization</a> was accepted by KDD 2018, Deep Learning Day.
-                  </li>
-                  <li>
-                    06/2018: Attended NAACL 2018 in New Orleans, LA.
-                  </li>
-                </ul>
-              </div>
-            </td>
-          </tr>
-        </table>
+  <!-- News Section -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">News</h2>
+      <div class="section-line"></div>
+      <a href="/page_news.html" class="section-link">View all →</a>
+    </div>
+    <div class="news-list">
+      <div class="news-item">
+        <span class="news-date">Dec 2025</span>
+        <div class="news-content">
+          Organizing <a href="https://sites.google.com/view/law-2025">LAW 2025 workshop</a> at NeurIPS 2025 on Language, Agent, and World Models.
+        </div>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Dec 2025</span>
+        <div class="news-content">
+          Presenting <strong>scPilot</strong> and <strong>DeepPersona</strong> at NeurIPS 2025.
+        </div>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Oct 2025</span>
+        <div class="news-content">
+          <span class="highlight">Honored to receive the Gordon and Betty Moore Foundation Fellowship</span> for AI-driven scientific discovery.
+        </div>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Sep 2025</span>
+        <div class="news-content">
+          Paper on multi-omics discovery with <strong>TaijiChat</strong> accepted to <a href="https://www.nature.com">Nature</a>.
+        </div>
+      </div>
+      <div class="news-item">
+        <span class="news-date">Sep 2025</span>
+        <div class="news-content">
+          <strong>scPilot</strong> (omics-native reasoning) accepted to NeurIPS 2025.
+        </div>
+      </div>
+    </div>
+  </section>
 
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research Highlights (Full List in <a href="https://zhenwang9102.github.io/page_pubs.html" style="font-family: inherit; font-size: inherit; font-weight: inherit;">Here</a> or <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works&sortby=pubdate" style="font-family: inherit; font-size: inherit; font-weight: inherit;">Google Scholar</a>)</h2>
-            </td>
-          </tr>
-        </table>
+  <!-- Selected Publications -->
+  <section class="section" style="background: var(--bg-secondary); max-width: 100%; padding-top: 2.5rem; padding-bottom: 2.5rem;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 3rem;">
+      <div class="section-header">
+        <h2 class="section-title">Selected Publications</h2>
+        <div class="section-line"></div>
+        <a href="/page_pubs.html" class="section-link">Full list →</a>
+      </div>
+      <div class="pub-list">
+        <div class="pub-item">
+          <div class="pub-image">🧬</div>
+          <div class="pub-content">
+            <div class="pub-venue">Nature 2025</div>
+            <div class="pub-title">TaijiChat: Multi-Omics Discovery for T-Cell Programming</div>
+            <div class="pub-authors">Paper Copilot that converts research into an AI agent for interactive exploration.</div>
+            <div class="pub-links">
+              <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354">Paper</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-image">🔬</div>
+          <div class="pub-content">
+            <div class="pub-venue">NeurIPS 2025</div>
+            <div class="pub-title">scPilot: Omics-Native Reasoning Agents</div>
+            <div class="pub-authors">First reasoning agent grounded directly in raw single-cell omics data.</div>
+            <div class="pub-links">
+              <a href="https://neurips.cc/virtual/2025/poster/117633">Paper</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-image">🧠</div>
+          <div class="pub-content">
+            <div class="pub-venue">EMNLP 2023 <span class="award">★ Featured in State of AI Report</span></div>
+            <div class="pub-title">Reasoning with Language Model is Planning with World Model (RAP)</div>
+            <div class="pub-authors"><strong>Zhen Wang</strong>, et al.</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2305.14992">Paper</a>
+              <a href="https://github.com/Ber666/llm-reasoners">Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-image">🔧</div>
+          <div class="pub-content">
+            <div class="pub-venue">NeurIPS 2023 <span class="award">★ Oral & Best Paper @ SoCal NLP</span></div>
+            <div class="pub-title">ToolkenGPT: Augmenting Frozen Language Models with Massive Tools</div>
+            <div class="pub-authors"><strong>Zhen Wang</strong>, et al.</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2305.11554">Paper</a>
+              <a href="https://github.com/Ber666/ToolkenGPT">Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-image">🎯</div>
+          <div class="pub-content">
+            <div class="pub-venue">ICLR 2024</div>
+            <div class="pub-title">PromptAgent: Strategic Planning with Language Models for Expert-level Prompt Optimization</div>
+            <div class="pub-authors"><strong>Zhen Wang</strong>, et al.</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2310.16427">Paper</a>
+              <a href="https://github.com/XinyuanWangCS/PromptAgent">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/dearena.png" alt="dearena" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://de-arena.maitrix.org/">Decentralized Arena: When LLMs Replace Human Judges for Democratic and Scalable LLM Leaderboard</a></h3>
-              <br>
-                &rarr; Decentralized Arena introduces an automated, scalable system for evaluating LLMs across specialized domains, where the models themselves participate in assessing each other. This democratic evaluation approach achieves 95% correlation with Chatbot Arena rankings while maintaining full transparency and reproducibility.
-              <br>
-              <a href="https://de-arena.maitrix.org/">Blog</a> / <a href="https://huggingface.co/spaces/LLM360/de-arena">Leaderboard</a>
-            </td>
-          </tr>
-        </table>
+  <!-- Education & Experience -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Education & Experience</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-period">2023 – Present</div>
+        <div class="timeline-content">
+          <h4>Postdoctoral Researcher</h4>
+          <p>UC San Diego · Collaborating with CMU, MBZUAI</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2018 – 2023</div>
+        <div class="timeline-content">
+          <h4>Ph.D. in Computer Science</h4>
+          <p>The Ohio State University · Advisor: <a href="https://cse.osu.edu/people/sun.397">Prof. Huan Sun</a></p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2022</div>
+        <div class="timeline-content">
+          <h4>Research Intern</h4>
+          <p><a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab</a> · with Rameswar Panda & Yoon Kim</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2021</div>
+        <div class="timeline-content">
+          <h4>Research Intern</h4>
+          <p><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">Microsoft Research</a> · with Nebojsa Jojic</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-period">2020</div>
+        <div class="timeline-content">
+          <h4>Research Intern</h4>
+          <p><a href="https://www.nec-labs.com/">NEC Labs America</a> · with Bo Zong</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/dynamic_alignment.png" alt="dynamic_alignment" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2411.08733">Dynamic Rewarding with Prompt Optimization Enables Tuning-free Self-Alignment of Language Models</a></h3>
-              <br>
-                &rarr; This paper introduces DRPO, a novel tuning-free approach that enables LLMs to achieve self-alignment through dynamic rewarding and search-based optimization, eliminating the need for costly human annotations and model training. This paves the way toward cost-effective and scalable AI alignment.
-              <br>
-              <i><b>[EMNLP 2024]</b> <a href="https://arxiv.org/pdf/2411.08733">PDF</a> / <a href="https://github.com/Singla17/dynamic-alignment-optimization">Code</a> / <a href="https://zhenwang9102.github.io/files/DRPO_Poster.pdf">Poster</a></i>
-            </td>
-          </tr>
-        </table>
+  <!-- Personal -->
+  <section class="section" style="padding-bottom: 1rem;">
+    <div class="section-header">
+      <h2 class="section-title">Beyond Research</h2>
+      <div class="section-line"></div>
+    </div>
+    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7;">
+      Outside of research, you'll find me hiking, playing pickleball, or planning my next adventure in national parks. I'm also a passionate sports fan, cheering for the <span style="color:#BB0000; font-weight:500;">Buckeyes</span>, <span style="color:#005596; font-weight:500;">Dodgers</span>, <span style="color:#FDB927; font-weight:500;">Lakers</span>, <span style="color:#F7B5CD; font-weight:500;">Inter Miami</span>, and <span style="color:#E31837; font-weight:500;">Chiefs</span>.
+    </p>
+  </section>
 
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/promptagent_iclr_2024.png" alt="promptagent_iclr2024" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2310.16427">PromptAgent: Strategic Planning with Language Models Enables Expert-level Prompt Optimization</a></h3>
-              <br>
-                &rarr; Tired of manual prompt engineering? PromptAgent offers the first principled framework to formalize the problem of API-based prompt optimization (state, action, reward, etc); also the first to benchmark exploration efficiency and show the transferability of optimized prompts. Targeting for expert-level prompting, there are many exciting directions ahead of PromptAgent!
-              <br>
-              <i><b>[ICLR 2024]</b> <a href="https://arxiv.org/pdf/2310.16427.pdf">PDF</a> / <a href="https://github.com/XinyuanWangCS/PromptAgent">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/files/promptagnet_poster_2023.pdf">Poster</a></i>
-            </td>
-          </tr>
-        </table>
-        
-                
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/rap_emnlp_2023.png" alt="rap_emnlp2023" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2305.14992">Reasoning with Language Model is Planning with World Model</a></h3>
-              <br>
-                &rarr; LLMs lack internal world models for effective reasoning. Reasoning via Planning (RAP) reformulates LLM reasoning as a planning problem, thus incorporating an external world model and principled planning seamlessly. This is a new framework applicable across varying tasks and an exciting direction for LLM augmentation research.
-              <br>
-              <i><b>[EMNLP 2023]</b> (Oral, Main) <a href="https://arxiv.org/pdf/2305.14992.pdf">PDF</a> / <a href="https://github.com/Ber666/llm-reasoners">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a> / <a href="https://docs.google.com/presentation/d/156WpBF_rGvf4Ecg19oM1fyR51g4FAmHV3Zs0WLukrLQ/edit#slide=id.g24daeb7f4f0_0_3930" style="color:red"><b>Featured in State of AI Report 2023</b></a></i>
-            </td>
-          </tr>
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/toolkengpt_neurips_2023.png" alt="toolkengpt_neurips2023" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2305.11554">ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings</a></h3>
-              <br>
-                &rarr; ToolkenGPT augments LLMs with massive tools/APIs by representing tools as tokens (“toolken”) and enabling tool calls in the same way as generating regular words. ToolkenGPT is super efficient for learning massive tools, as plugging in new tools is as easy as learning embeddings.
-              <br>
-              <i><b>[NeurIPS 2023] (Oral)</b> <a href="https://arxiv.org/pdf/2305.11554.pdf">PDF</a> / <a href="https://github.com/Ber666/ToolkenGPT">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a> /  <a href="https://socalnlp.github.io/symp23/index.html" style="color:red">SoCal NLP 2023 <b>Best Paper Award</b></a> </i>
-            </td>
-          </tr>
-        </table>
-
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/mpt_overview.png" alt="mpt_iclr2023" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2303.02861">Multitask Prompt Tuning Enables Parameter-Efficient Transfer Learning</a></h3>
-              <br>
-                &rarr; We propose Multitask Prompt Tuning (MPT) to exploit the rich cross-task knowledge for more efficient and generalizable transfer learning. MPT learns a single transferrable soft prompt through the use of a novel combination of prompt decomposition and prompt distillation.
-              <br>
-              <i> <b>[ICLR 2023]</b> <a href="https://arxiv.org/pdf/2303.02861.pdf">PDF</a> / <a href="http://zhenwang9102.github.io/">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a> / <a href="https://github.com/huggingface/peft/pull/400">Huggingface PEFT PR</a></i>
-            </td>          
-          </tr>
-          </table>
-
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/thinksum_acl_2023.png" alt="thinksum_acl2023" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2210.01293">ThinkSum: Probabilistic Reasoning Over Sets Using Large Language Models</a></h3>
-              <br>
-                &rarr; We propose a two-stage probabilistic inference paradigm, ThinkSum, to improve LLMs' abilities of reasoning over multiple objects in two steps, Think (e.g., retrieval of associations) and Sum (e.g., aggregation of results), which beats chain-of-thought prompting in hard BIG-bench tasks.
-              <br>
-              <i> <b>[ACL 2023]</b><a href="https://arxiv.org/pdf/2210.01293.pdf">PDF</a> / <a href="http://zhenwang9102.github.io/">Code</a> / <a href="http://zhenwang9102.github.io/">Slides</a> / <a href="http://zhenwang9102.github.io/">Poster</a></i>
-            </td>
-          </tr>
-        </table>
-
-
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/cb_acl_2022.png" alt="cb_acl2022" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2110.08294">Coherence Boosting: When Your Pretrained Language Model is <span style="color: #ff0000">Not</span> Paying Enough Attention</a></h3>
-              <br>
-                &rarr; We demonstrate that large language models have insufficiently learned the effect of distant words on next-token prediction. We present Coherence Boosting, an inference procedure that increases an LM’s focus on a long context, which greatly improves NLG and NLU tasks.
-              <br>
-              <i> <b>[ACL 2022]</b> <a href="https://arxiv.org/pdf/2110.08294.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/coherence-boosting">Code</a> / <a href="https://zhenwang9102.github.io/">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> <b>(Long Paper, Oral Presentation)</b></i>
-            </td>          
-          </tr>
-          </table>
-
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/x-clinrela_acl__2020.png" alt="x-clinrela_acl__2020" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/2005.00889">Rationalizing Medical Relation Prediction from Corpus-level Statistics</a></h3>
-              <br>
-                &rarr; We propose a self-interpretable framework to rationalize the neural relation prediction based on corpus-level statistics. This framework is inspired by human cognitive theory about recall and recognition, which provides structured knowledge triplets as rationales.
-              <br>
-              <i> <b>[ACL 2020]</b> <a href="https://zhenwang9102.github.io/files/ACL2020_ZW_X_MedRELA.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/X-MedRELA">Code</a> / <a href="https://zhenwang9102.github.io/files/ACL2020-X-MedRELA-ZW-Slides.pdf">Slides</a> / <a href="https://zhenwang9102.github.io/">Poster</a> / <a href="https://slideslive.com/38929313/rationalizing-medical-relation-prediction-from-corpuslevel-statistics">Video</a> <i>
-            </td>
-          </tr>
-        
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle;">
-              <img src="/images/surfcon_kdd_2019.png" alt="surfcon_kdd_2019" width="180" height="auto" style="border-style: none">
-            </td>
-            <td style="width:75%;vertical-align:middle;">
-              <h3><a href="https://arxiv.org/abs/1906.09285">SurfCon: Synonym Discovery on Privacy-Aware Clinical Data</a></h3>
-              <br>
-                &rarr; We propose to discover structured knowledge--synonyms--from the privacy-aware text corpus and present a novel framework to leverage both surface form and context information to discover out-of-distribution synonyms.
-              <br>
-              <i><b>[KDD 2019]</b> <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_paper.pdf">PDF</a> / <a href="https://github.com/zhenwang9102/SurfCon">Code</a> / <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_Slides.pdf">Slides</a> / <a href="https://zhenwang9102.github.io/files/KDD2019_ZW_SurfCon_Poster.pdf">Poster</a> (Research Track, Long Paper, Oral Presentation) <i>
-            </td>          
-          </tr>
-        </table> -->
-        
-            
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <p style="text-align:center;">
-              <a href="https://clustrmaps.com/site/1beb5"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs&cl=ffffff" /></a>
-              </p>
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Source code from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman</a>, design and inspiration from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a> and <a style="font-size:small;" href="https://dongkuanx27.github.io/">Dongkuan</a>.
-              </p>
-            </td>
-          </tr>
-        </table>
-        
-        
-      </td>
-    </tr>
-  </table>
-  
-  
+  <footer>
+    <p class="footer-note">
+      Design inspired by <a href="https://jonbarron.info" style="color: var(--accent-blue); text-decoration: none;">Jon Barron</a> · 
+      <a href="https://clustrmaps.com/site/1beb5" title="Visit tracker" style="color: var(--text-secondary); text-decoration: none;">Visitor Map</a>
+    </p>
+  </footer>
 </body>
-  
-
 </html>
