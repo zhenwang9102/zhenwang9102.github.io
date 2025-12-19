@@ -103,9 +103,9 @@
 
     .header-grid {
       display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 48px;
-      align-items: start;
+      grid-template-columns: 1fr 240px;
+      gap: 56px;
+      align-items: center;
     }
 
     .header h1 {
@@ -174,10 +174,12 @@
 
     .profile-photo {
       position: relative;
+      text-align: center;
     }
 
     .profile-photo img {
       width: 100%;
+      max-width: 220px;
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(26, 38, 57, 0.12);
     }
@@ -424,8 +426,10 @@
 
       .profile-photo {
         order: -1;
-        max-width: 240px;
-        margin: 0 auto;
+      }
+
+      .profile-photo img {
+        max-width: 200px;
       }
 
       .header h1 {
