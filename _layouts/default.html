@@ -84,11 +84,11 @@
     }
 
     .nav a {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 600;
       color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
-      padding: 6px 14px;
+      padding: 8px 18px;
       border-radius: 4px;
       transition: all 0.2s ease;
       letter-spacing: 0.02em;
@@ -325,6 +325,75 @@
       font-style: italic;
     }
 
+    /* Research Highlights */
+    .research-highlights-content h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 20px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .research-highlights-content h3:first-child {
+      margin-top: 0;
+    }
+
+    .research-highlights-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .research-highlights-content li {
+      padding: 6px 0;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .research-highlights-content li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 6px;
+      height: 6px;
+      background: var(--ucsd-yellow);
+      border-radius: 50%;
+    }
+
+    .research-highlights-content li strong {
+      color: var(--primary);
+    }
+
+    .research-highlights-content a {
+      color: var(--ucsd-blue);
+      text-decoration: none;
+    }
+
+    .research-highlights-content a:hover {
+      text-decoration: underline;
+    }
+
+    .impact-intro {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 12px;
+      padding-left: 16px;
+      border-left: 2px solid var(--ucsd-yellow);
+    }
+
+    .impact-intro em {
+      color: var(--ucsd-blue);
+      font-style: normal;
+      font-weight: 500;
+    }
+    
     /* News Section */
     .news-container {
       background: var(--bg-card);
@@ -844,9 +913,34 @@
       <p style="color: var(--text-light);">
         Visit my <a href="https://zhenwang9102.github.io/page_pubs.html" style="color: var(--ucsd-blue); text-decoration: none; font-weight: 500;">Publications page</a> for the complete list of papers and research contributions.
       </p>
+      
+      <div class="research-highlights-content">
+        <h3>Algorithmic Innovation</h3>
+        <ul>
+          <li><strong>Reasoning and planning:</strong> <a href="https://arxiv.org/abs/2305.14992">RAP (EMNLP 2023)</a>, <a href="https://arxiv.org/abs/2404.05221">LLM Reasoners (COLM 2024)</a>, <a href="https://arxiv.org/abs/2210.01293">ThinkSum (ACL 2023)</a></li>
+          <li><strong>Discrete optimization:</strong> <a href="https://arxiv.org/abs/2310.16427">PromptAgent (ICLR 2024)</a>, <a href="https://arxiv.org/abs/2411.08733">DRPO (EMNLP 2024)</a></li>
+          <li><strong>Efficient ML:</strong> <a href="https://arxiv.org/abs/2303.02861">Multitask Prompt Tuning (ICLR 2023)</a>, <a href="https://arxiv.org/abs/2406.12034">Self-MoE (ICLR 2025)</a></li>
+          <li><strong>Tool learning:</strong> <a href="https://arxiv.org/abs/2305.11554">ToolkenGPT (NeurIPS 2023 Oral)</a></li>
+          <!-- <li><strong>Representation learning:</strong> <a href="https://arxiv.org/abs/2110.08294">Coherence Boosting (ACL 2022)</a>, <a href="https://dl.acm.org/doi/10.1145/3437963.3441744">ConPI (WSDM 2021)</a></li> -->
+          <li><strong>Knowledge extraction with weak supervisions:</strong> <a href="https://arxiv.org/abs/1906.09285">SurfCon (KDD 2019)</a>, <a href="https://arxiv.org/abs/2005.00889">X-MedRELA (ACL 2020)</a></li>
+        </ul>
+        <h3>Impact in Science</h3>
+        <ul>
+          <li><strong>AI for Biomedical science:</strong> <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354">Nature 2025</a>, <a href="https://zhenwang9102.github.io/">scPilot (NeurIPS 2025)</a>, <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">MutationProjector (the first cancer genomics foundation model for tumor mutation profiles)</a>, <a href="https://academic.oup.com/bioinformatics/article/36/4/1241/5581350">BioNEV (Bioinformatics 2019) </a></li>
+          <li><strong>AI for Material science:</strong> <a href="https://uc-leap.github.io/LEAP">UC-LEAP</a></li>
+          <li><strong>AI for Social science:</strong> <a href="https://zhenwang9102.github.io/">Computational social simulation(DeepPersona, NeurIPS 2025)</a>, <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">TacoBot (Alexa Prize 2021)</a></li>
+        </ul>
+
+        <h3>Open-Source Infrastructure</h3>
+        <ul>
+          <li><strong>Reasoning library:</strong> <a href="https://github.com/maitrix-org/llm-reasoners">LLM Reasoners</a> (2.3k+ GitHub stars)</li>, <a href="https://github.com/maitrix-org/PromptAgent">PromptAgent</a> (300+ GitHub stars)
+          <li><strong>Model evaluation:</strong> <a href="https://arxiv.org/abs/2505.12808">Decentralized Arena</a></li>
+          <li><strong>Pre-training data:</strong> <a href="https://huggingface.co/datasets/LLM360/TxT360">TxT360</a>--globally deduplicated corpus across 99 CommonCrawl snapshots</li>
+        </ul>
+      </div>
+            
     </section>
   </main>
-
 
   <footer class="footer">
     <div class="container">
