@@ -257,6 +257,30 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
+    .research-overview-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .research-figure {
+      width: 100%;
+    }
+
+    .research-figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .research-text {
+      flex: 1;
+    }
+
+    .research-text p {
+      line-height: 1.75;
+    }
+
     .research-overview p {
       margin-bottom: 12px;
       line-height: 1.7;
@@ -642,9 +666,16 @@
       </h2>
       
       <div class="research-overview">
-        <p>
-          My research sits at the emerging intersection of <span class="highlight-tag highlight-blue">advanced AI reasoning</span> and <span class="highlight-tag highlight-gold">accelerated discovery</span> across science and society. This space extends traditional data-driven discovery, calling for AI systems that <strong>actively explore hypotheses</strong>, <strong>simulate possibilities</strong>, and <strong>generate new, verifiable knowledge</strong> across disciplines.
-        </p>
+        <div class="research-overview-content">
+          <div class="research-figure">
+            <img src="images/simple_career_overview.jpg" alt="Research Overview: Scientist AI that Reason to Discover - Accelerating the Lifecycle of Scientific Discovery">
+          </div>
+          <div class="research-text">
+            <p>
+              My research sits at the emerging intersection of <span class="highlight-tag highlight-blue">advanced AI reasoning</span> and <span class="highlight-tag highlight-gold">accelerated discovery</span> across science and society. This space extends traditional data-driven discovery, calling for AI systems that <strong>actively explore hypotheses</strong>, <strong>simulate possibilities</strong>, and <strong>generate new, verifiable knowledge</strong> across disciplines.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
