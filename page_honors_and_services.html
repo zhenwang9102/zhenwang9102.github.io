@@ -2,221 +2,642 @@
 <html lang="en">
 
 <head>
-  <title>Zhen Wang</title>
-
+  <title>Honors & Services | Zhen Wang</title>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="author" content="{{ site.name }}" />
+  <meta name="author" content="Zhen Wang" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="/style.css">
-<!--   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> -->
-<!--   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  <style>
+    :root {
+      --ucsd-navy: #182B49;
+      --ucsd-blue: #00629B;
+      --ucsd-yellow: #FFCD00;
+      --ucsd-gold: #C69214;
+      --ucsd-sand: #F5F0E6;
+      --primary: var(--ucsd-navy);
+      --accent: var(--ucsd-gold);
+      --accent-bright: var(--ucsd-yellow);
+      --secondary: var(--ucsd-blue);
+      --text: #2d3748;
+      --text-light: #4a5568;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --highlight-blue: #e6f3fa;
+      --highlight-gold: #fff9e6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* Subtle grain texture */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    .nav {
+      background: var(--ucsd-navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--ucsd-yellow);
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 48px 0 32px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 28px;
+      background: var(--ucsd-yellow);
+      border-radius: 2px;
+    }
+
+    /* Honors List */
+    .honors-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .honors-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .honors-list li:last-child {
+      border-bottom: none;
+    }
+
+    .honors-list .honor-content {
+      flex: 1;
+    }
+
+    .honors-list strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .honors-list .honor-year {
+      color: var(--ucsd-blue);
+      font-weight: 600;
+      font-size: 15px;
+      flex-shrink: 0;
+      min-width: 50px;
+      text-align: right;
+    }
+
+    .honor-note {
+      display: block;
+      font-size: 15px;
+      color: var(--text-light);
+      font-weight: 400;
+      margin-top: 4px;
+      font-style: italic;
+      padding-left: 16px;
+      border-left: 2px solid var(--ucsd-yellow);
+    }
+
+    .honor-highlight {
+      color: #dc2626;
+      font-weight: 600;
+    }
+
+    .honors-list a {
+      color: var(--ucsd-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .honors-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Services Section */
+    .services-category {
+      margin-bottom: 32px;
+    }
+
+    .services-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .services-category-title {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--ucsd-yellow);
+      display: inline-block;
+    }
+
+    .services-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .services-list li {
+      padding: 10px 0;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.6;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-list li:last-child {
+      border-bottom: none;
+    }
+
+    .services-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 8px;
+      height: 8px;
+      background: var(--ucsd-yellow);
+      border-radius: 50%;
+    }
+
+    .services-list strong {
+      color: var(--primary);
+    }
+
+    .services-list a {
+      color: var(--ucsd-blue);
+      text-decoration: none;
+    }
+
+    .services-list a:hover {
+      text-decoration: underline;
+    }
+
+    .service-role {
+      display: inline-block;
+      background: var(--highlight-blue);
+      color: var(--ucsd-blue);
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+
+    .service-years {
+      color: var(--text-light);
+      font-size: 15px;
+    }
+
+    .workshop-details {
+      margin-top: 8px;
+      padding-left: 16px;
+      border-left: 2px solid var(--border);
+    }
+
+    .workshop-people {
+      display: block;
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .workshop-people em {
+      color: var(--ucsd-blue);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    /* Compact list for PC members */
+    .services-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 8px;
+    }
+
+    .services-compact .service-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .services-compact .service-item:hover {
+      border-color: var(--ucsd-blue);
+      background: var(--highlight-blue);
+    }
+
+    .services-compact .service-item strong {
+      color: var(--primary);
+    }
+
+    .services-compact .service-item span {
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+
+    .visitor-map {
+      margin-bottom: 16px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .visitor-map:hover {
+      opacity: 1;
+    }
+
+    .footer-credit {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .honors-list li {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .honors-list .honor-year {
+        text-align: left;
+      }
+
+      .services-compact {
+        gap: 6px;
+      }
+
+      .services-compact .service-item {
+        padding: 4px 10px;
+        font-size: 13px;
+      }
+    }
+
+    /* Animation on load */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page-header {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .section {
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+  </style>
 </head>
 
-  
-<style>
-.listbox{
-    position: static;
-    overflow-y: scroll;
-    height: 200px;
-    color: black;
-    background-color: #EAF4F7;
-/*     border: 2px solid black; */
-/*     padding: 20px 50px 0px 30px; */
-/*     font-size: 15px; */
-    }
-</style>
-
-<style>
-  .navA{
-    display: inline-block;
-    margin-right: 13px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-    padding: 5px ;
-    border: #000 1px solid;
-  }
-  .navA:hover{
-    color: #fff;
-    background-color: #000;
-  }
-</style>
-
-  
-
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        
-
-        <div class="navbar" style="padding-left: 18px;">
-          <a href="/index.html" class="navA">About</a>
-          <a href="/page_research.html" class="navA">Research Overview</a>
-          <a href="/page_pubs.html" class="navA">Publications</a>
-          <a href="/page_posts.html" class="navA">Blogs</a>
-          <a href="/page_honors_and_services.html" class="navA">Honors and Services</a>
-        </div>
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Honors and Awards</h2>
-              <ul>
-                <li>
-                  <a style="color:red"><b>Gordon and Betty Moore Foundation Fellowship</b></a>, 2025
-                </li>
-                <li>
-                  <a style="color:red"><b>OpenAI Research Grant Award</b></a> (11 teams worldwide), 2024
-                </li>
-                <li>
-                  Top Reviewer Award, NeurIPS, 2023
-                </li>
-                <li>
-                  NeurIPS Oral (Top 2%), 2023
-                </li>
-                <li>
-                  <a style="color:red"><b>Best Paper Award</b></a>, SoCal NLP, 2023
-                </li>
-                <li>
-                  Third-Place Honor, Inaugural Alexa Prize TaskBot Challenge, 2022
-                </li>
-                <li>
-                  Graduate Research Award (Mike Liu Scholarship), CSE, OSU, 2022
-                </li>
-                <li>
-                  Graduate Student Research Poster Award (Top 5), CSE, OSU, 2021
-                </li>
-                <li>
-                  SIGIR Student Travel Grant, 2021
-                </li>
-                <li>
-                  <a href="https://datascience.uchicago.edu/research/postdoctoral-programs/rising-stars/2021/" style="color:red"><b>Rising Stars in Data Science</b></a>, Center for Data and Computing (CDAC), University of Chicago, 2021
-                </li>
-                <li>
-                  SIGKDD Student Travel Award, 2019
-                </li>
-                <li>
-                  Excellent Bachelor Degree Thesis Award in Shandong Province, China, 2016
-                </li>
-                <li>
-                  Excellent Graduate Thesis Award of UPC, China, 2015
-                </li>
-                <li>
-                  <b>China Scholarship Council (CSC) Scholarship</b>, Ministry of Education, China, 2015<br>
-                  <i style="margin-left: 20px;">Visiting Student Program at <a href="https://www.polytech-reseau.org/en/polytech-nice-sophia/">Polytech Nice Sophia</a>, Nice, France</i>
-                </li>
-                <li>
-                  <b>National Scholarship</b> (Top 0.2%), Ministry of Education, China, 2014
-                </li>
-                <li>
-                  Soong Ching Ling Foundation (SCLF) Scholarship, China, 2013                  
-                </li>
-                <li>
-                  National Scholarship for Encouragement, China, 2012
-                </li>
-              </ul>
-            </td>
-          </tr>
-        </table>
-        
-         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Services</h2>
-              <ul>
-                <b>Organization:</b>
-                <ul>
-                  <li>
-                    <b>Organizer (primary contact)</b>, <a href="https://neurips.cc/virtual/2025/workshop/109552">LAW 2025: Bridging Language, Agent, and World Models for Reasoning and Planning</a> @ NeurIPS 2025
-                  </li>
-                  <li>
-                    <b>Organizer (primary contact)</b>, Biologia Ex Machina 2026: Toward Trusted AI Collaborators for Biological Discovery (submitted workshop proposal)
-                  </li>
-                  <li>
-                    <b>Co-organizer</b>, AI/LLM Agents for Social Simulation: Challenges and Opportunities (submitted workshop proposal)
-                  </li>
-                </ul>
-                <b>Area Chair/Senior PC Member:</b>
-                <ul>
-                  <li>
-                    NLPCC 2023
-                  </li>
-                </ul>
-                <b>Program Committee Member:</b>
-                <ul>
-                  <li>
-                    ICML (2023, 2024, 2025)
-                  </li>
-                  <li>
-                    NeurIPS (2023, 2024, 2025)
-                  </li>
-                  <li>
-                    ICLR (2024, 2025, 2026)
-                  </li>
-                  <li>
-                    ACL ARR (Oct'21, Nov'21, Jan'22, Apr'22, Sep'22, Oct'22, Dec'22, Feb'23, Oct'23, Dec'23, Feb'24, Apr'24, June'24, Aug'24, May'25, July'25)
-                  </li>
-                  <li>
-                    EMNLP (2021, 2022, 2023, 2024, 2025)
-                  </li>
-                  <li>
-                    NAACL (2021, 2022, 2024, <b><a href="https://suki-workshop.github.io/">SUKI 2022</a></b> Workshop)
-                  </li>
-                  <li>
-                    ACL (2018, 2021, 2023, 2024)
-                  </li>
-                  <li>
-                    COLM (2024, 2025)
-                  </li>
-                  <li>
-                    KDD (2019, 2020, 2023, 2024)
-                  </li>
-                  <li>
-                    AAAI (2023, 2024)
-                  </li>
-                  <li>
-                    NLPCC (2020, 2021, 2022, 2024)
-                  </li>
-                  <li>
-                    Neural Networks
-                  </li>
-                  <li>
-                    Communications of the Association for Computing Machinery (ACM)
-                  </li>
-                </ul>
-                <b>External Reviewer:</b>
-                <ul>
-                  <li>
-                    KDD (2019, 2020), ACL 2018, ICDM 2018
-                  </li>
-                </ul>
-              </ul>
-            </td>
-          </tr>
-        </table>
-
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <p style="text-align:center;">
-                <a href="https://clustrmaps.com/site/1c85z"  title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=AojHR5VzlkZb8Vfdusw4vyYOlbAsmlNO4qij3_4Bkh0&cl=ffffff" /></a>
-              </p>
-            </td>
-          </tr>
-        </table>
-        
-      </td>
-    </tr>
-  </table>
+  <!-- UCSD Gold accent bar -->
+  <div style="height: 4px; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold));"></div>
   
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/index.html">About</a>
+      <a href="/page_research.html">Research</a>
+      <a href="/page_pubs.html">Publications</a>
+      <a href="/page_posts.html">Blog</a>
+      <a href="/page_honors_and_services.html" class="active">Honors & Service</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Honors & Services</h1>
+      <p>Recognition and contributions to the academic community</p>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Honors & Awards</h2>
+      
+      <ul class="honors-list">
+        <li>
+          <div class="honor-content">
+            <strong class="honor-highlight">Gordon and Betty Moore Foundation Fellowship</strong>
+          </div>
+          <span class="honor-year">2025</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong class="honor-highlight">Cancer Grand Challenges Shortlist</strong>
+            <span class="honor-note">Team Biologia Ex Machina — Cancer Research UK & NCI; final decision March 2026</span>
+          </div>
+          <span class="honor-year">2025</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong class="honor-highlight">OpenAI Research Grant Award</strong>
+            <span class="honor-note">One of 11 teams selected worldwide</span>
+          </div>
+          <span class="honor-year">2024</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Top Reviewer Award</strong>, NeurIPS
+          </div>
+          <span class="honor-year">2023</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>NeurIPS Oral Presentation</strong>
+            <span class="honor-note">Top 2% of submissions</span>
+          </div>
+          <span class="honor-year">2023</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong class="honor-highlight">Best Paper Award</strong>, SoCal NLP Symposium
+          </div>
+          <span class="honor-year">2023</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Third-Place Honor</strong>, Inaugural Alexa Prize TaskBot Challenge
+          </div>
+          <span class="honor-year">2022</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Graduate Research Award</strong> (Mike Liu Scholarship), CSE, OSU
+          </div>
+          <span class="honor-year">2022</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <a href="https://datascience.uchicago.edu/research/postdoctoral-programs/rising-stars/2021/"><strong class="honor-highlight">Rising Stars in Data Science</strong></a>, University of Chicago CDAC
+          </div>
+          <span class="honor-year">2021</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Graduate Student Research Poster Award</strong> (Top 5), CSE, OSU
+          </div>
+          <span class="honor-year">2021</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>SIGIR Student Travel Grant</strong>
+          </div>
+          <span class="honor-year">2021</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>SIGKDD Student Travel Award</strong>
+          </div>
+          <span class="honor-year">2019</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Excellent Bachelor Degree Thesis Award</strong>, Shandong Province, China
+          </div>
+          <span class="honor-year">2016</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Excellent Graduate Thesis Award</strong>, UPC, China
+          </div>
+          <span class="honor-year">2015</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>China Scholarship Council (CSC) Scholarship</strong>, Ministry of Education, China
+            <span class="honor-note">Visiting Student Program at <a href="https://www.polytech-reseau.org/en/polytech-nice-sophia/">Polytech Nice Sophia</a>, Nice, France</span>
+          </div>
+          <span class="honor-year">2015</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>National Scholarship</strong>, Ministry of Education, China
+            <span class="honor-note">Top 0.2% nationwide</span>
+          </div>
+          <span class="honor-year">2014</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>Soong Ching Ling Foundation (SCLF) Scholarship</strong>, China
+          </div>
+          <span class="honor-year">2013</span>
+        </li>
+        <li>
+          <div class="honor-content">
+            <strong>National Scholarship for Encouragement</strong>, China
+          </div>
+          <span class="honor-year">2012</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Academic Services</h2>
+
+      <div class="services-category">
+        <h3 class="services-category-title">Workshop Organization</h3>
+        <ul class="services-list">
+          <li>
+            <span class="service-role">Primary Organizer</span>
+            <a href="https://neurips.cc/virtual/2025/workshop/109552"><strong>LAW 2025: Bridging Language, Agent, and World Models for Reasoning and Planning</strong></a> @ NeurIPS 2025
+            <div class="workshop-details">
+              <span class="workshop-people"><em>Co-organizers:</em> Alane Suhr, Jacob Andreas, Jianwen Xie, Kelsey Allen, Tianmin Shu, Zhiting Hu, Ziqiao Ma, Jessy Lin, Melanie Sclar</span>
+              <span class="workshop-people"><em>Speakers:</em> Eric Xing, François Chollet, Chelsea Finn, Sherry Yang, Danijar Hafner, Ying Nian Wu</span>
+            </div>
+          </li>
+          <li>
+            <span class="service-role">Primary Organizer</span>
+            <strong>Biologia Ex Machina 2026: Toward Trusted AI Collaborators for Biological Discovery</strong>
+            <span class="service-years">(submitted workshop proposal)</span>
+            <div class="workshop-details">
+              <span class="workshop-people"><em>Co-organizers:</em> Marinka Zitnik, Rose Yu, Trey Ideker, Qingyun Wang</span>
+            </div>
+          </li>
+          <li>
+            <span class="service-role">Co-organizer</span>
+            <strong>AI/LLM Agents for Social Simulation: Challenges and Opportunities</strong>
+            <span class="service-years">(submitted workshop proposal)</span>
+            <div class="workshop-details">
+              <span class="workshop-people"><em>Co-organizers:</em> Xuan Wang, Dawei Zhou, Lifu Huang, Naren Ramakrishnan, Chris North, Le Wang, Yun Huang</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="services-category">
+        <h3 class="services-category-title">Area Chair / Senior PC Member</h3>
+        <div class="services-compact">
+          <div class="service-item"><strong>NLPCC</strong> <span>2023</span></div>
+        </div>
+      </div>
+
+      <div class="services-category">
+        <h3 class="services-category-title">Program Committee Member</h3>
+        <div class="services-compact">
+          <div class="service-item"><strong>ICML</strong> <span>2023–25</span></div>
+          <div class="service-item"><strong>NeurIPS</strong> <span>2023–25</span></div>
+          <div class="service-item"><strong>ICLR</strong> <span>2024–26</span></div>
+          <div class="service-item"><strong>COLM</strong> <span>2024–25</span></div>
+          <div class="service-item"><strong>ACL</strong> <span>2018, 21, 23–24</span></div>
+          <div class="service-item"><strong>EMNLP</strong> <span>2021–25</span></div>
+          <div class="service-item"><strong>NAACL</strong> <span>2021–22, 24</span></div>
+          <div class="service-item"><strong>NAACL SUKI Workshop</strong> <span>2022</span></div>
+          <div class="service-item"><strong>ACL ARR</strong> <span>2021–25</span></div>
+          <div class="service-item"><strong>KDD</strong> <span>2019–20, 23–24</span></div>
+          <div class="service-item"><strong>AAAI</strong> <span>2023–24</span></div>
+          <div class="service-item"><strong>NLPCC</strong> <span>2020–22, 24</span></div>
+          <div class="service-item"><strong>Neural Networks</strong></div>
+          <div class="service-item"><strong>Communications of the ACM</strong></div>
+        </div>
+      </div>
+
+      <div class="services-category">
+        <h3 class="services-category-title">External Reviewer</h3>
+        <div class="services-compact">
+          <div class="service-item"><strong>KDD</strong> <span>2019–20</span></div>
+          <div class="service-item"><strong>ACL</strong> <span>2018</span></div>
+          <div class="service-item"><strong>ICDM</strong> <span>2018</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="visitor-map">
+        <a href="https://clustrmaps.com/site/1c85z" title="ClustrMaps">
+          <img src="//www.clustrmaps.com/map_v2.png?d=AojHR5VzlkZb8Vfdusw4vyYOlbAsmlNO4qij3_4Bkh0&cl=ffffff" alt="Visitor Map" />
+        </a>
+      </div>
+    </div>
+  </footer>
   
 </body>
-  
 
 </html>
