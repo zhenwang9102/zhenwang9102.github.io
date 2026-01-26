@@ -185,11 +185,11 @@
 
     .header-bio {
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .header-bio p {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .header-bio p:last-child {
@@ -198,6 +198,10 @@
 
     .header-bio strong {
       color: var(--primary);
+    }
+
+    .header-bio em {
+      font-style: italic;
     }
 
     .header-bio a {
@@ -252,7 +256,7 @@
     .research-overview {
       background: var(--bg-card);
       border-radius: 10px;
-      padding: 20px 24px;
+      padding: 24px 28px;
       border: 1px solid var(--border);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
@@ -279,15 +283,29 @@
 
     .research-text p {
       line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .research-text p:last-child {
+      margin-bottom: 0;
     }
 
     .research-overview p {
-      margin-bottom: 12px;
-      line-height: 1.7;
+      margin-bottom: 14px;
+      line-height: 1.75;
     }
 
     .research-overview p:last-child {
       margin-bottom: 0;
+    }
+
+    .research-overview a {
+      color: var(--ucsd-blue);
+      text-decoration: none;
+    }
+
+    .research-overview a:hover {
+      text-decoration: underline;
     }
 
     .highlight-tag {
@@ -306,6 +324,33 @@
     .highlight-gold {
       background: var(--highlight-gold);
       color: var(--ucsd-gold);
+    }
+
+    /* Dual vision styling */
+    .dual-vision {
+      margin: 16px 0;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, rgba(230, 243, 250, 0.5) 0%, rgba(255, 249, 230, 0.5) 100%);
+      border-radius: 8px;
+      border-left: 3px solid var(--ucsd-gold);
+    }
+
+    .dual-vision h4 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ucsd-navy);
+      margin-bottom: 8px;
+    }
+
+    .dual-vision p {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .dual-vision p:last-child {
+      margin-bottom: 0;
     }
 
     /* Honors List */
@@ -639,22 +684,19 @@
 
       <div class="header-bio">
         <p>
-          <!-- Hi! I'm Zhen, currently a postdoctoral researcher in the Halıcıoğlu Data Science Institute (HDSI) at UC San Diego and a Gordon and Betty Moore Foundation Postdoctoral Fellow. I also have a collaborative affiliation and co-advising relationship involving the Machine Learning department at CMU and MBZUAI. -->
-                    <!-- currently a postdoctoral researcher in the Halıcıoğlu Data Science Institute (HDSI) at UC San Diego, hosted by Zhiting Hu and Eric Xing (CMU&MBZUAI). I'm also a Gordon and Betty Moore Foundation Postdoctoral Fellow. -->
-          Hi! I'm Zhen, currently a Gordon and Betty Moore Foundation Postdoctoral Fellow hosted at UC San Diego. My postdoc mentors are Profs. Eric Xing (CMU&MBZUAI) and Zhiting Hu (HDSI&CSE, UCSD). 
-          <!-- The postdoc fellow position is hosted in the Halıcıoğlu Data Science Institute (HDSI) at UC San Diego. -->
+          Hi! I'm Zhen, currently a <strong>Gordon and Betty Moore Foundation Postdoctoral Fellow</strong> hosted at UC San Diego. My postdoc mentors are Profs. <a href="https://mbzuai.ac.ae/study/faculty/professor-eric-xing/">Eric Xing</a> (CMU & MBZUAI) and <a href="https://zhiting.ucsd.edu/">Zhiting Hu</a> (HDSI & CSE, UCSD).
         </p>
         
         <p>
-          I am interested in building the foundations of <strong>Scientist AI</strong>&ndash;AI systems that learn and <strong>reason to discover</strong> at the scientist-level efficiency and extrapolation, reliability, and collaborate with humans across interdisciplinary and science domains.
-          <!-- (e.g., healthcare, biomedicine, cancer genomics, cell biology, topological materials). -->
+          I am interested in building the foundations of <strong>Scientist AI</strong>—AI systems that learn and reason to discover at scientist-level efficiency and extrapolation, with reliability, and that collaborate with humans across interdisciplinary and scientific domains.
         </p>
+
         <p>
-          To this end, my research seeks to answer fundamental questions like <em>How do models represent knowledge for discovery? How do they reason and plan to extrapolate? How do they reliably collaborate and co-discover with humans?</em> My philosophy centers on bringing new perspectives to shift existing paradigms or unifying seemingly different paradigms&ndash;exemplified by <strong>LLM Reasoners</strong> (reasoning as planning), <strong>PromptAgent</strong> (prompting as search), <strong>ToolkenGPT</strong> (tools as tokens), or NeurIPS 2025's <strong>LAW 2025</strong> workshop (Bridging Language, Agent, and World Models).
+          To this end, my research seeks to answer fundamental questions: <em>How do models represent knowledge for discovery? How do they reason and plan to extrapolate? How do they reliably collaborate and co-discover with humans?</em> My philosophy centers on bringing new perspectives to shift existing paradigms or unifying seemingly different ones—exemplified by <a href="https://arxiv.org/abs/2404.05221">LLM Reasoners</a> (reasoning as planning), <a href="https://arxiv.org/abs/2310.16427">PromptAgent</a> (prompting as search), <a href="https://arxiv.org/abs/2305.11554">ToolkenGPT</a> (tools as tokens), and the <a href="https://sites.google.com/view/law-2025">LAW 2025</a> workshop at NeurIPS (bridging language, agent, and world models).
         </p>
         
         <p>
-          I earned my PhD in the Computer Science department at The Ohio State University, advised by Prof. Huan Sun, where I developed foundational frameworks for knowledge-centric AI systems. My work has been supported by and recognized with the <strong>Gordon and Betty Moore Foundation Fellowship</strong>, <strong>OpenAI Research Grant</strong>, <strong>Rising Star in Data Science (UChicago)</strong>, <strong>Best Paper Award at SoCal NLP</strong>, <strong>Amazon Alexa Prize</strong>, etc. I collaborate with <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Lab</a>, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">Microsoft Research</a>, <a href="https://www.nec-labs.com/">NEC Labs</a>, and academic institutions including CMU, MBZUAI, and multiple UC campuses & national labs through <a href="https://uc-leap.github.io/LEAP/people/">the UC-LEAP project</a>.
+          I earned my PhD from the Computer Science department at The Ohio State University, advised by Prof. <a href="http://web.cse.ohio-state.edu/~sun.397/">Huan Sun</a>, where I developed foundational frameworks for knowledge-centric AI systems. My work has been supported by and recognized with the <strong>Gordon and Betty Moore Foundation Fellowship</strong>, <strong>OpenAI Research Grant</strong>, <strong>Rising Star in Data Science</strong> (UChicago), <strong>Best Paper Award at SoCal NLP</strong>, <strong>Amazon Alexa Prize</strong>, and more. I collaborate with <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Lab</a>, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">Microsoft Research</a>, <a href="https://www.nec-labs.com/">NEC Labs</a>, and academic institutions including CMU, MBZUAI, and multiple UC campuses and national labs through <a href="https://uc-leap.github.io/LEAP/people/">the UC-LEAP project</a>.
         </p>
       </div>
     </header>
@@ -672,7 +714,26 @@
           </div>
           <div class="research-text">
             <p>
-              <strong>Scientist AI</strong> sits at the emerging intersection of <span class="highlight-tag highlight-blue">advanced AI reasoning</span> and <span class="highlight-tag highlight-gold">accelerated discovery</span> across science and society. This space extends traditional data-driven discovery, calling for better AI systems (more scientist-like) that <strong>actively explore hypotheses</strong>, <strong>simulate possibilities</strong>, and <strong>generate new, verifiable knowledge</strong> across disciplines.
+              <strong>Scientist AI</strong> sits at the emerging intersection of <span class="highlight-tag highlight-blue">advanced AI reasoning</span> and <span class="highlight-tag highlight-gold">accelerated discovery</span> across science and society. This agenda captures a dual vision that drives my research:
+            </p>
+
+            <div class="dual-vision">
+              <h4>Scientist-like AI</h4>
+              <p>
+                The first dimension develops AI systems that embody the cognitive qualities that make human scientists effective: acquiring structured knowledge, learning efficiently from sparse and noisy evidence, reasoning rigorously under uncertainty, maintaining curiosity that drives exploration, and, crucially, extrapolating beyond training distributions to generate genuinely new, verifiable knowledge.
+              </p>
+              <h4>Scientist-centered AI</h4>
+              <p>
+                The second dimension builds AI as trustworthy collaborators that augment human researchers throughout the discovery loop-from hypothesis generation through experimental design to knowledge synthesis-and more broadly, in daily intellectual work.
+              </p>
+            </div>
+
+            <p>
+              These two dimensions reinforce each other. Understanding what makes human scientific reasoning effective reveals what's missing in current AI systems; building tools that scientists actually trust exposes where our theories of machine reasoning fall short.
+            </p>
+
+            <p>
+              This space extends traditional data-driven discovery, calling for human-centered AI systems that can <strong>actively explore hypotheses</strong>, <strong>simulate possibilities</strong>, and <strong>generate new, verifiable knowledge</strong> across disciplines.
             </p>
           </div>
         </div>
@@ -691,7 +752,6 @@
           <span>
             <strong>OpenAI Research Grant Award</strong>
             <span class="honor-note">One of 11 teams selected worldwide</span>
-            <!-- <span class="honor-note"><a href="https://x.com/OpenAI/status/1757525054097948687">One of 11 teams selected worldwide</a></span> -->
           </span>
           <span class="honor-year">2024</span>
         </li>
@@ -957,7 +1017,6 @@
           <li><strong>Discrete optimization:</strong> <a href="https://arxiv.org/abs/2310.16427">PromptAgent (ICLR 2024)</a>, <a href="https://arxiv.org/abs/2411.08733">DRPO (EMNLP 2024)</a></li>
           <li><strong>Efficient ML:</strong> <a href="https://arxiv.org/abs/2303.02861">Multitask Prompt Tuning (ICLR 2023)</a>, <a href="https://arxiv.org/abs/2406.12034">Self-MoE (ICLR 2025)</a></li>
           <li><strong>Tool learning:</strong> <a href="https://arxiv.org/abs/2305.11554">ToolkenGPT (NeurIPS 2023 Oral)</a></li>
-          <!-- <li><strong>Representation learning:</strong> <a href="https://arxiv.org/abs/2110.08294">Coherence Boosting (ACL 2022)</a>, <a href="https://dl.acm.org/doi/10.1145/3437963.3441744">ConPI (WSDM 2021)</a></li> -->
           <li><strong>Knowledge extraction with weak supervisions:</strong> <a href="https://arxiv.org/abs/1906.09285">SurfCon (KDD 2019)</a>, <a href="https://arxiv.org/abs/2005.00889">X-MedRELA (ACL 2020)</a></li>
         </ul>
         <h3>Impact in Science</h3>
