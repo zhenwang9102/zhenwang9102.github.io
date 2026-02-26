@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -16,11 +16,7 @@
       --ucsd-blue: #00629B;
       --ucsd-yellow: #FFCD00;
       --ucsd-gold: #C69214;
-      --ucsd-sand: #F5F0E6;
       --primary: var(--ucsd-navy);
-      --accent: var(--ucsd-gold);
-      --accent-bright: var(--ucsd-yellow);
-      --secondary: var(--ucsd-blue);
       --text: #2d3748;
       --text-light: #4a5568;
       --bg: #fafafa;
@@ -28,42 +24,21 @@
       --border: #e2e8f0;
       --highlight-blue: #e6f3fa;
       --highlight-gold: #fff9e6;
-      
-      /* Pillar colors */
+
       --pillar-reasoning: #6C7AE0;
       --pillar-science: #56B58C;
       --pillar-society: #7C8FB1;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Source Sans 3', -apple-system, sans-serif;
+      font-family: 'Lato', -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      font-size: 17px;
-    }
-
-    /* Subtle grain texture */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      font-size: 15px;
     }
 
     .container {
@@ -83,20 +58,21 @@
     .nav-inner {
       display: flex;
       justify-content: center;
-      gap: 8px;
-      padding: 12px 0;
+      gap: 4px;
+      padding: 11px 0;
       flex-wrap: wrap;
     }
 
     .nav a {
-      font-size: 15px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.85);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.82);
       text-decoration: none;
-      padding: 8px 18px;
+      padding: 7px 16px;
       border-radius: 4px;
       transition: all 0.2s ease;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .nav a:hover,
@@ -107,17 +83,16 @@
 
     /* Page Header */
     .page-header {
-      padding: 40px 0 24px;
+      padding: 36px 0 22px;
       animation: fadeInUp 0.6s ease-out;
     }
 
     .page-header h1 {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 2.4rem;
-      font-weight: 600;
+      font-size: 1.85rem;
+      font-weight: 900;
       color: var(--primary);
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -125,201 +100,178 @@
 
     .page-header h1::before {
       content: '';
-      width: 5px;
-      height: 36px;
+      width: 4px;
+      height: 28px;
       background: linear-gradient(180deg, var(--ucsd-yellow), var(--ucsd-gold));
-      border-radius: 3px;
+      border-radius: 2px;
+      flex-shrink: 0;
     }
 
     .page-subtitle {
-      font-size: 1.15rem;
+      font-size: 11px;
       color: var(--ucsd-blue);
-      font-weight: 500;
-      margin-left: 17px;
-      font-family: 'Crimson Pro', serif;
+      font-weight: 700;
+      margin-left: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
-    /* Section Styling */
+    /* Sections */
     .section {
-      padding: 28px 0;
+      padding: 26px 0;
       border-top: 1px solid var(--border);
       animation: fadeInUp 0.6s ease-out backwards;
     }
 
-    .section:first-of-type {
-      border-top: none;
-    }
-
+    .section:first-of-type { border-top: none; }
     .section:nth-child(2) { animation-delay: 0.1s; }
     .section:nth-child(3) { animation-delay: 0.2s; }
-    .section:nth-child(4) { animation-delay: 0.3s; }
-    .section:nth-child(5) { animation-delay: 0.4s; }
 
     .section-title {
-      font-family: 'Crimson Pro', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 11.5px;
+      font-weight: 900;
       color: var(--primary);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .section-title::before {
       content: '';
       width: 4px;
-      height: 24px;
+      height: 16px;
       background: var(--ucsd-yellow);
       border-radius: 2px;
+      flex-shrink: 0;
     }
 
     /* Research Overview Card */
     .research-overview {
       background: var(--bg-card);
       border-radius: 10px;
-      padding: 24px 28px;
+      padding: 22px 26px;
       border: 1px solid var(--border);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
-    .research-intro {
-      margin-bottom: 20px;
-    }
+    .research-intro { margin-bottom: 20px; }
 
     .research-intro p {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       line-height: 1.75;
+      font-size: 15px;
     }
 
-    .research-intro p:last-child {
-      margin-bottom: 0;
-    }
+    .research-intro p:last-child { margin-bottom: 0; }
+
+    .research-intro a { color: var(--ucsd-blue); text-decoration: none; }
+    .research-intro a:hover { text-decoration: underline; }
 
     .highlight-tag {
       display: inline;
-      padding: 2px 8px;
+      padding: 2px 7px;
       border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.95em;
+      font-weight: 700;
+      font-size: 0.9em;
     }
 
-    .highlight-blue {
-      background: var(--highlight-blue);
-      color: var(--ucsd-blue);
-    }
-
-    .highlight-gold {
-      background: var(--highlight-gold);
-      color: var(--ucsd-gold);
-    }
-
-    .discovery-tag {
-      color: var(--ucsd-blue);
-      font-weight: 500;
-    }
+    .highlight-blue { background: var(--highlight-blue); color: var(--ucsd-blue); }
+    .highlight-gold { background: var(--highlight-gold); color: var(--ucsd-gold); }
+    .discovery-tag { color: var(--ucsd-blue); font-weight: 700; }
 
     /* Research Figure */
     .research-figure {
-      margin: 24px 0;
+      margin: 20px 0;
       text-align: center;
     }
 
     .research-figure img {
       width: 100%;
-      max-width: 100%;
       border-radius: 8px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     .research-figure figcaption {
-      margin-top: 10px;
-      font-size: 0.9rem;
+      margin-top: 8px;
+      font-size: 12.5px;
       color: var(--text-light);
       font-style: italic;
     }
 
-    /* Research Pillars */
+    /* Pillars */
     .pillars-intro {
-      margin-bottom: 16px;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
     .research-pillars {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
     }
 
     .pillar {
-      padding: 16px 20px;
+      padding: 14px 18px;
       border-radius: 8px;
       background: var(--bg);
       border-left: 4px solid;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
 
     .pillar:hover {
-      transform: translateX(4px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transform: translateX(3px);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
     }
 
-    .pillar-reasoning {
-      border-left-color: var(--pillar-reasoning);
-    }
-
-    .pillar-science {
-      border-left-color: var(--pillar-science);
-    }
-
-    .pillar-society {
-      border-left-color: var(--pillar-society);
-    }
+    .pillar-reasoning { border-left-color: var(--pillar-reasoning); }
+    .pillar-science   { border-left-color: var(--pillar-science); }
+    .pillar-society   { border-left-color: var(--pillar-society); }
 
     .pillar-title {
-      font-variant: small-caps;
-      letter-spacing: 0.04em;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       color: var(--primary);
-      font-weight: 700;
-      font-size: 1.05rem;
       margin-bottom: 6px;
     }
 
     .pillar-content {
-      font-size: 0.95rem;
+      font-size: 14px;
       line-height: 1.65;
       color: var(--text);
     }
 
-    .pillar-content a {
-      color: var(--ucsd-blue);
-      text-decoration: none;
-      font-weight: 500;
-    }
+    .pillar-content a { color: var(--ucsd-blue); text-decoration: none; font-weight: 700; }
+    .pillar-content a:hover { text-decoration: underline; }
+    .pillar-content em { font-style: italic; }
 
-    .pillar-content a:hover {
-      text-decoration: underline;
-    }
-
-    /* Keywords Section */
+    /* Keywords */
     .keywords-intro {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       color: var(--text-light);
+      font-size: 14px;
     }
 
     .keywords-grid {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     .keyword-category {
-      padding: 14px 18px;
+      padding: 12px 16px;
       background: var(--bg-card);
-      border-left: 4px solid;
-      border-radius: 0 6px 6px 0;
       border: 1px solid var(--border);
       border-left-width: 4px;
+      border-radius: 0 6px 6px 0;
     }
 
     .keyword-category:nth-child(1) { border-left-color: var(--pillar-reasoning); }
@@ -330,92 +282,47 @@
     .keyword-category:nth-child(6) { border-left-color: #868e96; }
 
     .keyword-category-title {
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 12.5px;
       color: var(--primary);
-      font-size: 0.95rem;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      letter-spacing: 0.02em;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
     .keyword-category-title::before {
       content: '•';
-      color: inherit;
     }
 
     .keyword-list {
-      font-size: 0.9rem;
+      font-size: 13.5px;
       color: var(--text-light);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* Footer */
-    .footer {
-      padding: 28px 0;
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
+    .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); }
+    .visitor-map { margin-bottom: 16px; opacity: 0.8; transition: opacity 0.2s; }
+    .visitor-map:hover { opacity: 1; }
 
-    .visitor-map {
-      margin-bottom: 16px;
-      opacity: 0.8;
-      transition: opacity 0.2s;
-    }
-
-    .visitor-map:hover {
-      opacity: 1;
-    }
-
-    .footer-credit {
-      font-size: 13px;
-      color: var(--text-light);
-    }
-
-    /* Animation */
+    /* Animations */
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .page-header h1 {
-        font-size: 1.9rem;
-      }
-
-      .page-header h1::before {
-        height: 28px;
-      }
-
-      .research-overview {
-        padding: 18px 20px;
-      }
-
-      .pillar {
-        padding: 14px 16px;
-      }
-
-      .nav-inner {
-        gap: 4px;
-      }
-
-      .nav a {
-        padding: 6px 12px;
-        font-size: 14px;
-      }
+      .page-header h1 { font-size: 1.55rem; }
+      .research-overview { padding: 16px 18px; }
+      .pillar { padding: 12px 14px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- UCSD Gold accent bar -->
   <div style="height: 4px; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold));"></div>
   
   <nav class="nav">
