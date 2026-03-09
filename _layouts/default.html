@@ -22,6 +22,8 @@
       --bg: #fafafa;
       --bg-card: #ffffff;
       --border: #e2e8f0;
+      --link: #1772d0;
+      --link-hover: #1d52b8;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,13 +37,25 @@
       font-size: 15px;
     }
 
+    /* ── Global link style (Stanford academic style) ── */
+    a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 400;
+    }
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
     .container {
       max-width: 920px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* Navigation */
+    /* Navigation — keep white + bold for contrast on dark bg */
     .nav {
       background: var(--ucsd-navy);
       position: sticky;
@@ -72,6 +86,7 @@
     .nav a:hover {
       background: rgba(255, 255, 255, 0.1);
       color: var(--ucsd-yellow);
+      text-decoration: none;
     }
 
     /* Header */
@@ -129,10 +144,11 @@
       margin-bottom: 10px;
     }
 
+    /* Contact links — keep slightly bolder since they're icon-like nav items */
     .contact-links a {
       color: var(--text);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 13px;
       display: flex;
       align-items: center;
@@ -140,7 +156,10 @@
       transition: color 0.2s;
     }
 
-    .contact-links a:hover { color: var(--ucsd-blue); }
+    .contact-links a:hover {
+      color: var(--link);
+      text-decoration: none;
+    }
 
     .contact-links a::before {
       content: '';
@@ -154,8 +173,7 @@
     .header-bio p { margin-bottom: 11px; }
     .header-bio p:last-child { margin-bottom: 0; }
     .header-bio strong { color: var(--primary); font-weight: 700; }
-    .header-bio a { color: var(--ucsd-blue); text-decoration: none; }
-    .header-bio a:hover { color: var(--ucsd-navy); text-decoration: underline; }
+    /* header-bio links inherit global style */
 
     /* Sections */
     .section { padding: 26px 0; border-top: 1px solid var(--border); }
@@ -181,16 +199,19 @@
       flex-shrink: 0;
     }
 
+    /* "View Details →" link in section title */
     .section-title a {
       font-size: 0.85em;
-      font-weight: 700;
-      color: var(--ucsd-blue);
+      font-weight: 600;
+      color: var(--link);
       text-decoration: none;
       margin-left: auto;
       letter-spacing: 0.06em;
     }
-
-    .section-title a:hover { text-decoration: underline; }
+    .section-title a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
 
     /* Research Overview */
     .section > p {
@@ -224,8 +245,7 @@
     }
 
     .section > ul li strong { color: var(--primary); font-weight: 700; }
-    .section > ul li a { color: var(--ucsd-blue); text-decoration: none; }
-    .section > ul li a:hover { text-decoration: underline; }
+    /* list links inherit global style */
 
     /* Honors */
     .honors-list { list-style: none; padding: 0; margin: 0; }
@@ -298,8 +318,7 @@
     }
 
     .news-content { font-size: 13.5px; color: var(--text); line-height: 1.55; }
-    .news-content a { color: var(--ucsd-navy); text-decoration: none; font-weight: 700; }
-    .news-content a:hover { color: var(--ucsd-blue); text-decoration: underline; }
+    /* news links inherit global style — no more font-weight: 700 */
     .news-highlight { color: #dc2626; font-weight: 700; }
 
     /* Research Highlights */
@@ -337,8 +356,7 @@
     }
 
     .research-highlights-content li strong { color: var(--primary); font-weight: 700; }
-    .research-highlights-content a { color: var(--ucsd-blue); text-decoration: none; }
-    .research-highlights-content a:hover { text-decoration: underline; }
+    /* links here inherit global style */
 
     /* Footer */
     .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); }
@@ -400,9 +418,9 @@
             <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works">Google Scholar</a>
           </div>
           <p style="font-size:14px;"><strong>Job market 2025–2026.</strong>
-            <a href="https://drive.google.com/drive/folders/17bC8I_hMyY8lXeQiIsqmDayutQe4AaeE?usp=sharing" style="color:var(--ucsd-blue);text-decoration:none;">CV</a> |
-            <a href="https://drive.google.com/drive/folders/1u6WEz9M3EqUPZrcqTNyPxVni4w-ENrYz?usp=sharing" style="color:var(--ucsd-blue);text-decoration:none;">Research Statement</a> |
-            <a href="https://drive.google.com/drive/folders/1oikA8jVs8xQ5aeAO2C-Ci5wRcTys_ivy?usp=sharing" style="color:var(--ucsd-blue);text-decoration:none;">Teaching Statement</a>
+            <a href="https://drive.google.com/drive/folders/17bC8I_hMyY8lXeQiIsqmDayutQe4AaeE?usp=sharing">CV</a> |
+            <a href="https://drive.google.com/drive/folders/1u6WEz9M3EqUPZrcqTNyPxVni4w-ENrYz?usp=sharing">Research Statement</a> |
+            <a href="https://drive.google.com/drive/folders/1oikA8jVs8xQ5aeAO2C-Ci5wRcTys_ivy?usp=sharing">Teaching Statement</a>
           </p>
         </div>
       </div>
@@ -424,7 +442,7 @@
       </h2>
       
       <p>
-        My research focuses on the <strong>foundations of reasoning and agency in AI</strong>, and applies them to <strong>accelerate and democratize knowledge and scientific discovery</strong>. I aim to build AI systems that can autonomously <strong>reason, act, and discover</strong>, and am interested in deploying them as <strong>AI co-scientists</strong> that can speed up research across biology, materials science, social science, and beyond. My recent works explore:
+        My research focuses on the <a>foundations of reasoning and agency in AI</a>, and applies them to <a>accelerate and democratize knowledge and scientific discovery</a>. I aim to build AI systems that can autonomously <strong>reason, act, and discover</strong>, and am interested in deploying them as <strong>AI co-scientists</strong> that can speed up research across biology, materials science, social science, and beyond. My recent works explore:
       </p>
       <ul>
         <li><strong>Deliberative reasoning & world models</strong> (<a href="https://arxiv.org/abs/2305.14992">EMNLP'23</a>, <a href="https://arxiv.org/abs/2404.05221">COLM'24</a>, <a href="https://arxiv.org/abs/2210.01293">ACL'23</a>, <a href="https://arxiv.org/abs/2411.08733">EMNLP'24</a>, <a href="https://openreview.net/pdf?id=pEJAja73dk">ICLR'26</a>)</li>
@@ -474,7 +492,7 @@
       <div class="news-container">
         <div class="news-item">
           <span class="news-date">Mar 2026</span>
-          <div class="news-content">Invited talk at the <a href="https://nlp.stanford.edu/seminar/">Stanford NLP Seminar</a> on “Building AI that Reasons to Accelerate Real-world Discovery.”</div>
+          <div class="news-content">Invited talk at the <a href="https://nlp.stanford.edu/seminar/">Stanford NLP Seminar</a> on "Building AI that Reasons to Accelerate Real-world Discovery."</div>
         </div>
         <div class="news-item">
           <span class="news-date">Feb 2026</span>
@@ -482,16 +500,16 @@
         </div>
         <div class="news-item">
           <span class="news-date">Jan 2026</span>
-          <div class="news-content">Released <a href="https://firebench.github.io/" style="color:#dc2626;text-decoration:underline;">FIRE-Bench</a>, benchmarking full-cycle scientific discovery automation with verifiable evaluation.</div>
+          <div class="news-content">Released <a href="https://firebench.github.io/" style="color:#dc2626;">FIRE-Bench</a>, benchmarking full-cycle scientific discovery automation with verifiable evaluation.</div>
         </div>
         <div class="news-item">
           <span class="news-date">Jan 2026</span>
-          <div class="news-content"><a href="https://openreview.net/forum?id=pEJAja73dk" style="color:#dc2626;text-decoration:underline;">Nabla-Reasoner</a> was accepted to ICLR 2026: latent test-time reasoning with first-order optimization in logit space.</div>
+          <div class="news-content"><a href="https://openreview.net/forum?id=pEJAja73dk" style="color:#dc2626;">Nabla-Reasoner</a> was accepted to ICLR 2026: latent test-time reasoning with first-order optimization in logit space.</div>
         </div>
         <div class="news-item">
           <span class="news-date">Dec 2025</span>
           <div class="news-content">
-            Honored to organize <a href="https://sites.google.com/view/law-2025", style="color: #dc2626;text-decoration: underline;">LAW 2025 workshop (Bridging Language, Agent, and World Models) at NeurIPS 2025</a>. Thanks to our amazing co-organizers, Ziqiao, Jessy, Melanie, Jianwen, Kelsey, Alane, Jacob, Tianmin, and Zhiting; and speakers, Sherry, Chelsea, Francois, Eric, Danijar, Philop, Stephen, Ying Nian, and Keyon. Check the recording of their talks <a href="https://neurips.cc/virtual/2025/loc/san-diego/workshop/109552">here</a>.
+            Honored to organize <a href="https://sites.google.com/view/law-2025" style="color:#dc2626;">LAW 2025 workshop (Bridging Language, Agent, and World Models) at NeurIPS 2025</a>. Thanks to our amazing co-organizers, Ziqiao, Jessy, Melanie, Jianwen, Kelsey, Alane, Jacob, Tianmin, and Zhiting; and speakers, Sherry, Chelsea, Francois, Eric, Danijar, Philop, Stephen, Ying Nian, and Keyon. Check the recording of their talks <a href="https://neurips.cc/virtual/2025/loc/san-diego/workshop/109552">here</a>.
           </div>
         </div>
         <div class="news-item">
@@ -649,7 +667,7 @@
       </div>
       
       <p style="color:var(--text-light); font-size:13.5px; margin-top:14px;">
-        Visit my <a href="https://zhenwang9102.github.io/page_pubs.html" style="color:var(--ucsd-blue);text-decoration:none;font-weight:700;">Publications page</a> for the complete list of papers and research contributions.
+        Visit my <a href="https://zhenwang9102.github.io/page_pubs.html" style="font-weight:600;">Publications page</a> for the complete list of papers and research contributions.
       </p>
     </section>
 
