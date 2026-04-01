@@ -6,113 +6,440 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="author" content="Zhen Wang" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
   <style>
-    body { max-width: 800px; margin: auto; padding: 1em; line-height: 1.5; }
-    a { color: #4A90E2; }
-    a:visited { color: #7B68AD; }
-    .menu { padding: 0; text-align: center; }
-    .menu li { display: inline-block; padding: 5px; }
-    .menu a { text-decoration: none; background: #eee; padding: 5px; border-radius: 5px; }
-    hr { border-style: dashed; color: #ddd; }
-    main { hyphens: auto; }
-    img { max-width: 100%; }
+    :root {
+      --ucsd-navy: #182B49;
+      --ucsd-blue: #00629B;
+      --ucsd-yellow: #FFCD00;
+      --ucsd-gold: #C69214;
+      --primary: var(--ucsd-navy);
+      --text: #2d3748;
+      --text-light: #4a5568;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --highlight-blue: #e6f3fa;
+      --highlight-gold: #fff9e6;
+
+      --pillar-reasoning: #6C7AE0;
+      --pillar-science: #56B58C;
+      --pillar-society: #7C8FB1;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      hyphens: auto;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    .nav {
+      background: var(--ucsd-navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      padding: 11px 0;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+      padding: 7px 16px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--ucsd-yellow);
+    }
+
+    /* Page Header */
+    .page-header {
+      padding: 36px 0 22px;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .page-header h1 {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .page-header h1::before {
+      content: '';
+      width: 4px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--ucsd-yellow), var(--ucsd-gold));
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .page-subtitle {
+      font-size: 11px;
+      color: var(--ucsd-blue);
+      font-weight: 700;
+      margin-left: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Sections */
+    .section {
+      padding: 26px 0;
+      border-top: 1px solid var(--border);
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    .section:first-of-type { border-top: none; }
+    .section:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(3) { animation-delay: 0.2s; }
+
+    .section-title {
+      font-size: 11.5px;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      background: var(--ucsd-yellow);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Research Overview Card */
+    .research-overview {
+      background: var(--bg-card);
+      border-radius: 10px;
+      padding: 22px 26px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .research-intro { margin-bottom: 20px; }
+
+    .research-intro p {
+      margin-bottom: 12px;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .research-intro p:last-child { margin-bottom: 0; }
+
+    .research-intro a { color: var(--ucsd-blue); text-decoration: none; }
+    .research-intro a:hover { text-decoration: underline; }
+
+    .highlight-tag {
+      display: inline;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    .highlight-blue { background: var(--highlight-blue); color: var(--ucsd-blue); }
+    .highlight-gold { background: var(--highlight-gold); color: var(--ucsd-gold); }
+    .discovery-tag { color: var(--ucsd-blue); font-weight: 700; }
+
+    /* Research Figure */
+    .research-figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .research-figure img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .research-figure figcaption {
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    /* Pillars */
+    .pillars-intro {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .research-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pillar {
+      padding: 14px 18px;
+      border-radius: 8px;
+      background: var(--bg);
+      border-left: 4px solid;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .pillar:hover {
+      transform: translateX(3px);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .pillar-reasoning { border-left-color: var(--pillar-reasoning); }
+    .pillar-science   { border-left-color: var(--pillar-science); }
+    .pillar-society   { border-left-color: var(--pillar-society); }
+
+    .pillar-title {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .pillar-content {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .pillar-content a { color: var(--ucsd-blue); text-decoration: none; font-weight: 700; }
+    .pillar-content a:hover { text-decoration: underline; }
+    .pillar-content em { font-style: italic; }
+
+    /* Keywords */
+    .keywords-intro {
+      margin-bottom: 12px;
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .keywords-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .keyword-category {
+      padding: 12px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .keyword-category:nth-child(1) { border-left-color: var(--pillar-reasoning); }
+    .keyword-category:nth-child(2) { border-left-color: var(--pillar-science); }
+    .keyword-category:nth-child(3) { border-left-color: #f0ad4e; }
+    .keyword-category:nth-child(4) { border-left-color: var(--pillar-society); }
+    .keyword-category:nth-child(5) { border-left-color: #d9534f; }
+    .keyword-category:nth-child(6) { border-left-color: #868e96; }
+
+    .keyword-category-title {
+      font-weight: 700;
+      font-size: 12.5px;
+      color: var(--primary);
+      margin-bottom: 4px;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .keyword-category-title::before {
+      content: '•';
+    }
+
+    .keyword-list {
+      font-size: 13.5px;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* Footer */
+    .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); }
+    .visitor-map { margin-bottom: 16px; opacity: 0.8; transition: opacity 0.2s; }
+    .visitor-map:hover { opacity: 1; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 1.55rem; }
+      .research-overview { padding: 16px 18px; }
+      .pillar { padding: 12px 14px; }
+    }
   </style>
 </head>
 
 <body>
-  <nav>
-    <ul class="menu">
-      <li><a href="/index.html">About</a></li>
-      <li><a href="/page_research.html">Research</a></li>
-      <li><a href="/page_pubs.html">Publications</a></li>
-      <li><a href="/page_posts.html">Blog</a></li>
-      <li><a href="/page_honors_and_services.html">Honors &amp; Service</a></li>
-    </ul>
+  <div style="height: 4px; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold));"></div>
+  
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/index.html">About</a>
+      <a href="/page_research.html" class="active">Research</a>
+      <a href="/page_pubs.html">Publications</a>
+      <a href="/page_posts.html">Blog</a>
+      <a href="/page_honors_and_services.html">Honors & Service</a>
+    </div>
   </nav>
 
-  <hr>
+  <main class="container">
+    <header class="page-header">
+      <h1>Research Overview</h1>
+      <p class="page-subtitle">Building Scientist AI — Systems that Reason to Discover</p>
+    </header>
 
-  <main>
-    <h1>Research Overview</h1>
-    <p><em>Building Scientist AI &mdash; Systems that Reason to Discover</em></p>
+    <section class="section">
+      <div class="research-overview">
+        <div class="research-intro">
+          <p>
+            My research sits at the emerging intersection of <span class="highlight-tag highlight-blue">advanced AI reasoning</span> and <span class="highlight-tag highlight-gold">accelerated discovery</span> across science and society. This space extends traditional data-driven discovery, calling for AI systems that <strong>actively explore hypotheses</strong>, <strong>simulate possibilities</strong>, and <strong>generate new, verifiable knowledge</strong> across disciplines.
+          </p>
+          <p>
+            I approach this field by identifying new foundational problems with rigorous, reproducible benchmarks and evaluation protocols (<a href="https://zhenwang9102.github.io/">scBench</a>, <a href="https://zhenwang9102.github.io/">FIRE-Bench</a>, <a href="https://github.com/maitrix-org/llm-reasoners">LLM Reasoners</a>), and by building systems that reason, simulate, and interact directly with complex data, code, tools, literature, and human collaborators. I validate these systems end-to-end across biology, materials science, machine learning research, and human-centered domains, with novel discovery results including <span class="discovery-tag">new cancer driver genes</span>, <span class="discovery-tag">new materials</span>, and <span class="discovery-tag">new scientific insights</span>.
+          </p>
+        </div>
 
-    <hr>
+        <figure class="research-figure">
+          <img src="images/research_overview_01_12.jpg" alt="Research Overview: Foundations of Reasoning, Agentic Reasoning, and Collaborative Reasoning for Scientific Discovery">
+        </figure>
 
-    <p>
-      My research sits at the emerging intersection of <strong>advanced AI reasoning</strong> and <strong>accelerated discovery</strong> across science and society. This space extends traditional data-driven discovery, calling for AI systems that <strong>actively explore hypotheses</strong>, <strong>simulate possibilities</strong>, and <strong>generate new, verifiable knowledge</strong> across disciplines.
-    </p>
-    <p>
-      I approach this field by identifying new foundational problems with rigorous, reproducible benchmarks and evaluation protocols (<a href="https://zhenwang9102.github.io/">scBench</a>, <a href="https://zhenwang9102.github.io/">FIRE-Bench</a>, <a href="https://github.com/maitrix-org/llm-reasoners">LLM Reasoners</a>), and by building systems that reason, simulate, and interact directly with complex data, code, tools, literature, and human collaborators. I validate these systems end-to-end across biology, materials science, machine learning research, and human-centered domains, with novel discovery results including <strong>new cancer driver genes</strong>, <strong>new materials</strong>, and <strong>new scientific insights</strong>.
-    </p>
+        <p class="pillars-intro">My research agenda comprises three tightly connected pillars:</p>
 
-    <figure style="margin: 1.5em 0; text-align: center;">
-      <img src="images/research_overview_01_12.jpg" alt="Research Overview: Foundations of Reasoning, Agentic Reasoning, and Collaborative Reasoning for Scientific Discovery">
-    </figure>
+        <div class="research-pillars">
+          <div class="pillar pillar-reasoning">
+            <div class="pillar-title">Reasoning</div>
+            <div class="pillar-content">
+              Reliable structured reasoning is the <em>prerequisite</em> for enabling autonomous discovery at scale. My contributions in this area include structured reasoning frameworks that facilitate probabilistic reasoning (<a href="https://aclanthology.org/2023.acl-long.68/">ThinkSum, ACL'23</a>), planning with textual world models (<a href="https://aclanthology.org/2023.emnlp-main.507/">RAP, EMNLP'23</a>; <a href="https://arxiv.org/abs/2404.05221">LLM Reasoners, COLM'24</a>), simulation-based reasoning and strategic planning with language models (<a href="https://arxiv.org/abs/2310.16427">PromptAgent, ICLR'24</a>), and dynamic, test-time optimization techniques (<a href="https://zhenwang9102.github.io/">Nabla Reasoner</a>).
+            </div>
+          </div>
 
-    <p>My research agenda comprises three tightly connected pillars:</p>
+          <div class="pillar pillar-science">
+            <div class="pillar-title">Science</div>
+            <div class="pillar-content">
+              Science drives my research because its open-ended complexity offers the most rigorous testbed for reasoning systems and the clearest path toward socially meaningful progress. I operationalize this vision by training scientific foundation models (<a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723v1">MutationProjector</a>), building autonomous scientific copilots (<a href="https://neurips.cc/virtual/2025/poster/117633">scPilot, NeurIPS'25</a>), creating agents capable of end-to-end research automation and insight rediscovery (<a href="https://zhenwang9102.github.io/">FIRE-Bench</a>), and pioneering systematic AI augmentation of scientific inquiry (<a href="https://zhenwang9102.github.io/">TaijiChat in Multi-omics atlas for T-cell programming, Nature</a>).
+            </div>
+          </div>
 
-    <hr>
+          <div class="pillar pillar-society">
+            <div class="pillar-title">Society</div>
+            <div class="pillar-content">
+              True discovery is inherently human-centered, demanding scalable governance, human-aligned AI behavior, and deep societal simulation to ensure that AI-generated insights authentically serve societal progress. My research addresses these goals by developing scalable self-alignment and safe behavior (<a href="https://aclanthology.org/2024.emnlp-main.1220/">Dynamic Rewarding, EMNLP'24</a>), decentralized and democratic evaluation frameworks (<a href="https://de-arena.maitrix.org/">Decentralized Arena</a>), and sophisticated human-behavior simulations for personalized, socially informed discovery (<a href="https://zhenwang9102.github.io/">DeepPersona</a>).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Reasoning</h2>
-    <p>
-      Reliable structured reasoning is the <em>prerequisite</em> for enabling autonomous discovery at scale. My contributions in this area include structured reasoning frameworks that facilitate probabilistic reasoning (<a href="https://aclanthology.org/2023.acl-long.68/">ThinkSum, ACL'23</a>), planning with textual world models (<a href="https://aclanthology.org/2023.emnlp-main.507/">RAP, EMNLP'23</a>; <a href="https://arxiv.org/abs/2404.05221">LLM Reasoners, COLM'24</a>), simulation-based reasoning and strategic planning with language models (<a href="https://arxiv.org/abs/2310.16427">PromptAgent, ICLR'24</a>), and dynamic, test-time optimization techniques (<a href="https://zhenwang9102.github.io/">Nabla Reasoner</a>).
-    </p>
+    <section class="section">
+      <h2 class="section-title">Research Keywords & Technical Expertise</h2>
+      
+      <p class="keywords-intro">My technical expertise spans the following interconnected areas:</p>
+      
+      <div class="keywords-grid">
+        <div class="keyword-category">
+          <div class="keyword-category-title">Reasoning & Planning Methods</div>
+          <div class="keyword-list">
+            Reasoning with language models, planning as inference, Monte Carlo Tree Search (MCTS), textual world models, probabilistic reasoning, test-time compute optimization, structured reasoning frameworks, neuro-symbolic methods
+          </div>
+        </div>
 
-    <h2>Science</h2>
-    <p>
-      Science drives my research because its open-ended complexity offers the most rigorous testbed for reasoning systems and the clearest path toward socially meaningful progress. I operationalize this vision by training scientific foundation models (<a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723v1">MutationProjector</a>), building autonomous scientific copilots (<a href="https://neurips.cc/virtual/2025/poster/117633">scPilot, NeurIPS'25</a>), creating agents capable of end-to-end research automation and insight rediscovery (<a href="https://zhenwang9102.github.io/">FIRE-Bench</a>), and pioneering systematic AI augmentation of scientific inquiry (<a href="https://zhenwang9102.github.io/">TaijiChat in Multi-omics atlas for T-cell programming, Nature</a>).
-    </p>
+        <div class="keyword-category">
+          <div class="keyword-category-title">Scientific Discovery & Automation</div>
+          <div class="keyword-list">
+            Automated scientific discovery, AI agents for science, foundation models for biology, single-cell transcriptomics analysis, computational biology, automated hypothesis generation, omics-native reasoning, scientific workflow automation, materials discovery
+          </div>
+        </div>
 
-    <h2>Society</h2>
-    <p>
-      True discovery is inherently human-centered, demanding scalable governance, human-aligned AI behavior, and deep societal simulation to ensure that AI-generated insights authentically serve societal progress. My research addresses these goals by developing scalable self-alignment and safe behavior (<a href="https://aclanthology.org/2024.emnlp-main.1220/">Dynamic Rewarding, EMNLP'24</a>), decentralized and democratic evaluation frameworks (<a href="https://de-arena.maitrix.org/">Decentralized Arena</a>), and sophisticated human-behavior simulations for personalized, socially informed discovery (<a href="https://zhenwang9102.github.io/">DeepPersona</a>).
-    </p>
+        <div class="keyword-category">
+          <div class="keyword-category-title">Adaptation & Efficient Learning</div>
+          <div class="keyword-list">
+            Parameter-efficient fine-tuning (PEFT), prompt optimization, multi-task learning, transfer learning, few-shot adaptation, tool-augmented reasoning, mixture-of-experts (MoE), test-time adaptation
+          </div>
+        </div>
 
-    <hr>
+        <div class="keyword-category">
+          <div class="keyword-category-title">AI Governance & Alignment</div>
+          <div class="keyword-list">
+            Scalable AI alignment, scalable oversight, decentralized evaluation, self-alignment (without human labels), AI safety benchmarking
+          </div>
+        </div>
 
-    <h2>Research Keywords &amp; Technical Expertise</h2>
+        <div class="keyword-category">
+          <div class="keyword-category-title">Human-Centered AI & Social Modeling</div>
+          <div class="keyword-list">
+            Human behavior simulation, synthetic personas, social simulation with LLMs, LLM personalization, human-AI interaction, computational social science, agent-based modeling
+          </div>
+        </div>
 
-    <p>My technical expertise spans the following interconnected areas:</p>
-
-    <p>
-      <strong>Reasoning &amp; Planning Methods:</strong>
-      Reasoning with language models, planning as inference, Monte Carlo Tree Search (MCTS), textual world models, probabilistic reasoning, test-time compute optimization, structured reasoning frameworks, neuro-symbolic methods
-    </p>
-
-    <p>
-      <strong>Scientific Discovery &amp; Automation:</strong>
-      Automated scientific discovery, AI agents for science, foundation models for biology, single-cell transcriptomics analysis, computational biology, automated hypothesis generation, omics-native reasoning, scientific workflow automation, materials discovery
-    </p>
-
-    <p>
-      <strong>Adaptation &amp; Efficient Learning:</strong>
-      Parameter-efficient fine-tuning (PEFT), prompt optimization, multi-task learning, transfer learning, few-shot adaptation, tool-augmented reasoning, mixture-of-experts (MoE), test-time adaptation
-    </p>
-
-    <p>
-      <strong>AI Governance &amp; Alignment:</strong>
-      Scalable AI alignment, scalable oversight, decentralized evaluation, self-alignment (without human labels), AI safety benchmarking
-    </p>
-
-    <p>
-      <strong>Human-Centered AI &amp; Social Modeling:</strong>
-      Human behavior simulation, synthetic personas, social simulation with LLMs, LLM personalization, human-AI interaction, computational social science, agent-based modeling
-    </p>
-
-    <p>
-      <strong>Knowledge-Centric NLP &amp; Graph Learning:</strong>
-      Graph neural networks (GNNs), knowledge graphs, retrieval-augmented generation (RAG), knowledge-centric NLP, structured representations, knowledge acquisition, domain adaptation, biomedical NLP, graph embedding methods
-    </p>
-
-    <hr>
-
-    <div style="text-align: center; margin: 1.5em 0;">
-      <a href="https://clustrmaps.com/site/1c85d" title="Visit tracker">
-        <img src="//www.clustrmaps.com/map_v2.png?d=zT1Bkvv9WyrRI9T7o2Hyv6xsUGEh6aIo0Uxde1-fwOQ&cl=ffffff" alt="Visitor Map" />
-      </a>
-    </div>
+        <div class="keyword-category">
+          <div class="keyword-category-title">Knowledge-Centric NLP & Graph Learning</div>
+          <div class="keyword-list">
+            Graph neural networks (GNNs), knowledge graphs, retrieval-augmented generation (RAG), knowledge-centric NLP, structured representations, knowledge acquisition, domain adaptation, biomedical NLP, graph embedding methods
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="visitor-map">
+        <a href="https://clustrmaps.com/site/1c85d" title="Visit tracker">
+          <img src="//www.clustrmaps.com/map_v2.png?d=zT1Bkvv9WyrRI9T7o2Hyv6xsUGEh6aIo0Uxde1-fwOQ&cl=ffffff" alt="Visitor Map" />
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
