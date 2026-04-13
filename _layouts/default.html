@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -30,14 +30,17 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Lato', -apple-system, sans-serif;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.72;
       font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
-    /* ── Global link style (Stanford academic style) ── */
+    /* ── Global link style ── */
     a {
       color: var(--link);
       text-decoration: none;
@@ -55,7 +58,7 @@
       padding: 0 24px;
     }
 
-    /* Navigation — keep white + bold for contrast on dark bg */
+    /* Navigation */
     .nav {
       background: var(--ucsd-navy);
       position: sticky;
@@ -72,14 +75,14 @@
     }
 
     .nav a {
-      font-size: 12.5px;
-      font-weight: 700;
+      font-size: 12px;
+      font-weight: 600;
       color: rgba(255, 255, 255, 0.82);
       text-decoration: none;
       padding: 7px 16px;
       border-radius: 4px;
       transition: all 0.2s ease;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
@@ -113,23 +116,25 @@
     .header-intro { flex: 1; }
 
     .header h1 {
-      font-size: 2rem;
-      font-weight: 900;
+      font-family: 'Newsreader', 'Georgia', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
       color: var(--primary);
       margin-bottom: 3px;
-      letter-spacing: -0.01em;
-      line-height: 1.1;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
     }
 
     .header h1 span {
+      font-family: 'DM Sans', sans-serif;
       font-weight: 300;
       color: var(--text-light);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       margin-left: 10px;
     }
 
     .tagline {
-      font-size: 11px;
+      font-size: 11.5px;
       color: var(--ucsd-blue);
       font-weight: 700;
       margin-bottom: 12px;
@@ -144,7 +149,6 @@
       margin-bottom: 10px;
     }
 
-    /* Contact links — keep slightly bolder since they're icon-like nav items */
     .contact-links a {
       color: var(--text);
       text-decoration: none;
@@ -169,44 +173,45 @@
       border-radius: 50%;
     }
 
-    .header-bio { color: var(--text); line-height: 1.75; font-size: 15px; }
+    .header-bio { color: var(--text); line-height: 1.78; font-size: 15px; }
     .header-bio p { margin-bottom: 11px; }
     .header-bio p:last-child { margin-bottom: 0; }
     .header-bio strong { color: var(--primary); font-weight: 700; }
-    /* header-bio links inherit global style */
 
     /* Sections */
-    .section { padding: 26px 0; border-top: 1px solid var(--border); }
+    .section { padding: 28px 0; border-top: 1px solid var(--border); }
 
     .section-title {
-      font-size: 11.5px;
-      font-weight: 900;
+      font-family: 'Newsreader', 'Georgia', serif;
+      font-size: 15px;
+      font-weight: 600;
       color: var(--primary);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 10px;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
     .section-title::before {
       content: '';
       width: 4px;
-      height: 16px;
+      height: 18px;
       background: var(--ucsd-yellow);
       border-radius: 2px;
       flex-shrink: 0;
     }
 
-    /* "View Details →" link in section title */
     .section-title a {
-      font-size: 0.85em;
-      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75em;
+      font-weight: 500;
       color: var(--link);
       text-decoration: none;
       margin-left: auto;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
+      text-transform: none;
     }
     .section-title a:hover {
       text-decoration: underline;
@@ -245,7 +250,6 @@
     }
 
     .section > ul li strong { color: var(--primary); font-weight: 700; }
-    /* list links inherit global style */
 
     /* Honors */
     .honors-list { list-style: none; padding: 0; margin: 0; }
@@ -318,19 +322,19 @@
     }
 
     .news-content { font-size: 13.5px; color: var(--text); line-height: 1.55; }
-    /* news links inherit global style — no more font-weight: 700 */
     .news-highlight { color: #dc2626; font-weight: 700; }
 
     /* Research Highlights */
     .research-highlights-content h3 {
-      font-size: 11px;
-      font-weight: 900;
+      font-family: 'Newsreader', 'Georgia', serif;
+      font-size: 12.5px;
+      font-weight: 600;
       color: var(--primary);
       margin-top: 18px;
       margin-bottom: 8px;
       padding-bottom: 5px;
       border-bottom: 1px solid var(--border);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -356,7 +360,6 @@
     }
 
     .research-highlights-content li strong { color: var(--primary); font-weight: 700; }
-    /* links here inherit global style */
 
     /* Footer */
     .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); }
@@ -372,6 +375,7 @@
       .contact-links { justify-content: center; }
       .profile-photo img { width: 120px; height: 120px; }
       .news-item { grid-template-columns: 1fr; gap: 4px; }
+      .job-market-banner p { font-size: 12px; padding: 0 12px; }
     }
 
     /* Animations */
@@ -432,6 +436,9 @@
         <p>
           I received my PhD from the Computer Science department at The Ohio State University previously, working with <a href="https://u.osu.edu/ihudas/people/">Huan Sun</a> and <a>Yu Su</a>, where I developed foundational frameworks for knowledge-centric AI systems. My work has been supported by and recognized with the <strong>Gordon and Betty Moore Foundation Fellowship</strong>, <strong>OpenAI Research Grant</strong> (sole-PI, 1 of 11 teams worldwide), <strong>Rising Star in Data Science</strong> (UChicago), <strong>Best Paper Award at SoCal NLP</strong>, <strong>Amazon Alexa Prize Winner</strong> (proposal and team leader), and more. I have led collaborations with <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Lab</a>, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">Microsoft Research</a>, <a href="https://www.nec-labs.com/">NEC Labs</a>, and academic institutions including CMU, MBZUAI, five UC campuses and three national labs through <a href="https://uc-leap.github.io/LEAP/people/">the UC-LEAP project</a>.
         </p>
+        <p style="font-size:13.5px; color:var(--text-light); margin-top:4px;">
+          I will be on the job market starting in Fall 2025. If you believe I might be a good fit for your institution or organization, I'd love to connect! — please feel free to reach out at <a href="mailto:bowenj4@illinois.edu">zhw085[AT]ucsd.edu</a>.
+        </p>
       </div>
     </header>
 
@@ -445,10 +452,10 @@
         My research focuses on the <a><strong>foundations of reasoning, planning, and agency in AI</strong></a>, and applies them to <a><strong>accelerate and democratize knowledge and scientific discovery</strong></a>. I aim to build AI systems that can autonomously <strong>reason, act, and discover</strong>, and am interested in deploying them as <strong>AI co-scientists</strong> that can speed up research across biology, materials science, social science, and beyond. My recent works explore:
       </p>
       <ul>
-        <li><strong>Deliberative reasoning & world models</strong> (<a href="https://arxiv.org/abs/2305.14992">EMNLP'23</a>, <a href="https://arxiv.org/abs/2404.05221">COLM'24</a>, <a href="https://arxiv.org/abs/2210.01293">ACL'23</a>, <a href="https://arxiv.org/abs/2411.08733">EMNLP'24</a>, <a href="https://openreview.net/pdf?id=pEJAja73dk">ICLR'26</a>)</li>
-        <li><strong>Autonomous agents & trustworthy deployment</strong> (<a href="https://sites.google.com/view/law-2025">NeurIPS'25</a>, <a href="https://arxiv.org/abs/2310.16427">ICLR'24</a>, <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a>, <a href="https://arxiv.org/abs/2602.02905">FIRE-Bench</a>)</li>
-        <li><strong>Compositional & self-specializing foundation models</strong> (<a href="https://arxiv.org/abs/2303.02861">ICLR'23</a>, <a href="https://arxiv.org/abs/2406.12034">ICLR'25</a>, <a href="https://arxiv.org/abs/2305.11554">NeurIPS'23 Oral</a>)</li>
-        <li><strong>Foundation models and AI co-scientists for discovery</strong> (<a href="https://arxiv.org/abs/2602.11609">NeurIPS'25</a>, <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354">Nature'25</a>, <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">Cancer Discovery R&R</a>, <a href="https://uc-leap.github.io/LEAP/about/">UC-LEAP Grant</a>)</li>
+        <li><strong>Deliberative Reasoning & World Models</strong> (<a href="https://arxiv.org/abs/2305.14992">EMNLP'23</a>, <a href="https://arxiv.org/abs/2404.05221">COLM'24</a>, <a href="https://arxiv.org/abs/2210.01293">ACL'23</a>, <a href="https://arxiv.org/abs/2411.08733">EMNLP'24</a>, <a href="https://openreview.net/pdf?id=pEJAja73dk">ICLR'26</a>)</li>
+        <li><strong>Autonomous Agents & Trustworthy Deployment</strong> (<a href="https://sites.google.com/view/law-2025">NeurIPS'25</a>, <a href="https://arxiv.org/abs/2310.16427">ICLR'24</a>, <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a>, <a href="https://arxiv.org/abs/2602.02905">FIRE-Bench</a>)</li>
+        <li><strong>Compositional & Self-specializing Foundation Models</strong> (<a href="https://arxiv.org/abs/2303.02861">ICLR'23</a>, <a href="https://arxiv.org/abs/2406.12034">ICLR'25</a>, <a href="https://arxiv.org/abs/2305.11554">NeurIPS'23 Oral</a>)</li>
+        <li><strong>Scientific FMs and AI Co-scientists for Discovery</strong> (<a href="https://arxiv.org/abs/2602.11609">NeurIPS'25</a>, <a href="https://www.biorxiv.org/content/10.1101/2023.01.03.522354">Nature'25</a>, <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">Cancer Discovery R&R</a>, <a href="https://uc-leap.github.io/LEAP/about/">UC-LEAP Grant</a>)</li>
       </ul>
     </section>
 
@@ -692,4 +699,8 @@
         <a href="https://clustrmaps.com/site/1beb5" title="Visit tracker">
           <img src="//www.clustrmaps.com/map_v2.png?d=3ckIy3WQFut4Emdkpn-xSRLuODAvOXCYLy3z-r53Gcs&cl=ffffff" alt="Visitor Map" />
         </a>
-      </di
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
