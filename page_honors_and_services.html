@@ -2,10 +2,15 @@
 <html lang="en">
 
 <head>
-  <title>Honors & Service | Zhen Wang</title>
+  <title>Honors &amp; Service | Zhen Wang</title>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="author" content="Zhen Wang" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Honors, awards, and academic service of Zhen Wang, including workshop organization, area chair roles, and program committee memberships.">
+  <meta property="og:title" content="Honors & Service | Zhen Wang">
+  <meta property="og:description" content="Honors, awards, and academic service of Zhen Wang.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23182B49'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23FFCD00'%3EZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
@@ -207,11 +212,70 @@
       .honors-list li { flex-direction: column; gap: 4px; }
       .honor-year { text-align: left; }
     }
+
+    /* ===================== DYNAMIC ENHANCEMENTS ===================== */
+
+    /* Reading progress bar */
+    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(24,43,73,0.08); z-index: 200; }
+    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold)); transition: width 0.1s linear; }
+
+    /* Selected-Honors-style hover on honor rows: slide right + light tint */
+    .honors-list li { transition: background-color 0.15s ease, padding 0.15s ease; }
+    .honors-list li:hover { background: rgba(0, 98, 155, 0.03); padding-left: 10px; border-radius: 6px; }
+
+    /* Gentle hover on workshop service rows */
+    .services-list li { transition: background-color 0.15s ease; border-radius: 6px; }
+    .services-list li:hover { background: rgba(0, 98, 155, 0.025); }
+
+    /* Service chips: subtle lift */
+    .service-item { transition: all 0.18s ease; }
+    .service-item:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(24,43,73,0.08); }
+
+    /* Scroll reveal (class toggled by JS) */
+    .js-anim .honors-list li,
+    .js-anim .services-category { opacity: 0; transform: translateY(14px); }
+    .js-anim .honors-list li { transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.15s ease, padding 0.15s ease; }
+    .js-anim .services-category { transition: opacity 0.5s ease, transform 0.5s ease; }
+    .js-anim .honors-list li.in,
+    .js-anim .services-category.in { opacity: 1; transform: translateY(0); }
+
+    /* Back to top */
+    .to-top {
+      position: fixed; right: 24px; bottom: 24px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--ucsd-navy); color: #fff; border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; box-shadow: 0 10px 30px rgba(24,43,73,0.12);
+      opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: all 0.25s ease; z-index: 120;
+    }
+    .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .to-top:hover { background: var(--ucsd-blue); transform: translateY(-3px); }
+    .to-top svg { width: 20px; height: 20px; }
+
+    /* Footer meta */
+    .footer-meta { font-size: 12.5px; color: #717c8c; margin-bottom: 16px; }
+    .footer-meta .sep { margin: 0 8px; color: #c8cfd8; }
+    .visitor-map img { max-width: 230px; height: auto; border-radius: 6px; }
+
+    /* Keyboard focus */
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--ucsd-blue); outline-offset: 2px; border-radius: 4px; }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+      .js-anim .honors-list li, .js-anim .services-category { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .service-item:hover { transform: none !important; }
+      .page-header, .section { animation: none !important; }
+      .progress-bar { transition: none !important; }
+    }
   </style>
+
+  <script>document.documentElement.classList.add('js-anim');</script>
 </head>
 
 <body>
-  <div style="height: 4px; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold));"></div>
+  <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
 
   <nav class="nav">
     <div class="container nav-inner">
@@ -372,7 +436,7 @@
               <span class="workshop-people"><em>Speakers:</em> Eric Xing, François Chollet, Chelsea Finn, Sherry Yang, Danijar Hafner, Ying Nian Wu</span>
             </div>
           </li>
-          <li>
+          <!-- <li>
             <span class="service-role">Primary Organizer</span>
             <strong>Biologia Ex Machina 2026: Toward Trusted AI Collaborators for Biological Discovery</strong>
             <span class="service-years">(submitted workshop proposal)</span>
@@ -387,7 +451,7 @@
             <div class="workshop-details">
               <span class="workshop-people"><em>Co-organizers:</em> Xuan Wang, Dawei Zhou, Lifu Huang, Naren Ramakrishnan, Chris North, Le Wang, Yun Huang</span>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
 
@@ -431,15 +495,53 @@
 
   <footer class="footer">
     <div class="container">
+      <p class="footer-meta">© 2026 Zhen Wang <span class="sep">·</span> Last updated June 2026 <span class="sep">·</span> La Jolla, California</p>
       <div class="visitor-map">
-        <a href="https://mapmyvisitors.com/web/1c553"  title="Visit tracker">
-          <img src="https://mapmyvisitors.com/map.png?d=f8lAXYjO1MS_d4-ER11iYNKw75TUwIOhelPYZ3OAj4E&cl=ffffff" />
+        <a href="https://mapmyvisitors.com/web/1c553" title="Visit tracker">
+          <img src="https://mapmyvisitors.com/map.png?d=f8lAXYjO1MS_d4-ER11iYNKw75TUwIOhelPYZ3OAj4E&cl=ffffff" alt="Visitor map">
         </a>
-        <!-- <a href="https://clustrmaps.com/site/1c85z" title="ClustrMaps">
-          <img src="//www.clustrmaps.com/map_v2.png?d=AojHR5VzlkZb8Vfdusw4vyYOlbAsmlNO4qij3_4Bkh0&cl=ffffff" alt="Visitor Map" />
-        </a> -->
       </div>
     </div>
   </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script>
+    (function () {
+      // Reading progress bar
+      var bar = document.getElementById('progressBar');
+      function onScroll() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+      }
+
+      // Back to top
+      var toTop = document.getElementById('toTop');
+      function toggleTop() { if (window.scrollY > 450) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); } }
+      toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+      window.addEventListener('scroll', function () { onScroll(); toggleTop(); }, { passive: true });
+      onScroll(); toggleTop();
+
+      // Scroll reveal
+      try {
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+          }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+          document.querySelectorAll('.honors-list li, .services-category').forEach(function (el) { io.observe(el); });
+        } else {
+          document.querySelectorAll('.honors-list li, .services-category').forEach(function (el) { el.classList.add('in'); });
+        }
+      } catch (err) {
+        document.documentElement.classList.remove('js-anim');
+      }
+    })();
+  </script>
 </body>
 </html>
