@@ -149,6 +149,7 @@
       display: flex; align-items: center; justify-content: center;
     }
     .paper-image img { width: 100%; height: 100%; object-fit: cover; }
+    .paper-image img[src*="-logo."] { object-fit: contain; background: #fff; padding: 9px; }
     .paper-content { flex: 1; min-width: 0; }
 
     .paper-title {
@@ -344,7 +345,7 @@
         </div>
 
         <div class="paper-card">
-          <div class="paper-image"><img src="/images/cancer-discovery-logo.png" alt="Cancer Discovery" onerror="this.onerror=null;this.src='/images/ArXiv_logo_2022.png';"></div>
+          <div class="paper-image"><img src="/images/cancer-discovery-logo.jpg" alt="Cancer Discovery" onerror="this.onerror=null;this.src='/images/ArXiv_logo_2022.png';"></div>
           <div class="paper-content">
             <h3 class="paper-title"><a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">A Foundation Model of Cancer Genotype Enables Precise Predictions of Therapeutic Response</a></h3>
             <p class="paper-authors">JungHo Kong, Ingoo Lee, Dean Boecher, Akshat Singhal, Marcus Kelly, Jimin Moon, Chang Ho Ahn, Chan-Young Ock, Tannavee Kumar, Timothy John Sears, David Laub, Sarah Wright, Patrick Wall, Hannah Carter, <strong>Zhen Wang</strong>+, Trey Ideker+ (+co-corresponding authors)</p>
@@ -1339,7 +1340,7 @@
         </div>
 
         <div class="paper-card">
-          <div class="paper-image"><img src="/images/cancer-discovery-logo.png" alt="Cancer Discovery" onerror="this.onerror=null;this.src='/images/ArXiv_logo_2022.png';"></div>
+          <div class="paper-image"><img src="/images/cancer-discovery-logo.jpg" alt="Cancer Discovery" onerror="this.onerror=null;this.src='/images/ArXiv_logo_2022.png';"></div>
           <div class="paper-content">
             <h3 class="paper-title"><a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">A Foundation Model of Cancer Genotype Enables Precise Predictions of Therapeutic Response</a></h3>
             <p class="paper-authors">JungHo Kong, Ingoo Lee, ... Hannah Carter, <strong>Zhen Wang</strong>+, Trey Ideker+</p>
