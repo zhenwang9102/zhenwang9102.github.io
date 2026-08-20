@@ -1,136 +1,174 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <title>Invited Talks | Zhen Wang</title>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="author" content="Zhen Wang" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Invited talks, seminars, and panels by Zhen Wang on AI reasoning, agents, and scientific discovery.">
   <meta property="og:title" content="Invited Talks | Zhen Wang">
   <meta property="og:description" content="Invited talks, seminars, and panels by Zhen Wang.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2324303e'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
+  <meta property="og:url" content="https://zhenwang9102.github.io/page_talks.html">
+  <meta property="og:image" content="https://zhenwang9102.github.io/images/headshot_square.jpg">
+  <link rel="canonical" href="https://zhenwang9102.github.io/page_talks.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230064b1'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&text=%E7%8E%8B%E9%9C%87&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --brand-dark: #24303e;
-      --brand-blue: #3d6a8f;
-      --brand-accent: #7f95a3;
-      --brand-accent-dark: #6d8290;
-      --primary: var(--brand-dark);
-      --text: #2d3748;
-      --text-light: #4a5568;
-      --bg: #fafafa;
-      --bg-card: #ffffff;
-      --border: #e2e8f0;
-      --border-soft: #eef1f4;
-      --highlight-blue: #e9f1f7;
-      --highlight-gold: #eef2f5;
-      --link: #3d6a8f;
-      --link-hover: #2e5270;
-    }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 12px; top: 10px; z-index: 300; background: #ffffff; color: #000000; padding: 6px 12px; outline: 2px solid #0064b1; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.65;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
-    a { color: var(--link); text-decoration: none; font-weight: 500; transition: color .15s ease; }
-    a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+    a { color: #0064b1; text-decoration: none; font-weight: 500; transition: color .15s ease; }
+    a:hover { color: #00548f; text-decoration: underline; text-decoration-color: #00548f; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:visited { color: #0064b1; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #0064b1; outline-offset: 2px; border-radius: 4px; }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    strong { font-weight: 700; color: #000000; }
+    a strong { color: inherit; }
 
-    /* Navigation */
-    .nav { background: var(--brand-dark); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
-    .nav-inner { display: flex; justify-content: center; gap: 4px; padding: 11px 0; flex-wrap: wrap; }
+    ::selection { background: rgba(0, 100, 177, .15); }
+
+    /* ── Top nav ── */
+    .nav {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(255, 255, 255, .88);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      backdrop-filter: saturate(180%) blur(10px);
+      box-shadow: 0 1px 0 #e9ecee;
+    }
+    .nav-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; justify-content: center;
+      gap: 4px; padding: 11px 0; flex-wrap: wrap;
+    }
     .nav a {
-      font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, .82);
-      padding: 7px 15px; border-radius: 6px;
-      transition: all .18s ease; letter-spacing: .11em; text-transform: uppercase;
-      position: relative;
+      position: relative; text-decoration: none;
+      font-size: 13.5px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: #494e52;
+      padding: 7px 15px;
+      transition: color .18s ease;
     }
-    .nav a:hover { background: rgba(255, 255, 255, .10); color: #fff; text-decoration: none; }
-    .nav a.active { color: #fff; }
-    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: rgba(255, 255, 255, .7); border-radius: 2px; }
+    .nav a:hover { color: #000000; text-decoration: none; }
+    .nav a.active { color: #000000; }
+    .nav a::after {
+      content: ''; position: absolute;
+      left: 15px; right: 15px; bottom: 2px;
+      height: 2px; background: #0064b1; border-radius: 2px;
+      transform: scaleX(0); transition: transform 0.2s ease-in-out;
+    }
+    .nav a:hover::after { transform: scaleX(1); }
+    .nav a.active::after { transform: scaleX(1); }
 
-    /* Page Header */
-    .page-header {
-      padding: 36px 0 22px;
-      animation: fadeInUp 0.6s ease-out;
-    }
-    .page-header h1 {
-      font-family: 'Newsreader', 'Georgia', serif;
-      font-size: 2.1rem; font-weight: 700; color: var(--primary);
-      margin-bottom: 5px; letter-spacing: -0.02em; line-height: 1.15;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .page-header h1 .count {
-      margin-left: auto; align-self: center;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px; font-weight: 700;
-      color: var(--brand-blue); background: var(--highlight-blue);
-      padding: 3px 13px; border-radius: 20px;
-      letter-spacing: 0.02em;
-    }
-    .page-header p {
-      font-size: 13.5px; color: var(--text-light); margin-left: 16px;
-    }
+    /* ── Two-column layout ── */
+    .layout { display: flex; max-width: 1160px; margin: 0 auto; }
 
-    /* Section */
-    .section {
-      padding: 22px 0;
-      border-top: 1px solid var(--border);
-      animation: fadeInUp 0.6s ease-out backwards;
+    .sidebar { width: 300px; flex-shrink: 0; }
+    .sidebar-inner {
+      position: sticky; top: 58px; max-height: calc(100vh - 58px); overflow-y: auto;
+      padding: 42px 30px 36px; text-align: center; scrollbar-width: none;
     }
+    .sidebar-inner::-webkit-scrollbar { display: none; }
+
+    .profile-photo img { width: 168px; height: 168px; object-fit: cover; border-radius: 14px; }
+
+    .side-name { font-size: 1.02rem; font-weight: 700; color: #000000; letter-spacing: .16em; text-transform: uppercase; margin-top: 18px; line-height: 1.3; }
+    .side-name .cn { display: block; font-family: 'Libian SC', 'Baoli SC', 'LiSu', 'Ma Shan Zheng', 'STKaiti', 'KaiTi', serif; font-weight: 400; color: #000000; font-size: 1.7rem; margin: 3px 0 0; line-height: 1.2; }
+
+    .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; width: fit-content; margin: 18px auto 0; }
+    .contact-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #494e52; text-decoration: none; }
+    .contact-links a:hover { color: #494e52; text-decoration: underline; }
+    .contact-links .loc { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #494e52; }
+    .contact-links .ci { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .content { flex: 1; min-width: 0; padding: 36px 46px 44px; }
+
+    .section { padding: 30px 0 26px; scroll-margin-top: 64px; }
+    .section:first-child { padding-top: 4px; }
+    .section-title { font-size: 14px; font-weight: 700; color: #000000; letter-spacing: .12em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .section-title::before { content: ''; width: 4px; height: 19px; background: #0064b1; border-radius: 2px; flex-shrink: 0; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: #e9ecee; margin-left: 4px; }
 
     /* Talks list (flat, chronological) */
-    .talks-list { list-style: none; margin: 0; padding: 0; }
+    .talks-list { list-style: none; margin: 0; padding: 0; max-width: 100%; }
 
     .talk-row {
       display: grid; grid-template-columns: 112px 1fr; gap: 16px;
       padding: 12px 6px; align-items: baseline;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #e9ecee;
+      transition: background-color .15s ease;
     }
     .talk-row:last-child { border-bottom: none; }
+    .talk-row:hover { background: rgba(0, 100, 177, .04); }
 
     .talk-date {
-      font-size: 13px; font-weight: 700; color: var(--brand-blue);
+      font-size: 13px; font-weight: 600; color: #6d757d;
       white-space: nowrap; letter-spacing: 0.01em;
     }
-    .talk-where { font-size: 14px; color: var(--text); line-height: 1.55; }
-    .talk-where strong { color: var(--primary); font-weight: 700; }
-    .talk-host { color: var(--text-light); }
+    .talk-where { font-size: 14px; color: #000000; line-height: 1.55; }
+    .talk-where strong { color: #000000; font-weight: 700; }
+    .talk-where a strong { color: inherit; }
+    .talk-host { color: #6d757d; }
 
     .talk-link {
       display: inline-block; margin-left: 7px;
-      font-size: 10.5px; font-weight: 700; color: var(--brand-blue);
-      background: var(--highlight-blue); padding: 1px 8px; border-radius: 4px;
+      font-size: 10.5px; font-weight: 700; color: #0064b1;
+      background: #f2f4f6; padding: 1px 8px; border-radius: 4px;
       text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
       vertical-align: 1px;
     }
-    .talk-link:hover { background: var(--brand-blue); color: #fff; text-decoration: none; }
+    .talk-link:hover { background: #f2f4f6; color: #00548f; }
+    .talk-link:visited { color: #0064b1; }
 
     /* Footer */
-    .footer { padding: 30px 0; text-align: center; border-top: 1px solid var(--border); margin-top: 24px; }
-    .footer-meta { font-size: 12.5px; color: #717c8c; }
-    .footer-meta .sep { margin: 0 8px; color: #c8cfd8; }
+    .footer { margin-top: 24px; padding: 26px 0 8px; text-align: center; border-top: 1px solid #e9ecee; }
+    .footer-meta { font-size: 13px; color: #6d757d; margin-bottom: 12px; }
+    .visitor-map { opacity: .7; }
+    .visitor-map:hover { opacity: 1; }
+    .visitor-map a { text-decoration: none; }
+    .visitor-map img { max-width: 200px; border-radius: 4px; border: 1px solid #e9ecee; }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+    /* Back to top */
+    .to-top {
+      position: fixed; right: 24px; bottom: 24px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: #494e52; color: #fff; border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0; visibility: hidden;
+      transition: background-color 0.18s ease;
+      z-index: 120;
+    }
+    .to-top.show { opacity: 1; visibility: visible; }
+    .to-top:hover { background: #000000; }
+    .to-top svg { width: 20px; height: 20px; }
+
+    @media (max-width: 900px) {
+      .nav-inner { padding: 9px 0; }
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .sidebar-inner { position: static; max-height: none; padding: 30px 22px 22px; }
+      .profile-photo img { width: 130px; height: 130px; }
+      .content { padding: 26px 22px 36px; }
     }
 
     @media (max-width: 768px) {
@@ -138,176 +176,188 @@
       .talk-row { grid-template-columns: 1fr; gap: 3px; padding: 11px 4px; }
     }
 
-    /* ===================== DYNAMIC ENHANCEMENTS ===================== */
-
-    /* Reading progress bar */
-    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(36,48,62,0.08); z-index: 200; }
-    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-dark)); transition: width 0.1s linear; }
-
-    /* Selected-Honors-style hover: slide right + light tint */
-    .talk-row { transition: background-color 0.15s ease, padding 0.15s ease; }
-    .talk-row:hover { background: rgba(61, 106, 143, 0.03); padding-left: 14px; border-radius: 6px; }
-
-    /* Scroll reveal (class toggled by JS) */
-    .js-anim .talk-row { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.15s ease, padding 0.15s ease; }
-    .js-anim .talk-row.in { opacity: 1; transform: translateY(0); }
-
-    /* Back to top */
-    .to-top {
-      position: fixed; right: 24px; bottom: 24px;
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--brand-dark); color: #fff; border: none;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; box-shadow: 0 10px 30px rgba(36,48,62,0.12);
-      opacity: 0; visibility: hidden; transform: translateY(10px);
-      transition: all 0.25s ease; z-index: 120;
+    @media print {
+      a { color: #000000; text-decoration: underline; }
+      .nav, .to-top, .visitor-map, .skip { display: none; }
+      .sidebar-inner { position: static; max-height: none; }
+      .layout { display: block; }
+      .sidebar { width: auto; }
     }
-    .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
-    .to-top:hover { background: var(--brand-blue); transform: translateY(-3px); }
-    .to-top svg { width: 20px; height: 20px; }
-
-    /* Keyboard focus */
-    a:focus-visible, button:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 2px; border-radius: 4px; }
 
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto !important; }
-      .js-anim .talk-row { opacity: 1 !important; transform: none !important; transition: none !important; }
-      .page-header, .section { animation: none !important; }
-      .progress-bar { transition: none !important; }
+      html { scroll-behavior: auto; }
+      .nav a::after { transition: none; }
     }
   </style>
-
-  <script>document.documentElement.classList.add('js-anim');</script>
 </head>
 
 <body>
-  <div class="progress-track" hidden><div class="progress-bar" id="progressBar"></div></div>
-
-  <nav class="nav">
-    <div class="container nav-inner">
+  <a class="skip" href="#content">Skip to content</a>
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner">
       <a href="/index.html">About</a>
       <a href="/page_lab.html">My Lab</a>
-      <a href="/page_research.html">Research</a>
       <a href="/page_pubs.html">Publications</a>
-      <a href="/page_talks.html" class="active">Invited Talks</a>
+      <a href="/page_talks.html" class="active" aria-current="page">Invited Talks</a>
       <a href="/page_posts.html">Blogs</a>
       <a href="/page_honors_and_services.html">Honors &amp; Service</a>
     </div>
   </nav>
 
-  <main class="container">
-    <header class="page-header">
-      <h1>Invited Talks</h1>
-    </header>
+  <div class="layout">
 
-    <section class="section">
-      <ul class="talks-list">
+    <!-- ==== Fixed sidebar ==== -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <figure class="profile-photo">
+          <img src="images/headshot_square.jpg" alt="Zhen Wang">
+        </figure>
+        <h1 class="side-name">Zhen Wang <span class="cn" lang="zh-Hans">王震</span></h1>
 
-        <li class="talk-row">
-          <span class="talk-date">June 2026</span>
-          <span class="talk-where">Invited Talk at Datadog AI Research (DAIR), New York, about <strong>Unifying Language, Agent, and World Models for Reasoning and Planning: Building AI That Can Simulate, Search, and Self-Improve</strong></span>
-        </li>
+        <div class="contact-links">
+          <span class="loc">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            ERB 527
+          </span>
+          <a href="mailto:zhenwang.work@gmail.com">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            Email
+          </a>
+          <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769 0.5 9.5 12 1l11.5 8.5-4.742 4.269A8 8 0 0 0 12 9.5a8 8 0 0 0-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            Google Scholar
+          </a>
+          <a href="https://twitter.com/zhenwang9102">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter/X
+          </a>
+          <a href="https://www.linkedin.com/in/zhenwang9102/">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.555v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.267 2.37 4.267 5.456v6.285zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.778 13.018H3.555V9h3.56v11.451zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
 
-        <li class="talk-row">
-          <span class="talk-date">June 2026</span>
-          <span class="talk-where">Invited Talk at the "AI Science at Scale" Annual Meeting, Santa Fe (organized by UCOP &amp; LANL), about <strong>AI Agents for the UC-LEAP Project</strong> <a class="talk-link" href="https://sites.google.com/view/uc-leap/home">Project</a> <a class="talk-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7471354969997221888/">Event</a></span>
-        </li>
+      </div>
+    </aside>
 
-        <li class="talk-row">
-          <span class="talk-date">May 2026</span>
-          <span class="talk-where">Invited Talk at the University of South Carolina about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
-        </li>
+    <!-- ==== Scrolling content ==== -->
+    <main class="content" id="content">
 
-        <li class="talk-row">
-          <span class="talk-date">May 2026</span>
-          <span class="talk-where">Invited Talk at The University of Texas at Arlington about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
-        </li>
+      <section class="section" id="talks">
+        <h2 class="section-title">Invited Talks</h2>
+        <ul class="talks-list">
 
-        <li class="talk-row">
-          <span class="talk-date">April 2026</span>
-          <span class="talk-where">Virtual Talk at the NYU Tandon School of Engineering about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">June 2026</span>
+            <span class="talk-where">Invited Talk at Datadog AI Research (DAIR), New York, about <strong>Unifying Language, Agent, and World Models for Reasoning and Planning: Building AI That Can Simulate, Search, and Self-Improve</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">April 2026</span>
-          <span class="talk-where">Invited Talk at the Colorado School of Mines (Computer Science) about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">June 2026</span>
+            <span class="talk-where">Invited Talk at the "AI Science at Scale" Annual Meeting, Santa Fe (organized by UCOP &amp; LANL), about <strong>AI Agents for the UC-LEAP Project</strong> <a class="talk-link" href="https://sites.google.com/view/uc-leap/home">Project</a> <a class="talk-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7471354969997221888/">Event</a></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">March 2026</span>
-          <span class="talk-where">Invited Talk at the Stanford NLP Seminar about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong> <a class="talk-link" href="https://nlp.stanford.edu/seminar/details/zhen_wang_2026.shtml">Link</a></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">May 2026</span>
+            <span class="talk-where">Invited Talk at the University of South Carolina about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">March 2026</span>
-          <span class="talk-where">Invited Talk at the University of Georgia (School of Computing) about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">May 2026</span>
+            <span class="talk-where">Invited Talk at The University of Texas at Arlington about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">March 2026</span>
-          <span class="talk-where">Invited Talk at the New Jersey Institute of Technology (Data Science) about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">April 2026</span>
+            <span class="talk-where">Virtual Talk at the NYU Tandon School of Engineering about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">November 2025</span>
-          <span class="talk-where">Invited Talk at the UCSD CSE AI Seminar about <strong>Building AI That Discovers</strong> <span class="talk-host">(hosted by Prithviraj (Raj) Ammanabrolu)</span> <a class="talk-link" href="https://drive.google.com/file/d/1qq5farbBbHoRBvDPORIn1Tpa_NA7SQqa/view?usp=sharing">Poster</a></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">April 2026</span>
+            <span class="talk-where">Invited Talk at the Colorado School of Mines (Computer Science) about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">July 2025</span>
-          <span class="talk-where">Panel at ACL 2025 (Birds of a Feather) about <strong>Bridging Human Study and LLM Agents for Social Simulation</strong> <a class="talk-link" href="https://xuanwang91.github.io/2025-ACL-BOF/">Website</a></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">March 2026</span>
+            <span class="talk-where">Invited Talk at the Stanford NLP Seminar about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong> <a class="talk-link" href="https://nlp.stanford.edu/seminar/details/zhen_wang_2026.shtml">Link</a></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">June 2023</span>
-          <span class="talk-where">Invited Talk at North Carolina State University about <strong>Augmenting Language Models with Massive Tools and World Models</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">March 2026</span>
+            <span class="talk-where">Invited Talk at the University of Georgia (School of Computing) about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">June 2023</span>
-          <span class="talk-where">Invited Talk at George Mason University about <strong>Augmenting Language Models with Massive Tools and World Models</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">March 2026</span>
+            <span class="talk-where">Invited Talk at the New Jersey Institute of Technology (Data Science) about <strong>Building AI that Reasons to Accelerate Real-world Discovery</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">Autumn 2022</span>
-          <span class="talk-where">Invited Talk at UCSD, MBZUAI, and CMU about <strong>Towards Efficient and Robust Practice of Large Language Models</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">November 2025</span>
+            <span class="talk-where">Invited Talk at the UCSD CSE AI Seminar about <strong>Building AI That Discovers</strong> <span class="talk-host">(hosted by Prithviraj (Raj) Ammanabrolu)</span> <a class="talk-link" href="https://drive.google.com/file/d/1qq5farbBbHoRBvDPORIn1Tpa_NA7SQqa/view?usp=sharing">Poster</a></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">Autumn 2022</span>
-          <span class="talk-where">Invited Talk at the University of Washington about <strong>Towards Efficient and Robust Practice of Large Language Models</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">July 2025</span>
+            <span class="talk-where">Panel at ACL 2025 (Birds of a Feather) about <strong>Bridging Human Study and LLM Agents for Social Simulation</strong> <a class="talk-link" href="https://xuanwang91.github.io/2025-ACL-BOF/">Website</a></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">March 2021</span>
-          <span class="talk-where">Conference Talk at WSDM 2021 about <strong>Modeling Context Pair Interaction for Pairwise Tasks on Graphs</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">June 2023</span>
+            <span class="talk-where">Invited Talk at North Carolina State University about <strong>Augmenting Language Models with Massive Tools and World Models</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">January 2021</span>
-          <span class="talk-where">Invited Talk at the CDAC Rising Stars in Data Science Workshop, University of Chicago, about <strong>Towards Interpretable Machine Learning by Human Knowledge Reasoning</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">June 2023</span>
+            <span class="talk-where">Invited Talk at George Mason University about <strong>Augmenting Language Models with Massive Tools and World Models</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">July 2020</span>
-          <span class="talk-where">Conference Talk at ACL 2020 about <strong>Rationalizing Relation Prediction from Corpus-level Statistics</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">Autumn 2022</span>
+            <span class="talk-where">Invited Talk at UCSD, MBZUAI, and CMU about <strong>Towards Efficient and Robust Practice of Large Language Models</strong></span>
+          </li>
 
-        <li class="talk-row">
-          <span class="talk-date">August 2019</span>
-          <span class="talk-where">Conference Talk at KDD 2019, Anchorage, Alaska, about <strong>SurfCon: Synonym Discovery on Privacy-Aware Clinical Data</strong></span>
-        </li>
+          <li class="talk-row">
+            <span class="talk-date">Autumn 2022</span>
+            <span class="talk-where">Invited Talk at the University of Washington about <strong>Towards Efficient and Robust Practice of Large Language Models</strong></span>
+          </li>
 
-      </ul>
-    </section>
-  </main>
+          <li class="talk-row">
+            <span class="talk-date">March 2021</span>
+            <span class="talk-where">Conference Talk at WSDM 2021 about <strong>Modeling Context Pair Interaction for Pairwise Tasks on Graphs</strong></span>
+          </li>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-meta">© 2026 Zhen Wang</p>
-    </div>
-  </footer>
+          <li class="talk-row">
+            <span class="talk-date">January 2021</span>
+            <span class="talk-where">Invited Talk at the CDAC Rising Stars in Data Science Workshop, University of Chicago, about <strong>Towards Interpretable Machine Learning by Human Knowledge Reasoning</strong></span>
+          </li>
+
+          <li class="talk-row">
+            <span class="talk-date">July 2020</span>
+            <span class="talk-where">Conference Talk at ACL 2020 about <strong>Rationalizing Relation Prediction from Corpus-level Statistics</strong></span>
+          </li>
+
+          <li class="talk-row">
+            <span class="talk-date">August 2019</span>
+            <span class="talk-where">Conference Talk at KDD 2019, Anchorage, Alaska, about <strong>SurfCon: Synonym Discovery on Privacy-Aware Clinical Data</strong></span>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="footer-meta">© 2026 Zhen Wang</p>
+        <div class="visitor-map">
+          <a href="https://mapmyvisitors.com/web/1c7la" title="Visit tracker">
+            <img src="https://mapmyvisitors.com/map.png?d=pV71LnC71IrfEBQZBzoLe3YrtnJhQ5qtWT6to28Cu4o&cl=ffffff" alt="Visitor map" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+    </main>
+  </div>
 
   <button class="to-top" id="toTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
@@ -315,47 +365,12 @@
 
   <script>
     (function () {
-      // Auto-counted talk badge on the page title
-      var title = document.querySelector('.page-header h1');
-      var n = document.querySelectorAll('.talk-row').length;
-      if (title && n > 0) {
-        var b = document.createElement('span');
-        b.className = 'count';
-        b.textContent = n;
-        title.appendChild(b);
-      }
-
-      // Reading progress bar
-      var bar = document.getElementById('progressBar');
-      function onScroll() {
-        var h = document.documentElement;
-        var max = h.scrollHeight - h.clientHeight;
-        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-      }
-
       // Back to top
       var toTop = document.getElementById('toTop');
       function toggleTop() { if (window.scrollY > 450) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); } }
       toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-
-      window.addEventListener('scroll', function () { onScroll(); toggleTop(); }, { passive: true });
-      onScroll(); toggleTop();
-
-      // Scroll reveal
-      try {
-        if ('IntersectionObserver' in window) {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) {
-              if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-            });
-          }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-          document.querySelectorAll('.talk-row').forEach(function (el) { io.observe(el); });
-        } else {
-          document.querySelectorAll('.talk-row').forEach(function (el) { el.classList.add('in'); });
-        }
-      } catch (err) {
-        document.documentElement.classList.remove('js-anim');
-      }
+      window.addEventListener('scroll', toggleTop, { passive: true });
+      toggleTop();
     })();
   </script>
 </body>

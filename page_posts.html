@@ -1,127 +1,143 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Blog | Zhen Wang</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2324303e'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta charset="utf-8">
+  <title>Blogs | Zhen Wang</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230064b1'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
   <meta name="author" content="Zhen Wang" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blog posts by Zhen Wang on AI research: reasoning, agents, LLM evaluation, and reflections on the field.">
+  <meta property="og:title" content="Blogs | Zhen Wang">
+  <meta property="og:description" content="Blog posts by Zhen Wang on AI research and reflections on the field.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zhenwang9102.github.io/page_posts.html">
+  <meta property="og:image" content="https://zhenwang9102.github.io/images/headshot_square.jpg">
+  <link rel="canonical" href="https://zhenwang9102.github.io/page_posts.html">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&text=%E7%8E%8B%E9%9C%87&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --brand-dark: #24303e;
-      --brand-blue: #3d6a8f;
-      --brand-accent: #7f95a3;
-      --brand-accent-dark: #6d8290;
-      --primary: var(--brand-dark);
-      --text: #2d3748;
-      --text-light: #4a5568;
-      --bg: #fafafa;
-      --bg-card: #ffffff;
-      --border: #e2e8f0;
-      --highlight-blue: #e9f1f7;
-      --highlight-gold: #eef2f5;
-      --link: #3d6a8f;
-      --link-hover: #2e5270;
-    }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 12px; top: 10px; z-index: 300; background: #ffffff; color: #000000; padding: 6px 12px; outline: 2px solid #0064b1; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.65;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
-    a { color: var(--link); text-decoration: none; font-weight: 500; transition: color .15s ease; }
-    a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+    a { color: #0064b1; text-decoration: none; font-weight: 500; transition: color .15s ease; }
+    a:hover { color: #00548f; text-decoration: underline; text-decoration-color: #00548f; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:visited { color: #0064b1; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #0064b1; outline-offset: 2px; border-radius: 4px; }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    strong { font-weight: 700; color: #000000; }
+    a strong { color: inherit; }
 
-    /* Reading progress bar */
-    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(36, 48, 62, .08); z-index: 200; }
-    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-dark)); transition: width .1s linear; }
+    ::selection { background: rgba(0, 100, 177, .15); }
 
-    /* Navigation */
-    .nav { background: var(--brand-dark); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
-    .nav-inner { display: flex; justify-content: center; gap: 4px; padding: 11px 0; flex-wrap: wrap; }
+    /* ── Top nav ── */
+    .nav {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(255, 255, 255, .88);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      backdrop-filter: saturate(180%) blur(10px);
+      box-shadow: 0 1px 0 #e9ecee;
+    }
+    .nav-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: flex; justify-content: center;
+      gap: 4px; padding: 11px 0; flex-wrap: wrap;
+    }
     .nav a {
-      font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, .82);
-      padding: 7px 15px; border-radius: 6px;
-      transition: all .18s ease; letter-spacing: .11em; text-transform: uppercase;
-      position: relative;
+      position: relative; text-decoration: none;
+      font-size: 13.5px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: #494e52;
+      padding: 7px 15px;
+      transition: color .18s ease;
     }
-    .nav a:hover { background: rgba(255, 255, 255, .10); color: #fff; text-decoration: none; }
-    .nav a.active { color: #fff; }
-    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: rgba(255, 255, 255, .7); border-radius: 2px; }
+    .nav a:hover { color: #000000; text-decoration: none; }
+    .nav a.active { color: #000000; }
+    .nav a::after {
+      content: ''; position: absolute;
+      left: 15px; right: 15px; bottom: 2px;
+      height: 2px; background: #0064b1; border-radius: 2px;
+      transform: scaleX(0); transition: transform 0.2s ease-in-out;
+    }
+    .nav a:hover::after { transform: scaleX(1); }
+    .nav a.active::after { transform: scaleX(1); }
 
-    /* Page Header */
-    .page-header {
-      padding: 36px 0 26px;
-      animation: fadeInUp 0.6s ease-out;
+    /* ── Two-column layout ── */
+    .layout { display: flex; max-width: 1160px; margin: 0 auto; }
+
+    .sidebar { width: 300px; flex-shrink: 0; }
+    .sidebar-inner {
+      position: sticky; top: 58px; max-height: calc(100vh - 58px); overflow-y: auto;
+      padding: 42px 30px 36px; text-align: center; scrollbar-width: none;
     }
-    .page-header h1 {
-      font-family: 'Newsreader', 'Georgia', serif;
-      font-size: 2.1rem; font-weight: 700; color: var(--primary);
-      margin-bottom: 5px; letter-spacing: -0.02em; line-height: 1.15;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .page-header p {
-      font-size: 14px; color: var(--text-light); margin-left: 16px; margin-top: 3px;
-    }
-    .page-header em {
-      font-size: 12.5px; color: var(--text-light); font-style: italic; margin-left: 16px;
-      display: block; margin-top: 2px;
-    }
+    .sidebar-inner::-webkit-scrollbar { display: none; }
+
+    .profile-photo img { width: 168px; height: 168px; object-fit: cover; border-radius: 14px; }
+
+    .side-name { font-size: 1.02rem; font-weight: 700; color: #000000; letter-spacing: .16em; text-transform: uppercase; margin-top: 18px; line-height: 1.3; }
+    .side-name .cn { display: block; font-family: 'Libian SC', 'Baoli SC', 'LiSu', 'Ma Shan Zheng', 'STKaiti', 'KaiTi', serif; font-weight: 400; color: #000000; font-size: 1.7rem; margin: 3px 0 0; line-height: 1.2; }
+
+    .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; width: fit-content; margin: 18px auto 0; }
+    .contact-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #494e52; text-decoration: none; }
+    .contact-links a:hover { color: #494e52; text-decoration: underline; }
+    .contact-links .loc { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #494e52; }
+    .contact-links .ci { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .content { flex: 1; min-width: 0; padding: 36px 46px 44px; }
+
+    .section { padding: 30px 0 26px; scroll-margin-top: 64px; }
+    .section:first-child { padding-top: 4px; }
+    .section-title { font-size: 14px; font-weight: 700; color: #000000; letter-spacing: .12em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .section-title::before { content: ''; width: 4px; height: 19px; background: #0064b1; border-radius: 2px; flex-shrink: 0; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: #e9ecee; margin-left: 4px; }
+
+    .section-intro { font-size: 13.5px; color: #494e52; margin: -8px 0 4px; }
+    .section-intro em { font-size: 12.5px; font-style: italic; }
+    .section-intro:last-of-type { margin: 0 0 18px; }
 
     /* Blog Grid */
-    .section { padding: 4px 0 32px; }
-
     .blog-grid {
       display: flex;
       flex-direction: column;
       gap: 14px;
+      max-width: 100%;
     }
 
     .blog-card {
-      background: var(--bg-card);
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #e9ecee;
       overflow: hidden;
-      transition: all 0.25s ease;
       display: grid;
       grid-template-columns: 185px 1fr;
-    }
-
-    .blog-card:hover {
-      box-shadow: 0 6px 26px rgba(36,48,62,0.10);
-      transform: translateY(-2px);
-      border-color: rgba(109,130,144,0.4);
     }
 
     .blog-card-image {
       position: relative;
       overflow: hidden;
-      background: var(--highlight-blue);
+      background: #e9ecee;
     }
 
     .blog-card-image img {
       width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.4s ease;
     }
-
-    .blog-card:hover .blog-card-image img { transform: scale(1.05); }
 
     .blog-card-content {
       padding: 20px 24px;
@@ -130,202 +146,235 @@
     }
 
     .blog-date {
-      font-size: 11px; font-weight: 700; color: var(--brand-blue);
+      font-size: 11px; font-weight: 700; color: #6d757d;
       text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px;
     }
 
     .blog-card h3 {
-      font-size: 15px; font-weight: 700; color: var(--primary);
+      font-size: 15px; font-weight: 700; color: #000000;
       margin-bottom: 8px; line-height: 1.4;
     }
 
-    .blog-card h3 a { color: inherit; text-decoration: none; transition: color 0.2s; }
-    .blog-card h3 a:hover { color: var(--brand-blue); }
+    .blog-card h3 a { color: #0064b1; font-weight: 700; text-decoration: none; transition: color 0.2s; }
+    .blog-card h3 a:hover { color: #00548f; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
     .blog-card p {
-      font-size: 13.5px; color: var(--text-light); line-height: 1.65; flex: 1;
+      font-size: 13.5px; color: #494e52; line-height: 1.65; flex: 1;
     }
 
     .blog-card p em { font-style: italic; }
 
     .blog-card-footer {
-      margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border);
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid #e9ecee;
     }
 
     .read-more {
       display: inline-flex; align-items: center; gap: 5px;
-      font-size: 12.5px; font-weight: 700; color: var(--brand-blue);
-      text-decoration: none; transition: all 0.2s; letter-spacing: 0.02em;
+      font-size: 12.5px; font-weight: 700; color: #0064b1;
+      text-decoration: none; letter-spacing: 0.02em;
     }
 
-    .read-more:hover { color: var(--brand-dark); gap: 9px; }
-    .read-more::after { content: '→'; transition: transform 0.2s; }
-    .read-more:hover::after { transform: translateX(3px); }
+    .read-more:hover { color: #00548f; }
+    .read-more::after { content: '→'; }
 
     /* Featured tag */
     .featured-tag {
       display: inline-block;
-      background: var(--border);
-      color: var(--text-light);
+      background: #e9ecee;
+      color: #494e52;
       font-size: 10px; font-weight: 900;
       text-transform: uppercase; letter-spacing: 0.1em;
       padding: 3px 9px; border-radius: 3px; margin-bottom: 5px;
     }
 
     /* Footer */
-    .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); margin-top: 16px; }
-    .visitor-map { margin-bottom: 16px; opacity: 0.8; transition: opacity 0.2s; }
+    .footer { margin-top: 24px; padding: 26px 0 8px; text-align: center; border-top: 1px solid #e9ecee; }
+    .footer-meta { font-size: 13px; color: #6d757d; margin-bottom: 12px; }
+    .visitor-map { opacity: .7; }
     .visitor-map:hover { opacity: 1; }
+    .visitor-map a { text-decoration: none; }
+    .visitor-map img { max-width: 200px; border-radius: 4px; border: 1px solid #e9ecee; }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+    @media (max-width: 900px) {
+      .nav-inner { padding: 9px 0; }
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .sidebar-inner { position: static; max-height: none; padding: 30px 22px 22px; }
+      .profile-photo img { width: 130px; height: 130px; }
+      .content { padding: 26px 22px 36px; }
     }
-
-    .blog-card { animation: fadeInUp 0.6s ease-out backwards; }
-    .blog-card:nth-child(1) { animation-delay: 0.08s; }
-    .blog-card:nth-child(2) { animation-delay: 0.13s; }
-    .blog-card:nth-child(3) { animation-delay: 0.18s; }
-    .blog-card:nth-child(4) { animation-delay: 0.23s; }
-    .blog-card:nth-child(5) { animation-delay: 0.28s; }
 
     @media (max-width: 768px) {
       body { font-size: 15px; }
       .blog-card { grid-template-columns: 1fr; }
       .blog-card-image { height: 170px; }
     }
+
+    @media print {
+      a { color: #000000; text-decoration: underline; }
+      .nav, .visitor-map, .skip { display: none; }
+      .sidebar-inner { position: static; max-height: none; }
+      .layout { display: block; }
+      .sidebar { width: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .nav a::after { transition: none; }
+    }
   </style>
 </head>
 
 <body>
-  <div class="progress-track" hidden><div class="progress-bar" id="progressBar"></div></div>
-
-  <nav class="nav">
-    <div class="container nav-inner">
+  <a class="skip" href="#content">Skip to content</a>
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner">
       <a href="/index.html">About</a>
       <a href="/page_lab.html">My Lab</a>
-      <a href="/page_research.html">Research</a>
       <a href="/page_pubs.html">Publications</a>
       <a href="/page_talks.html">Invited Talks</a>
-      <a href="/page_posts.html" class="active">Blogs</a>
+      <a href="/page_posts.html" class="active" aria-current="page">Blogs</a>
       <a href="/page_honors_and_services.html">Honors &amp; Service</a>
     </div>
   </nav>
 
-  <main class="container">
-    <header class="page-header">
-      <h1>Blog</h1>
-      <p>I write blogs from time to time to introduce some of my new research topics or reflect on past research.</p>
-      <em>(Opinions expressed are my own.)</em>
-    </header>
+  <div class="layout">
 
-    <section class="section">
-      <div class="blog-grid">
+    <!-- ==== Fixed sidebar ==== -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <figure class="profile-photo">
+          <img src="images/headshot_square.jpg" alt="Zhen Wang">
+        </figure>
+        <h1 class="side-name">Zhen Wang <span class="cn" lang="zh-Hans">王震</span></h1>
 
-        <!-- Post 1 - Featured -->
-        <article class="blog-card">
-          <div class="blog-card-image">
-            <img src="/images/blog_agi_race.png" alt="The Missing Science of AI">
-          </div>
-          <div class="blog-card-content">
-            <span class="featured-tag">Featured</span>
-            <span class="blog-date">September 2025</span>
-            <h3><a href="https://medium.com/@wangzhen_60071/why-the-current-agi-race-may-fail-us-all-2b1aaf163426">The Missing Science of AI: Why Understanding Intelligence Matters More Than Ever</a></h3>
-            <p>Drawing from an analogy in Liu Cixin's <em>The Three-Body Problem</em>, I challenge the current AI race as a dangerous commitment to a single, brute-force path of "scaling." This approach reflects our scientific ignorance, unable to achieve elegant humanlike generalizability, we resort to feeding the machine everything. I advocate that alternatives should be funded and explored with the same vigor, such as task-specific scientific discovery.</p>
-            <div class="blog-card-footer">
-              <a href="https://medium.com/@wangzhen_60071/why-the-current-agi-race-may-fail-us-all-2b1aaf163426" class="read-more">Read on Medium</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Post 2 -->
-        <article class="blog-card">
-          <div class="blog-card-image">
-            <img src="/images/blog_chatgpt_year_2.png" alt="ChatGPT's Second Year">
-          </div>
-          <div class="blog-card-content">
-            <span class="blog-date">January 2025</span>
-            <h3><a href="https://www.notion.so/zhenwang/ChatGPT-s-Second-Year-10-Aha-Moments-of-2024-That-Rewired-2025-15a0404f81f58028adf6ed4d402187f5">ChatGPT's Second Year: 10 Aha Moments of 2024 That Rewired 2025</a></h3>
-            <p>The second entry in my ChatGPT "Twist" Reflection Series. Computing scaling slowed in 2024 while inference-time scaling emerged. The year delivered unexpected plot twists: from rethinking how LLMs handle reasoning and benchmarks to the seamless integration of multimodal I/O, small language models, persona vs. personalization, world models, and AI scientists.</p>
-            <div class="blog-card-footer">
-              <a href="https://www.notion.so/zhenwang/ChatGPT-s-Second-Year-10-Aha-Moments-of-2024-That-Rewired-2025-15a0404f81f58028adf6ed4d402187f5" class="read-more">Read on Notion</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="blog-card">
-          <div class="blog-card-image">
-            <img src="/images/blog_de_arena.png" alt="Decentralized Arena">
-          </div>
-          <div class="blog-card-content">
-            <span class="blog-date">October 2024</span>
-            <h3><a href="https://de-arena.maitrix.org/">Decentralized Arena via Collective LLM Intelligence</a></h3>
-            <p>Introducing DeArena, the first scalable, automated LLM evaluation system that expands the "Chatbot Arena" concept across diverse dimensions. By enabling LLMs to evaluate each other, DeArena fosters a transparent, autonomous, and reproducible approach to AI benchmarking, minimizing bias through an efficient sorting-based algorithm. Its potential extends to superintelligence oversight, offering a democratic, collective intelligence-driven alternative.</p>
-            <div class="blog-card-footer">
-              <a href="https://de-arena.maitrix.org/" class="read-more">Read more</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Post 4 -->
-        <article class="blog-card">
-          <div class="blog-card-image">
-            <img src="/images/blog_txt360_from_llm360.png" alt="TxT360 Dataset">
-          </div>
-          <div class="blog-card-content">
-            <span class="blog-date">October 2024</span>
-            <h3><a href="https://huggingface.co/spaces/LLM360/TxT360">TxT360: A Top-Quality LLM Pre-training Dataset Requires the Perfect Blend</a></h3>
-            <p>Introducing TxT360 (Trillion eXtracted Text), a large-scale pre-training dataset from LLM360, the first dataset to globally deduplicate 99 CommonCrawl snapshots and 14 high-quality data sources from diverse domains. This blog explains every detail of how TxT360 was produced, offering insights into how data scaling works in balancing noisy web and highly curated data.</p>
-            <div class="blog-card-footer">
-              <a href="https://huggingface.co/spaces/LLM360/TxT360" class="read-more">Read on Hugging Face</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Post 5 -->
-        <article class="blog-card">
-          <div class="blog-card-image">
-            <img src="/images/blog_chatgpt_year_1.png" alt="ChatGPT's First Year">
-          </div>
-          <div class="blog-card-content">
-            <span class="blog-date">January 2024</span>
-            <h3><a href="https://zhenwang.notion.site/Reflecting-on-ChatGPT-s-First-Year-Evolutions-Twists-and-Smooth-Directions-2381d752b5c94012bd21269f46d12a08">Reflecting on ChatGPT's First Year: Evolutions, Twists, and Smooth Directions</a></h3>
-            <p>One year after ChatGPT's release, this blog reflects on its impact on LLM research, examining which topics emerged and which became less relevant. I highlight "twisted" directions where academic interest surged or declined unexpectedly, alongside "smooth" directions with consistent attention. Understanding these shifts helps prioritize impactful research areas.</p>
-            <div class="blog-card-footer">
-              <a href="https://zhenwang.notion.site/Reflecting-on-ChatGPT-s-First-Year-Evolutions-Twists-and-Smooth-Directions-2381d752b5c94012bd21269f46d12a08" class="read-more">Read on Notion</a>
-            </div>
-          </div>
-        </article>
+        <div class="contact-links">
+          <span class="loc">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            ERB 527
+          </span>
+          <a href="mailto:zhenwang.work@gmail.com">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            Email
+          </a>
+          <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769 0.5 9.5 12 1l11.5 8.5-4.742 4.269A8 8 0 0 0 12 9.5a8 8 0 0 0-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            Google Scholar
+          </a>
+          <a href="https://twitter.com/zhenwang9102">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter/X
+          </a>
+          <a href="https://www.linkedin.com/in/zhenwang9102/">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.555v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.602 0 4.267 2.37 4.267 5.456v6.285zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.778 13.018H3.555V9h3.56v11.451zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
 
       </div>
-    </section>
-  </main>
+    </aside>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="visitor-map">
-        <a href="https://mapmyvisitors.com/web/1c552"  title="Visit tracker">
-          <img src="https://mapmyvisitors.com/map.png?d=pEuk6HO7gDMR_73ddjHHGqR1Hq0PY80nKyf0lnKgJVY&cl=ffffff" />
-        </a>
-        <!-- <a href="https://clustrmaps.com/site/1c85c" title="Visit tracker">
-          <img src="//www.clustrmaps.com/map_v2.png?d=Z_LvieCN3EbSxzA7WZG5Chqk2tagYjQYT-ZVbwMi1zg&cl=ffffff" alt="Visitor Map" />
-        </a> -->
+    <!-- ==== Scrolling content ==== -->
+    <main class="content" id="content">
+
+      <!-- Blogs -->
+      <section class="section" id="blogs">
+        <h2 class="section-title">Blogs</h2>
+        <p class="section-intro">I write blogs from time to time to introduce some of my new research topics or reflect on past research.</p>
+        <p class="section-intro"><em>(Opinions expressed are my own.)</em></p>
+
+        <div class="blog-grid">
+
+          <!-- Post 1 - Featured -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/blog_agi_race.png" alt="The Missing Science of AI">
+            </div>
+            <div class="blog-card-content">
+              <span class="featured-tag">Featured</span>
+              <span class="blog-date">September 2025</span>
+              <h3><a href="https://medium.com/@wangzhen_60071/why-the-current-agi-race-may-fail-us-all-2b1aaf163426">The Missing Science of AI: Why Understanding Intelligence Matters More Than Ever</a></h3>
+              <p>Drawing from an analogy in Liu Cixin's <em>The Three-Body Problem</em>, I challenge the current AI race as a dangerous commitment to a single, brute-force path of "scaling." This approach reflects our scientific ignorance, unable to achieve elegant humanlike generalizability, we resort to feeding the machine everything. I advocate that alternatives should be funded and explored with the same vigor, such as task-specific scientific discovery.</p>
+              <div class="blog-card-footer">
+                <a href="https://medium.com/@wangzhen_60071/why-the-current-agi-race-may-fail-us-all-2b1aaf163426" class="read-more">Read on Medium</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/blog_chatgpt_year_2.png" alt="ChatGPT's Second Year">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-date">January 2025</span>
+              <h3><a href="https://www.notion.so/zhenwang/ChatGPT-s-Second-Year-10-Aha-Moments-of-2024-That-Rewired-2025-15a0404f81f58028adf6ed4d402187f5">ChatGPT's Second Year: 10 Aha Moments of 2024 That Rewired 2025</a></h3>
+              <p>The second entry in my ChatGPT "Twist" Reflection Series. Computing scaling slowed in 2024 while inference-time scaling emerged. The year delivered unexpected plot twists: from rethinking how LLMs handle reasoning and benchmarks to the seamless integration of multimodal I/O, small language models, persona vs. personalization, world models, and AI scientists.</p>
+              <div class="blog-card-footer">
+                <a href="https://www.notion.so/zhenwang/ChatGPT-s-Second-Year-10-Aha-Moments-of-2024-That-Rewired-2025-15a0404f81f58028adf6ed4d402187f5" class="read-more">Read on Notion</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/blog_de_arena.png" alt="Decentralized Arena">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-date">October 2024</span>
+              <h3><a href="https://de-arena.maitrix.org/">Decentralized Arena via Collective LLM Intelligence</a></h3>
+              <p>Introducing DeArena, the first scalable, automated LLM evaluation system that expands the "Chatbot Arena" concept across diverse dimensions. By enabling LLMs to evaluate each other, DeArena fosters a transparent, autonomous, and reproducible approach to AI benchmarking, minimizing bias through an efficient sorting-based algorithm. Its potential extends to superintelligence oversight, offering a democratic, collective intelligence-driven alternative.</p>
+              <div class="blog-card-footer">
+                <a href="https://de-arena.maitrix.org/" class="read-more">Read more</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/blog_txt360_from_llm360.png" alt="TxT360 Dataset">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-date">October 2024</span>
+              <h3><a href="https://huggingface.co/spaces/LLM360/TxT360">TxT360: A Top-Quality LLM Pre-training Dataset Requires the Perfect Blend</a></h3>
+              <p>Introducing TxT360 (Trillion eXtracted Text), a large-scale pre-training dataset from LLM360, the first dataset to globally deduplicate 99 CommonCrawl snapshots and 14 high-quality data sources from diverse domains. This blog explains every detail of how TxT360 was produced, offering insights into how data scaling works in balancing noisy web and highly curated data.</p>
+              <div class="blog-card-footer">
+                <a href="https://huggingface.co/spaces/LLM360/TxT360" class="read-more">Read on Hugging Face</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 5 -->
+          <article class="blog-card">
+            <div class="blog-card-image">
+              <img src="/images/blog_chatgpt_year_1.png" alt="ChatGPT's First Year">
+            </div>
+            <div class="blog-card-content">
+              <span class="blog-date">January 2024</span>
+              <h3><a href="https://zhenwang.notion.site/Reflecting-on-ChatGPT-s-First-Year-Evolutions-Twists-and-Smooth-Directions-2381d752b5c94012bd21269f46d12a08">Reflecting on ChatGPT's First Year: Evolutions, Twists, and Smooth Directions</a></h3>
+              <p>One year after ChatGPT's release, this blog reflects on its impact on LLM research, examining which topics emerged and which became less relevant. I highlight "twisted" directions where academic interest surged or declined unexpectedly, alongside "smooth" directions with consistent attention. Understanding these shifts helps prioritize impactful research areas.</p>
+              <div class="blog-card-footer">
+                <a href="https://zhenwang.notion.site/Reflecting-on-ChatGPT-s-First-Year-Evolutions-Twists-and-Smooth-Directions-2381d752b5c94012bd21269f46d12a08" class="read-more">Read on Notion</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="footer-meta">© 2026 Zhen Wang</p>
+        <div class="visitor-map">
+          <a href="https://mapmyvisitors.com/web/1c552" title="Visit tracker">
+            <img src="https://mapmyvisitors.com/map.png?d=pEuk6HO7gDMR_73ddjHHGqR1Hq0PY80nKyf0lnKgJVY&cl=ffffff" alt="Visitor map" loading="lazy">
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
-  <script>
-    (function () {
-      var bar = document.getElementById('progressBar');
-      if (!bar) return;
-      function onScroll() {
-        var h = document.documentElement;
-        var max = h.scrollHeight - h.clientHeight;
-        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
-  </script>
+
+    </main>
+  </div>
 </body>
 </html>
