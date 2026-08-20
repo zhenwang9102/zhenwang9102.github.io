@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Lab | Zhen Wang</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2324303e'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="author" content="Zhen Wang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhen Wang's research group at The University of Texas at Arlington: reasoning, planning, and agency in AI, and AI co-scientists for scientific discovery.">
+  <meta property="og:title" content="Lab | Zhen Wang">
+  <meta property="og:description" content="Zhen Wang's research group at UT Arlington. Members, mentees, and openings.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-dark: #24303e;
+      --brand-blue: #3d6a8f;
+      --brand-blue-dark: #2e5270;
+      --brand-accent: #7f95a3;
+      --brand-accent-dark: #6d8290;
+      --primary: var(--brand-dark);
+      --text: #2d3748;
+      --text-light: #4a5568;
+      --text-muted: #717c8c;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --border-soft: #eef1f4;
+      --link: #3d6a8f;
+      --link-hover: #2e5270;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--link); text-decoration: none; font-weight: 500; transition: color .15s ease; }
+    a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    /* Reading progress bar */
+    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(36, 48, 62, .08); z-index: 200; }
+    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-dark)); transition: width .1s linear; }
+
+    /* Navigation */
+    .nav { background: var(--brand-dark); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
+    .nav-inner { display: flex; justify-content: center; gap: 4px; padding: 11px 0; flex-wrap: wrap; }
+    .nav a {
+      font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, .82);
+      padding: 7px 15px; border-radius: 6px;
+      transition: all .18s ease; letter-spacing: .11em; text-transform: uppercase;
+      position: relative;
+    }
+    .nav a:hover { background: rgba(255, 255, 255, .10); color: #fff; text-decoration: none; }
+    .nav a.active { color: #fff; }
+    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: rgba(255, 255, 255, .7); border-radius: 2px; }
+
+    /* Page Header */
+    .page-header { padding: 36px 0 26px; animation: fadeInUp 0.6s ease-out; }
+    .page-header h1 {
+      font-family: 'Newsreader', 'Georgia', serif;
+      font-size: 2.1rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 5px; letter-spacing: -0.02em; line-height: 1.15;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .page-header p { font-size: 14px; color: var(--text-light); margin-left: 16px; margin-top: 3px; }
+
+    /* Sections */
+    .section { padding: 24px 0 28px; border-top: 1px solid var(--border); }
+    .section:first-of-type { border-top: none; padding-top: 4px; }
+    .section-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 15px; font-weight: 600; color: var(--primary);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 11px;
+      letter-spacing: .07em; text-transform: uppercase;
+    }
+    .section > p { font-size: 15.5px; line-height: 1.74; margin-bottom: 13px; }
+    .section > p:last-child { margin-bottom: 0; }
+    .section p strong { color: var(--primary); font-weight: 700; }
+
+    /* People cards */
+    .people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+
+    .person-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+    .person-card:hover {
+      box-shadow: 0 6px 26px rgba(36, 48, 62, 0.10);
+      transform: translateY(-2px);
+      border-color: rgba(109, 130, 144, 0.4);
+    }
+    .person-card:nth-child(1) { animation-delay: 0.08s; }
+    .person-card:nth-child(2) { animation-delay: 0.13s; }
+    .person-card:nth-child(3) { animation-delay: 0.18s; }
+    .person-card:nth-child(4) { animation-delay: 0.23s; }
+
+    .person-photo {
+      width: 108px; height: 108px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 13px;
+    }
+    .person-name {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 17px; font-weight: 700; color: var(--primary);
+      line-height: 1.3;
+    }
+    .person-name a { color: inherit; }
+    .person-role {
+      font-size: 11.5px; font-weight: 700; color: var(--brand-blue);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-top: 3px; margin-bottom: 8px;
+    }
+    .person-note { font-size: 13px; color: var(--text-light); line-height: 1.55; }
+    .person-links { margin-top: 10px; display: flex; gap: 10px; justify-content: center; font-size: 12.5px; }
+
+    /* Coming-soon placeholder inside people grid */
+    .person-card.placeholder {
+      border-style: dashed;
+      background: transparent;
+      box-shadow: none;
+      justify-content: center;
+      min-height: 220px;
+      color: var(--text-muted);
+    }
+    .person-card.placeholder:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .person-card.placeholder .ph-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--border-soft);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px; font-size: 20px; color: var(--text-muted);
+    }
+    .person-card.placeholder p { font-size: 13px; line-height: 1.6; }
+
+    /* Past mentees list */
+    .alumni-note { font-size: 13px; color: var(--text-muted); font-style: italic; margin: -4px 0 14px; }
+    .alumni-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 30px; }
+    .alumni-list li { padding: 7px 0; border-bottom: 1px solid var(--border-soft); }
+    .alumni-name { display: block; font-size: 14px; font-weight: 700; color: var(--primary); line-height: 1.45; }
+    .alumni-path { display: block; font-size: 12.5px; color: var(--text-light); line-height: 1.5; }
+
+    /* Join-us panel */
+    .join-panel {
+      background: linear-gradient(180deg, #fbfdff, #f5f9fc);
+      border: 1px solid #d9e7f1; border-left: 3px solid var(--brand-blue);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .join-panel p { font-size: 14.5px; line-height: 1.7; margin-bottom: 10px; }
+    .join-panel p:last-child { margin-bottom: 0; }
+    .join-panel strong { color: var(--brand-blue-dark); font-weight: 700; }
+    .join-list { list-style: none; padding: 0; margin: 10px 0 0; }
+    .join-list li { padding: 5px 0; font-size: 14px; line-height: 1.62; }
+    .join-list li strong { color: var(--primary); }
+
+    /* Footer */
+    .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); margin-top: 16px; }
+    .footer-meta { font-size: 12.5px; color: var(--text-muted); }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 15px; }
+      .people-grid { grid-template-columns: 1fr; }
+      .alumni-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress-track" hidden><div class="progress-bar" id="progressBar"></div></div>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/index.html">About</a>
+      <a href="/page_lab.html" class="active">My Lab</a>
+      <a href="/page_research.html">Research</a>
+      <a href="/page_pubs.html">Publications</a>
+      <a href="/page_talks.html">Invited Talks</a>
+      <a href="/page_posts.html">Blogs</a>
+      <a href="/page_honors_and_services.html">Honors &amp; Service</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Lab</h1>
+    </header>
+
+    <!-- Group intro: draft kept for later polishing
+    <section class="section">
+      <p>
+        Our group is part of the Department of <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse">Computer Science and Engineering</a> at <strong>The University of Texas at Arlington</strong>, founded in Fall 2026. We study the <strong>foundations of reasoning, planning, and agency in AI</strong>, and build <strong>AI co-scientists</strong> that accelerate and democratize scientific discovery across biology, materials science, social science, and beyond.
+      </p>
+      <p>
+        We care about both the science of intelligent agents (world models, deliberative reasoning, self-improving foundation models) and their trustworthy deployment in the real world (rigorous evaluation and benchmarking, agent safety and oversight). See the <a href="/page_research.html">Research</a> page for details on our current directions.
+      </p>
+    </section>
+    -->
+
+    <section class="section">
+      <h2 class="section-title">Principal Investigator</h2>
+      <div class="people-grid">
+        <div class="person-card">
+          <img class="person-photo" src="images/headshot_square.jpg" alt="Zhen Wang">
+          <div class="person-name"><a href="/index.html">Zhen Wang</a></div>
+          <div class="person-role">Assistant Professor</div>
+          <div class="person-links">
+            <a href="mailto:zhenwang.work@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=asBaytUAAAAJ&view_op=list_works">Google Scholar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Members &amp; Mentees</h2>
+      <div class="people-grid">
+        <!--
+          Member card template: copy this block into the grid for each student/mentee.
+
+          <div class="person-card">
+            <img class="person-photo" src="images/members/NAME.jpg" alt="Full Name">
+            <div class="person-name"><a href="https://their-homepage.example">Full Name</a></div>
+            <div class="person-role">PhD Student / MS Student / Undergraduate Researcher</div>
+            <p class="person-note">One line on their research topic.</p>
+            <div class="person-links">
+              <a href="mailto:their@email">Email</a>
+            </div>
+          </div>
+        -->
+        <div class="person-card placeholder">
+          <div class="ph-icon">+</div>
+          <p>Founding members<br>coming soon</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Past Mentees</h2>
+      <p class="alumni-note">All students listed have published peer-reviewed publications under my supervision.</p>
+      <ul class="alumni-list">
+        <li><span class="alumni-name">Lingbo Mo</span><span class="alumni-path">PhD student at OSU → Research Scientist at Amazon</span></li>
+        <li><span class="alumni-name">Yufan Zhou</span><span class="alumni-path">PhD student at KU Leuven</span></li>
+        <li><span class="alumni-name">Xinyuan Wang</span><span class="alumni-path">M.S. student at UCSD → PhD student at HKU</span></li>
+        <li><span class="alumni-name">Somanshu Singla</span><span class="alumni-path">M.S. student at UCSD → AI Research at Essential → Microsoft AI (MAI)</span></li>
+        <li><span class="alumni-name">Enze Ma</span><span class="alumni-path">M.S. student at UCSD → PhD student at UIC</span></li>
+        <li><span class="alumni-name">Janvijay Singh</span><span class="alumni-path">M.S. student at GaTech → PhD student at UIUC</span></li>
+        <li><span class="alumni-name">Yanbin Yin</span><span class="alumni-path">Undergraduate at Renmin University of China → PhD student at GaTech</span></li>
+        <li><span class="alumni-name">Ana Jojic</span><span class="alumni-path">Undergraduate at UW → PhD student at UIUC</span></li>
+        <li><span class="alumni-name">Yiming Gao</span><span class="alumni-path">Undergraduate at UCSD → PhD student at TAMU</span></li>
+        <li><span class="alumni-name">Chenxi Li</span><span class="alumni-path">Undergraduate at UCSD → M.S. student at UChicago</span></li>
+        <li><span class="alumni-name">Zhongyan Luo</span><span class="alumni-path">Undergraduate at UCSD → CMU MSML</span></li>
+        <li><span class="alumni-name">Jinzhou Tang</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Jieyuan Liu</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Xinle Yu</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Ayushi Mishra</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Abdullah Ashfaq</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Jefferson Chen</span><span class="alumni-path">Undergraduate at UCSD → PhD student at UCLA</span></li>
+        <li><span class="alumni-name">Zixuan Wang</span><span class="alumni-path">Undergraduate at Tsinghua University</span></li>
+      </ul>
+    </section>
+
+    <!-- Join Us: hidden for now, kept for possible fallback
+    <section class="section">
+      <h2 class="section-title">Join Us</h2>
+      <div class="join-panel">
+        <p>
+          <strong>We are always looking for curious, self-driven students</strong> who are excited about reasoning, agents, and AI for scientific discovery.
+        </p>
+        <ul class="join-list">
+          <li><strong>Prospective PhD students:</strong> apply through the <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse">UTA CSE graduate program</a> and mention my name in your application; feel free to also email me with your CV and a short note on what you want to work on.</li>
+          <li><strong>UTA master's and undergraduate students:</strong> email me to discuss research opportunities in the group.</li>
+          <li><strong>Visitors and collaborators:</strong> we are open to collaborations with researchers who share our interests; reach out anytime.</li>
+        </ul>
+        <p style="margin-top:12px;">
+          Please use a subject line starting with <strong>[Prospective]</strong> so your email is easy to spot.
+        </p>
+      </div>
+    </section>
+    -->
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-meta">© 2026 Zhen Wang</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var bar = document.getElementById('progressBar');
+      if (!bar) return;
+      function onScroll() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

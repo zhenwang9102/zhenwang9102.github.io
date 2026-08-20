@@ -10,28 +10,28 @@
   <meta property="og:title" content="Publications | Zhen Wang">
   <meta property="og:description" content="Publication list of Zhen Wang, organized by year and by topic.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23182B49'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23FFCD00'%3EZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2324303e'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --ucsd-navy: #182B49;
-      --ucsd-blue: #00629B;
-      --ucsd-yellow: #FFCD00;
-      --ucsd-gold: #C69214;
-      --primary: var(--ucsd-navy);
+      --brand-dark: #24303e;
+      --brand-blue: #3d6a8f;
+      --brand-accent: #7f95a3;
+      --brand-accent-dark: #6d8290;
+      --primary: var(--brand-dark);
       --text: #2d3748;
       --text-light: #4a5568;
       --bg: #fafafa;
       --bg-card: #ffffff;
       --border: #e2e8f0;
-      --highlight-blue: #e6f3fa;
-      --highlight-gold: #fff9e6;
+      --highlight-blue: #e9f1f7;
+      --highlight-gold: #eef2f5;
       --highlight-red: #fef2f2;
-      --link: #00629B;
-      --link-hover: #004d78;
+      --link: #3d6a8f;
+      --link-hover: #2e5270;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -54,17 +54,17 @@
     .container { max-width: 900px; margin: 0 auto; padding: 0 26px; }
 
     /* Navigation */
-    .nav { background: var(--ucsd-navy); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
+    .nav { background: var(--brand-dark); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
     .nav-inner { display: flex; justify-content: center; gap: 4px; padding: 11px 0; flex-wrap: wrap; }
     .nav a {
-      font-size: 11.5px; font-weight: 600; color: rgba(255, 255, 255, .78);
+      font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, .82);
       padding: 7px 15px; border-radius: 6px;
       transition: all .18s ease; letter-spacing: .11em; text-transform: uppercase;
       position: relative;
     }
-    .nav a:hover { background: rgba(255, 255, 255, .09); color: var(--ucsd-yellow); text-decoration: none; }
-    .nav a.active { color: var(--ucsd-yellow); }
-    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: var(--ucsd-yellow); border-radius: 2px; }
+    .nav a:hover { background: rgba(255, 255, 255, .10); color: #fff; text-decoration: none; }
+    .nav a.active { color: #fff; }
+    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: rgba(255, 255, 255, .7); border-radius: 2px; }
 
     /* Page Header */
     .page-header { padding: 36px 0 22px; animation: fadeInUp 0.6s ease-out; }
@@ -74,13 +74,8 @@
       margin-bottom: 5px; letter-spacing: -0.02em; line-height: 1.15;
       display: flex; align-items: center; gap: 12px;
     }
-    .page-header h1::before {
-      content: ''; width: 4px; height: 28px;
-      background: linear-gradient(180deg, var(--ucsd-yellow), var(--ucsd-gold));
-      border-radius: 2px; flex-shrink: 0;
-    }
     .page-header p { font-size: 13px; color: var(--text-light); margin-left: 16px; }
-    .page-header p a { color: var(--ucsd-blue); text-decoration: none; font-weight: 700; }
+    .page-header p a { color: var(--brand-blue); text-decoration: none; font-weight: 700; }
     .page-header p a:hover { text-decoration: underline; }
 
     /* View Toggle */
@@ -96,8 +91,8 @@
       transition: all 0.2s ease; background: transparent; color: var(--text-light);
       letter-spacing: 0.04em; text-transform: uppercase;
     }
-    .view-toggle button:hover { background: var(--highlight-blue); color: var(--ucsd-blue); }
-    .view-toggle button.active { background: var(--ucsd-navy); color: white; }
+    .view-toggle button:hover { background: var(--highlight-blue); color: var(--brand-blue); }
+    .view-toggle button.active { background: var(--brand-dark); color: white; }
 
     /* Topic Nav */
     .topic-nav {
@@ -111,11 +106,11 @@
     }
     .topic-nav-list { display: flex; flex-wrap: wrap; gap: 8px; }
     .topic-nav-list a {
-      font-size: 12.5px; font-weight: 700; color: var(--ucsd-blue);
+      font-size: 12.5px; font-weight: 700; color: var(--brand-blue);
       text-decoration: none; padding: 5px 12px; border-radius: 20px;
       background: var(--highlight-blue); transition: all 0.2s ease; white-space: nowrap;
     }
-    .topic-nav-list a:hover { background: var(--ucsd-blue); color: white; }
+    .topic-nav-list a:hover { background: var(--brand-blue); color: white; }
 
     /* Sections */
     .section { margin-bottom: 34px; animation: fadeInUp 0.6s ease-out backwards; }
@@ -127,10 +122,6 @@
       display: flex; align-items: center; gap: 10px;
       letter-spacing: 0.06em; text-transform: uppercase;
     }
-    .section-title::before {
-      content: ''; width: 4px; height: 18px;
-      background: var(--ucsd-yellow); border-radius: 2px; flex-shrink: 0;
-    }
 
     /* Paper Cards */
     .paper-card {
@@ -140,7 +131,7 @@
     }
     .paper-card:hover {
       box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-      border-color: rgba(0,98,155,0.3);
+      border-color: rgba(61,106,143,0.3);
     }
     .paper-image {
       flex-shrink: 0; width: 148px; height: 92px;
@@ -156,8 +147,20 @@
       font-size: 14.5px; font-weight: 700; color: var(--primary);
       margin-bottom: 5px; line-height: 1.4;
     }
-    .paper-title a { color: inherit; text-decoration: none; }
-    .paper-title a:hover { color: var(--ucsd-blue); }
+    .paper-title a {
+      color: inherit;
+      text-decoration: underline dotted;
+      text-decoration-color: rgba(61, 106, 143, 0.55);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
+      transition: color .15s ease, text-decoration-color .15s ease;
+    }
+    .paper-title a:hover {
+      color: var(--brand-blue);
+      text-decoration: underline solid;
+      text-decoration-color: var(--brand-blue);
+      text-underline-offset: 3px;
+    }
 
     .paper-authors {
       font-size: 13px; color: var(--text-light);
@@ -166,11 +169,11 @@
     .paper-authors strong { color: var(--primary); font-weight: 700; }
 
     .paper-venue {
-      font-size: 13px; color: var(--ucsd-blue); font-weight: 700;
+      font-size: 13px; color: var(--brand-blue); font-weight: 700;
       margin-bottom: 6px; display: flex; align-items: center; flex-wrap: wrap; gap: 5px;
     }
     .paper-venue .highlight {
-      background: var(--highlight-gold); color: var(--ucsd-gold);
+      background: var(--highlight-gold); color: var(--brand-accent-dark);
       padding: 2px 7px; border-radius: 4px; font-size: 11.5px; font-weight: 700;
     }
     .paper-venue .highlight.red { background: var(--highlight-red); color: #dc2626; }
@@ -182,17 +185,17 @@
       margin: 9px 0 11px;
       padding: 8px 13px;
       background: #f6f8fb;
-      border-left: 3px solid var(--ucsd-gold);
+      border-left: 3px solid var(--brand-accent-dark);
       border-radius: 0 7px 7px 0;
     }
 
     .paper-links { display: flex; flex-wrap: wrap; gap: 6px; }
     .paper-links a {
-      font-size: 12px; font-weight: 700; color: var(--ucsd-blue);
+      font-size: 12px; font-weight: 700; color: var(--brand-blue);
       text-decoration: none; padding: 3px 11px; border-radius: 4px;
       background: var(--highlight-blue); transition: all 0.2s ease; letter-spacing: 0.02em;
     }
-    .paper-links a:hover { background: var(--ucsd-blue); color: white; }
+    .paper-links a:hover { background: var(--brand-blue); color: white; }
 
     /* Footer */
     .footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); margin-top: 40px; }
@@ -221,25 +224,25 @@
 
     /* ====================== DYNAMIC ENHANCEMENTS ====================== */
 
-    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(24, 43, 73, .08); z-index: 200; }
-    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold)); transition: width .1s linear; }
+    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(36, 48, 62, .08); z-index: 200; }
+    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-dark)); transition: width .1s linear; }
 
     /* Selected-Honors-style hover: subtle right-slide + light tint + soft lift */
     .paper-image, .paper-content { transition: transform 0.2s ease; }
     .paper-card:hover .paper-image,
     .paper-card:hover .paper-content { transform: translateX(5px); }
-    .paper-card:hover { background: rgba(0, 98, 155, 0.035); box-shadow: 0 8px 26px rgba(24,43,73,0.10); }
+    .paper-card:hover { background: rgba(61, 106, 143, 0.035); box-shadow: 0 8px 26px rgba(36,48,62,0.10); }
 
     .section-title .count {
       margin-left: auto;
       font-family: 'DM Sans', sans-serif;
       font-size: 11.5px; font-weight: 700;
-      color: var(--ucsd-blue); background: var(--highlight-blue);
+      color: var(--brand-blue); background: var(--highlight-blue);
       padding: 2px 11px; border-radius: 20px;
       letter-spacing: 0.03em; text-transform: none;
     }
 
-    .topic-nav-list a.active { background: var(--ucsd-blue); color: #fff; }
+    .topic-nav-list a.active { background: var(--brand-blue); color: #fff; }
 
     .js-anim .paper-card { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
     .js-anim .paper-card.in { opacity: 1; transform: translateY(0); }
@@ -251,17 +254,17 @@
     .to-top {
       position: fixed; right: 24px; bottom: 24px;
       width: 44px; height: 44px; border-radius: 50%;
-      background: var(--ucsd-navy); color: #fff; border: none;
+      background: var(--brand-dark); color: #fff; border: none;
       display: flex; align-items: center; justify-content: center;
-      cursor: pointer; box-shadow: 0 10px 30px rgba(24,43,73,0.12);
+      cursor: pointer; box-shadow: 0 10px 30px rgba(36,48,62,0.12);
       opacity: 0; visibility: hidden; transform: translateY(10px);
       transition: all 0.25s ease; z-index: 120;
     }
     .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
-    .to-top:hover { background: var(--ucsd-blue); transform: translateY(-3px); }
+    .to-top:hover { background: var(--brand-blue); transform: translateY(-3px); }
     .to-top svg { width: 20px; height: 20px; }
 
-    a:focus-visible, button:focus-visible { outline: 2px solid var(--ucsd-blue); outline-offset: 2px; border-radius: 4px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 2px; border-radius: 4px; }
 
     @media (prefers-reduced-motion: reduce) {
       * { scroll-behavior: auto !important; }
@@ -276,15 +279,16 @@
 </head>
 
 <body>
-  <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+  <div class="progress-track" hidden><div class="progress-bar" id="progressBar"></div></div>
 
   <nav class="nav">
     <div class="container nav-inner">
       <a href="/index.html">About</a>
+      <a href="/page_lab.html">My Lab</a>
       <a href="/page_research.html">Research</a>
       <a href="/page_pubs.html" class="active">Publications</a>
       <a href="/page_talks.html">Invited Talks</a>
-      <a href="/page_posts.html">Blog</a>
+      <a href="/page_posts.html">Blogs</a>
       <a href="/page_honors_and_services.html">Honors &amp; Service</a>
     </div>
   </nav>

@@ -10,27 +10,27 @@
   <meta property="og:title" content="Honors & Service | Zhen Wang">
   <meta property="og:description" content="Honors, awards, and academic service of Zhen Wang.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23182B49'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23FFCD00'%3EZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2324303e'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --ucsd-navy: #182B49;
-      --ucsd-blue: #00629B;
-      --ucsd-yellow: #FFCD00;
-      --ucsd-gold: #C69214;
-      --primary: var(--ucsd-navy);
+      --brand-dark: #24303e;
+      --brand-blue: #3d6a8f;
+      --brand-accent: #7f95a3;
+      --brand-accent-dark: #6d8290;
+      --primary: var(--brand-dark);
       --text: #2d3748;
       --text-light: #4a5568;
       --bg: #fafafa;
       --bg-card: #ffffff;
       --border: #e2e8f0;
-      --highlight-blue: #e6f3fa;
-      --highlight-gold: #fff9e6;
-      --link: #00629B;
-      --link-hover: #004d78;
+      --highlight-blue: #e9f1f7;
+      --highlight-gold: #eef2f5;
+      --link: #3d6a8f;
+      --link-hover: #2e5270;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -53,17 +53,17 @@
     .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
     /* Navigation */
-    .nav { background: var(--ucsd-navy); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
+    .nav { background: var(--brand-dark); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
     .nav-inner { display: flex; justify-content: center; gap: 4px; padding: 11px 0; flex-wrap: wrap; }
     .nav a {
-      font-size: 11.5px; font-weight: 600; color: rgba(255, 255, 255, .78);
+      font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, .82);
       padding: 7px 15px; border-radius: 6px;
       transition: all .18s ease; letter-spacing: .11em; text-transform: uppercase;
       position: relative;
     }
-    .nav a:hover { background: rgba(255, 255, 255, .09); color: var(--ucsd-yellow); text-decoration: none; }
-    .nav a.active { color: var(--ucsd-yellow); }
-    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: var(--ucsd-yellow); border-radius: 2px; }
+    .nav a:hover { background: rgba(255, 255, 255, .10); color: #fff; text-decoration: none; }
+    .nav a.active { color: #fff; }
+    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: rgba(255, 255, 255, .7); border-radius: 2px; }
 
     /* Page Header */
     .page-header {
@@ -75,11 +75,6 @@
       font-size: 2.1rem; font-weight: 700; color: var(--primary);
       margin-bottom: 5px; letter-spacing: -0.02em; line-height: 1.15;
       display: flex; align-items: center; gap: 12px;
-    }
-    .page-header h1::before {
-      content: ''; width: 4px; height: 28px;
-      background: linear-gradient(180deg, var(--ucsd-yellow), var(--ucsd-gold));
-      border-radius: 2px; flex-shrink: 0;
     }
     .page-header p {
       font-size: 13.5px; color: var(--text-light); margin-left: 16px;
@@ -100,10 +95,6 @@
       margin-bottom: 18px; display: flex; align-items: center; gap: 10px;
       letter-spacing: 0.06em; text-transform: uppercase;
     }
-    .section-title::before {
-      content: ''; width: 4px; height: 18px;
-      background: var(--ucsd-yellow); border-radius: 2px; flex-shrink: 0;
-    }
 
     /* Honors List */
     .honors-list { list-style: none; padding: 0; margin: 0; }
@@ -122,7 +113,7 @@
     .honor-content strong { color: var(--primary); font-weight: 700; }
 
     .honor-year {
-      color: var(--ucsd-blue); font-weight: 700; font-size: 13px;
+      color: var(--brand-blue); font-weight: 700; font-size: 13px;
       flex-shrink: 0; min-width: 44px; text-align: right;
     }
 
@@ -130,12 +121,12 @@
       display: block;
       font-size: 13px; color: var(--text-light); font-style: italic;
       margin-top: 3px; padding-left: 12px;
-      border-left: 2px solid var(--ucsd-yellow);
+      border-left: 2px solid var(--border);
     }
 
-    .honor-highlight { color: #c0232b; font-weight: 700; }
+    .honor-highlight { color: #9e3d3d; font-weight: 700; }
 
-    .honors-list a { color: var(--ucsd-blue); text-decoration: none; font-weight: 700; }
+    .honors-list a { color: var(--brand-blue); text-decoration: none; font-weight: 700; }
     .honors-list a:hover { text-decoration: underline; }
 
     /* Services */
@@ -145,33 +136,30 @@
     .services-category-title {
       font-size: 11px; font-weight: 900; color: var(--primary);
       margin-bottom: 12px; letter-spacing: 0.1em; text-transform: uppercase;
-      padding-bottom: 6px; border-bottom: 1px solid var(--ucsd-yellow);
+      padding-bottom: 6px; border-bottom: 1px solid var(--border);
       display: inline-block;
     }
 
     .services-list { list-style: none; padding: 0; margin: 0; }
     .services-list li {
-      padding: 10px 0 10px 18px;
-      position: relative;
+      padding: 10px 0;
       line-height: 1.6;
       border-bottom: 1px solid var(--border);
       font-size: 14.5px;
     }
     .services-list li:last-child { border-bottom: none; }
-    .services-list li::before {
-      content: '';
-      position: absolute; left: 0; top: 17px;
-      width: 7px; height: 7px;
-      background: var(--ucsd-yellow); border-radius: 50%;
-    }
 
     .services-list strong { color: var(--primary); font-weight: 700; }
-    .services-list a { color: var(--ucsd-blue); text-decoration: none; font-weight: 700; }
+    .services-list a { color: var(--brand-blue); text-decoration: none; font-weight: 700; }
     .services-list a:hover { text-decoration: underline; }
+
+    /* Tight two-column venue lists */
+    .services-list.tight { display: grid; grid-template-columns: 1fr 1fr; column-gap: 30px; }
+    .services-list.tight li { padding: 7px 0; font-size: 14px; }
 
     .service-role {
       display: inline-block;
-      background: var(--highlight-blue); color: var(--ucsd-blue);
+      background: var(--highlight-blue); color: var(--brand-blue);
       padding: 2px 9px; border-radius: 4px;
       font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
       margin-right: 6px;
@@ -186,7 +174,7 @@
     .workshop-people {
       display: block; font-size: 13px; color: var(--text-light); line-height: 1.6;
     }
-    .workshop-people em { color: var(--ucsd-blue); font-style: normal; font-weight: 700; }
+    .workshop-people em { color: var(--brand-blue); font-style: normal; font-weight: 700; }
 
     /* Compact service chips */
     .services-compact {
@@ -197,7 +185,7 @@
       padding: 5px 13px; border-radius: 6px; font-size: 13.5px;
       transition: all 0.2s ease;
     }
-    .service-item:hover { border-color: var(--ucsd-blue); background: var(--highlight-blue); }
+    .service-item:hover { border-color: var(--brand-blue); background: var(--highlight-blue); }
     .service-item strong { color: var(--primary); font-weight: 700; }
     .service-item span { color: var(--text-light); font-size: 12.5px; }
 
@@ -215,25 +203,26 @@
       body { font-size: 15px; }
       .honors-list li { flex-direction: column; gap: 4px; }
       .honor-year { text-align: left; }
+      .services-list.tight { grid-template-columns: 1fr; }
     }
 
     /* ===================== DYNAMIC ENHANCEMENTS ===================== */
 
     /* Reading progress bar */
-    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(24, 43, 73, .08); z-index: 200; }
-    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold)); transition: width .1s linear; }
+    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(36, 48, 62, .08); z-index: 200; }
+    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-dark)); transition: width .1s linear; }
 
     /* Selected-Honors-style hover on honor rows: slide right + light tint */
     .honors-list li { transition: background-color 0.15s ease, padding 0.15s ease; }
-    .honors-list li:hover { background: rgba(0, 98, 155, 0.03); padding-left: 10px; border-radius: 6px; }
+    .honors-list li:hover { background: rgba(61, 106, 143, 0.03); padding-left: 10px; border-radius: 6px; }
 
     /* Gentle hover on workshop service rows */
     .services-list li { transition: background-color 0.15s ease; border-radius: 6px; }
-    .services-list li:hover { background: rgba(0, 98, 155, 0.025); }
+    .services-list li:hover { background: rgba(61, 106, 143, 0.025); }
 
     /* Service chips: subtle lift */
     .service-item { transition: all 0.18s ease; }
-    .service-item:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(24,43,73,0.08); }
+    .service-item:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(36,48,62,0.08); }
 
     /* Scroll reveal (class toggled by JS) */
     .js-anim .honors-list li,
@@ -247,14 +236,14 @@
     .to-top {
       position: fixed; right: 24px; bottom: 24px;
       width: 44px; height: 44px; border-radius: 50%;
-      background: var(--ucsd-navy); color: #fff; border: none;
+      background: var(--brand-dark); color: #fff; border: none;
       display: flex; align-items: center; justify-content: center;
-      cursor: pointer; box-shadow: 0 10px 30px rgba(24,43,73,0.12);
+      cursor: pointer; box-shadow: 0 10px 30px rgba(36,48,62,0.12);
       opacity: 0; visibility: hidden; transform: translateY(10px);
       transition: all 0.25s ease; z-index: 120;
     }
     .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
-    .to-top:hover { background: var(--ucsd-blue); transform: translateY(-3px); }
+    .to-top:hover { background: var(--brand-blue); transform: translateY(-3px); }
     .to-top svg { width: 20px; height: 20px; }
 
     /* Footer meta */
@@ -263,7 +252,7 @@
     .visitor-map img { max-width: 230px; height: auto; border-radius: 6px; }
 
     /* Keyboard focus */
-    a:focus-visible, button:focus-visible { outline: 2px solid var(--ucsd-blue); outline-offset: 2px; border-radius: 4px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 2px; border-radius: 4px; }
 
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
@@ -279,15 +268,16 @@
 </head>
 
 <body>
-  <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+  <div class="progress-track" hidden><div class="progress-bar" id="progressBar"></div></div>
 
   <nav class="nav">
     <div class="container nav-inner">
       <a href="/index.html">About</a>
+      <a href="/page_lab.html">My Lab</a>
       <a href="/page_research.html">Research</a>
       <a href="/page_pubs.html">Publications</a>
       <a href="/page_talks.html">Invited Talks</a>
-      <a href="/page_posts.html">Blog</a>
+      <a href="/page_posts.html">Blogs</a>
       <a href="/page_honors_and_services.html" class="active">Honors &amp; Service</a>
     </div>
   </nav>
@@ -461,38 +451,38 @@
 
       <div class="services-category">
         <h3 class="services-category-title">Area Chair / Senior PC Member</h3>
-        <div class="services-compact">
-          <div class="service-item"><strong>NLPCC</strong> <span>2023</span></div>
-        </div>
+        <ul class="services-list tight">
+          <li><strong>ACL ARR</strong> <span class="service-years">Area Chair</span></li>
+          <li><strong>AAAI</strong> <span class="service-years">Senior PC Member, 2027</span></li>
+          <li><strong>NLPCC</strong> <span class="service-years">2023</span></li>
+        </ul>
       </div>
 
       <div class="services-category">
         <h3 class="services-category-title">Program Committee Member</h3>
-        <div class="services-compact">
-          <div class="service-item"><strong>ICML</strong> <span>2023–25</span></div>
-          <div class="service-item"><strong>NeurIPS</strong> <span>2023–25</span></div>
-          <div class="service-item"><strong>ICLR</strong> <span>2024–26</span></div>
-          <div class="service-item"><strong>COLM</strong> <span>2024–25</span></div>
-          <div class="service-item"><strong>ACL</strong> <span>2018, 21, 23–24</span></div>
-          <div class="service-item"><strong>EMNLP</strong> <span>2021–25</span></div>
-          <div class="service-item"><strong>NAACL</strong> <span>2021–22, 24</span></div>
-          <div class="service-item"><strong>NAACL SUKI Workshop</strong> <span>2022</span></div>
-          <div class="service-item"><strong>ACL ARR</strong> <span>2021–25</span></div>
-          <div class="service-item"><strong>KDD</strong> <span>2019–20, 23–24</span></div>
-          <div class="service-item"><strong>AAAI</strong> <span>2023–24</span></div>
-          <div class="service-item"><strong>NLPCC</strong> <span>2020–22, 24</span></div>
-          <div class="service-item"><strong>Neural Networks</strong></div>
-          <div class="service-item"><strong>Communications of the ACM</strong></div>
-        </div>
+        <ul class="services-list tight">
+          <li><strong>ICML</strong> <span class="service-years">2023-26</span></li>
+          <li><strong>NeurIPS</strong> <span class="service-years">2023-26</span></li>
+          <li><strong>ICLR</strong> <span class="service-years">2024-26</span></li>
+          <li><strong>COLM</strong> <span class="service-years">2024-26</span></li>
+          <li><strong>ACL ARR</strong> <span class="service-years">2021-26</span></li>
+          <li><strong>ACL</strong> <span class="service-years">2018, 21, 23-24</span></li>
+          <li><strong>EMNLP</strong> <span class="service-years">2021-25</span></li>
+          <li><strong>NAACL</strong> <span class="service-years">2021-22, 24</span></li>
+          <li><strong>KDD</strong> <span class="service-years">2019-20, 23-26</span></li>
+          <li><strong>AAAI</strong> <span class="service-years">2023-24</span></li>
+          <li><strong>NLPCC</strong> <span class="service-years">2020-22, 24</span></li>
+          <li><strong>ICDM</strong> <span class="service-years">2018</span></li>
+        </ul>
       </div>
 
       <div class="services-category">
-        <h3 class="services-category-title">External Reviewer</h3>
-        <div class="services-compact">
-          <div class="service-item"><strong>KDD</strong> <span>2019–20</span></div>
-          <div class="service-item"><strong>ACL</strong> <span>2018</span></div>
-          <div class="service-item"><strong>ICDM</strong> <span>2018</span></div>
-        </div>
+        <h3 class="services-category-title">Journal Reviewer</h3>
+        <ul class="services-list tight">
+          <li><strong>Transactions on Machine Learning Research (TMLR)</strong></li>
+          <li><strong>Neural Networks</strong></li>
+          <li><strong>Communications of the ACM</strong></li>
+        </ul>
       </div>
     </section>
   </main>

@@ -9,24 +9,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23182B49'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23FFCD00'%3EZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2324303e'/%3E%3Ctext x='50' y='71' font-size='62' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EZ%3C/text%3E%3C/svg%3E">
 
   <style>
     :root {
-      --ucsd-navy: #182B49;
-      --ucsd-blue: #00629B;
-      --ucsd-yellow: #FFCD00;
-      --ucsd-gold: #C69214;
-      --primary: var(--ucsd-navy);
+      --brand-dark: #24303e;
+      --brand-blue: #3d6a8f;
+      --brand-accent: #7f95a3;
+      --brand-accent-dark: #6d8290;
+      --primary: var(--brand-dark);
       --text: #2d3748;
       --text-light: #4a5568;
       --bg: #fafafa;
       --bg-card: #ffffff;
       --border: #e2e8f0;
-      --highlight-blue: #e6f3fa;
-      --highlight-gold: #fff9e6;
-      --link: #00629B;
-      --link-hover: #004d78;
+      --highlight-blue: #e9f1f7;
+      --highlight-gold: #eef2f5;
+      --link: #3d6a8f;
+      --link-hover: #2e5270;
 
       --pillar-reasoning: #6C7AE0;
       --pillar-science: #56B58C;
@@ -53,21 +53,21 @@
     .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
     /* Navigation */
-    .nav { background: var(--ucsd-navy); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
+    .nav { background: var(--brand-dark); position: sticky; top: 0; z-index: 150; box-shadow: 0 1px 0 rgba(255, 255, 255, .06); }
     .nav-inner { display: flex; justify-content: center; gap: 4px; padding: 11px 0; flex-wrap: wrap; }
     .nav a {
-      font-size: 11.5px; font-weight: 600; color: rgba(255, 255, 255, .78);
+      font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, .82);
       padding: 7px 15px; border-radius: 6px;
       transition: all .18s ease; letter-spacing: .11em; text-transform: uppercase;
       position: relative;
     }
-    .nav a:hover { background: rgba(255, 255, 255, .09); color: var(--ucsd-yellow); text-decoration: none; }
-    .nav a.active { color: var(--ucsd-yellow); }
-    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: var(--ucsd-yellow); border-radius: 2px; }
+    .nav a:hover { background: rgba(255, 255, 255, .10); color: #fff; text-decoration: none; }
+    .nav a.active { color: #fff; }
+    .nav a.active::after { content: ''; position: absolute; left: 15px; right: 15px; bottom: 2px; height: 2px; background: rgba(255, 255, 255, .7); border-radius: 2px; }
 
     /* Reading progress bar */
-    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(24, 43, 73, .08); z-index: 200; }
-    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--ucsd-yellow), var(--ucsd-gold)); transition: width .1s linear; }
+    .progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(36, 48, 62, .08); z-index: 200; }
+    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--brand-accent), var(--brand-accent-dark)); transition: width .1s linear; }
 
     /* Page Header */
     .page-header {
@@ -88,18 +88,10 @@
       gap: 12px;
     }
 
-    .page-header h1::before {
-      content: '';
-      width: 4px;
-      height: 28px;
-      background: linear-gradient(180deg, var(--ucsd-yellow), var(--ucsd-gold));
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
 
     .page-subtitle {
       font-size: 11px;
-      color: var(--ucsd-blue);
+      color: var(--brand-blue);
       font-weight: 700;
       margin-left: 16px;
       letter-spacing: 0.1em;
@@ -130,14 +122,6 @@
       text-transform: uppercase;
     }
 
-    .section-title::before {
-      content: '';
-      width: 4px;
-      height: 18px;
-      background: var(--ucsd-yellow);
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
 
     /* Research Overview Card */
     .research-overview {
@@ -158,7 +142,7 @@
 
     .research-intro p:last-child { margin-bottom: 0; }
 
-    .research-intro a { color: var(--ucsd-blue); text-decoration: none; }
+    .research-intro a { color: var(--brand-blue); text-decoration: none; }
     .research-intro a:hover { text-decoration: underline; }
 
     .highlight-tag {
@@ -169,9 +153,9 @@
       font-size: 0.9em;
     }
 
-    .highlight-blue { background: var(--highlight-blue); color: var(--ucsd-blue); }
-    .highlight-gold { background: var(--highlight-gold); color: var(--ucsd-gold); }
-    .discovery-tag { color: var(--ucsd-blue); font-weight: 700; }
+    .highlight-blue { background: var(--highlight-blue); color: var(--brand-blue); }
+    .highlight-gold { background: var(--highlight-gold); color: var(--brand-accent-dark); }
+    .discovery-tag { color: var(--brand-blue); font-weight: 700; }
 
     /* Research Figure */
     .research-figure {
@@ -240,7 +224,7 @@
       color: var(--text);
     }
 
-    .pillar-content a { color: var(--ucsd-blue); text-decoration: none; font-weight: 700; }
+    .pillar-content a { color: var(--brand-blue); text-decoration: none; font-weight: 700; }
     .pillar-content a:hover { text-decoration: underline; }
     .pillar-content em { font-style: italic; }
 
@@ -283,9 +267,6 @@
       gap: 7px;
     }
 
-    .keyword-category-title::before {
-      content: '•';
-    }
 
     .keyword-list {
       font-size: 13.5px;
@@ -315,15 +296,16 @@
 </head>
 
 <body>
-  <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+  <div class="progress-track" hidden><div class="progress-bar" id="progressBar"></div></div>
 
   <nav class="nav">
     <div class="container nav-inner">
       <a href="/index.html">About</a>
+      <a href="/page_lab.html">My Lab</a>
       <a href="/page_research.html" class="active">Research</a>
       <a href="/page_pubs.html">Publications</a>
       <a href="/page_talks.html">Invited Talks</a>
-      <a href="/page_posts.html">Blog</a>
+      <a href="/page_posts.html">Blogs</a>
       <a href="/page_honors_and_services.html">Honors & Service</a>
     </div>
   </nav>
