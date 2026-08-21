@@ -113,8 +113,9 @@
 
     .key { font-weight: 700; color: #000000; }
 
-    .lead-list { list-style: none; padding: 0; margin: 6px 0 0; }
+    .lead-list { list-style: disc; padding-left: 20px; margin: 6px 0 0; }
     .lead-list li { padding: 6px 0; font-size: 15px; line-height: 1.6; }
+    .lead-list li::marker { color: #000000; font-size: .8em; }
     .lead-list li strong { color: #000000; font-weight: 700; }
 
     .news-wrap { position: relative; }
@@ -131,6 +132,22 @@
     .news-date { font-size: 10.5px; font-weight: 600; color: #6d757d; letter-spacing: .05em; text-transform: uppercase; }
     .news-content { font-size: 13.5px; line-height: 1.58; }
     .news-highlight { font-weight: 700; }
+    .news-older summary {
+      list-style: none; cursor: pointer;
+      padding: 11px 18px; font-size: 12.5px; color: #6d757d;
+      border-top: 1px solid #e9ecee;
+      display: flex; align-items: center; gap: 7px;
+      transition: color .15s ease;
+    }
+    .news-older summary::-webkit-details-marker { display: none; }
+    .news-older summary::before {
+      content: '›'; font-size: 15px; line-height: 1;
+      transition: transform .2s ease; display: inline-block;
+    }
+    .news-older[open] summary::before { transform: rotate(90deg); }
+    .news-older summary:hover { color: #000000; }
+    .news-older .news-item { border-top: 1px solid #e9ecee; border-bottom: none; }
+
     .news-fade {
       pointer-events: none; position: absolute; left: 1px; right: 7px; bottom: 1px; height: 36px;
       background: linear-gradient(rgba(255,255,255,0), #ffffff); transition: opacity .2s ease;
@@ -263,9 +280,9 @@
         </p>
         <ul class="lead-list">
           <li><strong>Deliberative Reasoning &amp; World Models</strong> (<a href="https://arxiv.org/abs/2305.14992">EMNLP'23</a>, <a href="https://arxiv.org/abs/2404.05221">COLM'24</a>, <a href="https://arxiv.org/abs/2210.01293">ACL'23</a>, <a href="https://arxiv.org/abs/2411.08733">EMNLP'24</a>, <a href="https://openreview.net/pdf?id=pEJAja73dk">ICLR'26</a>)</li>
-          <li><strong>Autonomous Agents &amp; Trustworthy Deployment</strong> (<a href="https://sites.google.com/view/law-2025">LAW @ NeurIPS'25</a>, <a href="https://arxiv.org/abs/2310.16427">ICLR'24</a>, <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a>, <a href="https://arxiv.org/abs/2602.02905">FIRE-Bench, ICML'26</a>)</li>
+          <li><strong>Autonomous Agents &amp; Trustworthy Deployment</strong> (<a href="https://sites.google.com/view/law-2025">NeurIPS'25</a>, <a href="https://arxiv.org/abs/2310.16427">ICLR'24</a>, <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a>, <a href="https://arxiv.org/abs/2602.02905">ICML'26</a>)</li>
           <li><strong>Compositional &amp; Self-specializing Foundation Models</strong> (<a href="https://arxiv.org/abs/2303.02861">ICLR'23</a>, <a href="https://arxiv.org/abs/2406.12034">ICLR'25</a>, <a href="https://arxiv.org/abs/2305.11554">NeurIPS'23 Oral</a>)</li>
-          <li><strong>Scientific FMs and AI Co-scientists for Discovery</strong> (<a href="https://arxiv.org/abs/2602.11609">NeurIPS'25</a>, <a href="https://www.nature.com/articles/s41586-025-09989-7">Nature'26</a>, <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">Cancer Discovery'26</a> (IF: 33.3), <a href="https://sites.google.com/view/uc-leap/home">UC-LEAP Grant</a>)</li>
+          <li><strong>Scientific FMs and AI Co-scientists for Discovery</strong> (<a href="https://www.nature.com/articles/s41586-025-09989-7">Nature'26</a>, <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723">Cancer Discovery'26</a>, <a href="https://arxiv.org/abs/2602.11609">NeurIPS'25</a>, <a href="https://sites.google.com/view/uc-leap/home">UC-LEAP Grant</a>)</li>
         </ul>
       </section>
 
@@ -275,8 +292,12 @@
         <div class="news-wrap">
           <div class="news-container" id="newsBox">
             <div class="news-item">
+              <span class="news-date">Aug 2026</span>
+              <div class="news-content">Two papers accepted to <strong>EMNLP 2026</strong>.</div>
+            </div>
+            <div class="news-item">
               <span class="news-date">Jun 2026</span>
-              <div class="news-content">Presented our <a href="https://sites.google.com/view/uc-leap/home">UC-LEAP</a> project at the <a href="https://www.linkedin.com/feed/update/urn:li:activity:7471354969997221888/">"AI Science at Scale"</a> annual meeting in Santa Fe (Jun 8-9), organized by UCOP and LANL.</div>
+              <div class="news-content">Presented <a href="https://sites.google.com/view/uc-leap/home">UC-LEAP</a> at the UCOP's <a href="https://www.linkedin.com/feed/update/urn:li:activity:7471354969997221888/">"AI Science at Scale"</a> meeting in Santa Fe, hosted by LANL.</div>
             </div>
             <div class="news-item">
               <span class="news-date">May 2026</span>
@@ -303,22 +324,12 @@
               <div class="news-content">Invited talk at the <a href="https://nlp.stanford.edu/seminar/">Stanford NLP Seminar</a> on "Building AI that Reasons to Accelerate Real-world Discovery."</div>
             </div>
             <div class="news-item">
-              <span class="news-date">Feb 2026</span>
-              <div class="news-content">Released arXiv versions of <a href="https://arxiv.org/abs/2602.11609">scPilot</a> and <a href="https://arxiv.org/abs/2602.13346">CellMaster</a>, scientific copilot agents towards AI co-scientists, collaborating with human scientists in executing comp-bio analyses and discovering new insights from data directly.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jan 2026</span>
-              <div class="news-content">Released <a href="https://firebench.github.io/" class="news-highlight">FIRE-Bench</a>, benchmarking full-cycle scientific discovery automation with verifiable evaluation.</div>
-            </div>
-            <div class="news-item">
               <span class="news-date">Jan 2026</span>
               <div class="news-content"><a href="https://openreview.net/forum?id=pEJAja73dk" class="news-highlight">Nabla Reasoner</a> was accepted to ICLR 2026: LLM reasoning via test-time gradient descent in textual space.</div>
             </div>
             <div class="news-item">
               <span class="news-date">Dec 2025</span>
-              <div class="news-content">
-                Honored to organize <a href="https://sites.google.com/view/law-2025" class="news-highlight">LAW 2025 workshop (Bridging Language, Agent, and World Models) at NeurIPS 2025</a>. Thanks to our amazing co-organizers, Ziqiao, Jessy, Melanie, Jianwen, Kelsey, Alane, Jacob, Tianmin, and Zhiting; and speakers, Sherry, Chelsea, François, Eric, Danijar, Philip, Stephen, Ying Nian, and Keyon. Check the recording of their talks <a href="https://neurips.cc/virtual/2025/loc/san-diego/workshop/109552">here</a>.
-              </div>
+              <div class="news-content">Honored to organize <a href="https://sites.google.com/view/law-2025" class="news-highlight">LAW 2025 workshop (Bridging Language, Agent, and World Models) at NeurIPS 2025</a>. Thanks to our amazing co-organizers, Ziqiao, Jessy, Melanie, Jianwen, Kelsey, Alane, Jacob, Tianmin, and Zhiting; and speakers, Sherry, Chelsea, François, Eric, Danijar, Philip, Stephen, Ying Nian, and Keyon. Check the recording of their talks <a href="https://neurips.cc/virtual/2025/loc/san-diego/workshop/109552">here</a>.</div>
             </div>
             <div class="news-item">
               <span class="news-date">Dec 2025</span>
@@ -330,7 +341,7 @@
             </div>
             <div class="news-item">
               <span class="news-date">Oct 2025</span>
-              <div class="news-content">Received the Gordon and Betty Moore Foundation Fellowship for the Natural Sciences to support research on AI-driven scientific reasoning and discovery.</div>
+              <div class="news-content">Received the <strong>Gordon and Betty Moore Foundation Fellowship</strong> for the Natural Sciences to support research on AI-driven scientific reasoning and discovery.</div>
             </div>
             <div class="news-item">
               <span class="news-date">Sep 2025</span>
@@ -341,10 +352,6 @@
               <div class="news-content"><span class="news-highlight">scPilot</span> accepted to NeurIPS 2025: omics-native reasoning for grounding LLMs in raw omics data.</div>
             </div>
             <div class="news-item">
-              <span class="news-date">Sep 2025</span>
-              <div class="news-content">Released preprint: <a href="https://www.biorxiv.org/content/10.1101/2025.09.08.674723v1.abstract">MutationProjector</a>: cancer genomics foundation model for tumor mutation profiles.</div>
-            </div>
-            <div class="news-item">
               <span class="news-date">Aug 2025</span>
               <div class="news-content">Attended <a href="https://www.universityofcalifornia.edu/news/uc-awards-18-million-scale-ambition-and-impact-ai-science">UC-LEAP</a> Kick-off at <a href="https://engineering.ucsb.edu/news/leap-forward-ai-enabled-materials-research">UCSB</a>: exploring AI agents for Materials Science.</div>
             </div>
@@ -353,99 +360,94 @@
               <div class="news-content">Speaking at <a href="https://xuanwang91.github.io/2025-ACL-BOF/">ACL 2025 BoF: Bridging Human Study and LLM Agents for Social Simulation</a>.</div>
             </div>
             <div class="news-item">
-              <span class="news-date">Jul 2025</span>
-              <div class="news-content">Hosting <a href="https://sites.google.com/view/law-2025">LAW 2025 workshop</a> at NeurIPS 2025 in San Diego this December!</div>
-            </div>
-            <div class="news-item">
               <span class="news-date">Jun 2025</span>
-              <div class="news-content">Attended <a href="https://dl4sci-school.lbl.gov/home">DL4SCI 2025</a> at Berkeley: diving into AI for automated scientific discovery.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jan 2025</span>
-              <div class="news-content">Released blog: <a href="https://www.notion.so/zhenwang/ChatGPT-s-Second-Year-10-Aha-Moments-of-2024-That-Rewired-2025-15a0404f81f58028adf6ed4d402187f5">ChatGPT's Second Year: 10 Aha Moments of 2024</a></div>
+              <div class="news-content">Presented CellMaster at <a href="https://dl4sci-school.lbl.gov/home">DL4SCI 2025</a> at Berkeley.</div>
             </div>
             <div class="news-item">
               <span class="news-date">Jan 2025</span>
               <div class="news-content"><a href="https://arxiv.org/abs/2406.12034">Self-MoE</a> accepted to ICLR 2025: transforming monolithic LLMs into modular self-specialized experts.</div>
             </div>
-            <div class="news-item">
-              <span class="news-date">Oct 2024</span>
-              <div class="news-content">Released <a href="https://de-arena.maitrix.org/">Decentralized Arena</a>: democratic LLM benchmarking where models judge each other. <a href="https://de-arena.maitrix.org/">HF Leaderboard</a></div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Oct 2024</span>
-              <div class="news-content">Released <a href="https://huggingface.co/spaces/LLM360/TxT360">TxT360</a>: first dataset to globally deduplicate 99 CommonCrawl snapshots. <a href="https://huggingface.co/datasets/LLM360/TxT360">Dataset</a></div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Sep 2024</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2411.08733">DRPO</a> accepted to EMNLP 2024: first tuning-free method for self-aligning LLMs with human preferences.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jul 2024</span>
-              <div class="news-content">Selected for <a href="https://datascience.uchicago.edu/events/ai-science-summer-school-2024/">2024 AI+Science Summer School</a> at University of Chicago.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jul 2024</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2404.05221">LLM Reasoners</a> accepted to COLM 2024. Check the 2.3k+ star <a href="https://github.com/maitrix-org/llm-reasoners">GitHub package</a>!</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Feb 2024</span>
-              <div class="news-content">Received <strong>OpenAI research grant</strong> to support agentic systems research.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jan 2024</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2310.16427">PromptAgent</a> accepted to ICLR 2024: first principled framework for API-based prompt optimization.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Nov 2023</span>
-              <div class="news-content">Received <strong>Top Reviewer Award</strong> at NeurIPS 2023.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Nov 2023</span>
-              <div class="news-content"><span class="news-highlight">Best Paper Award</span> at <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a>.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Oct 2023</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2305.14992">Reasoning via Planning</a> featured in <a href="https://docs.google.com/presentation/d/156WpBF_rGvf4Ecg19oM1fyR51g4FAmHV3Zs0WLukrLQ/edit#slide=id.g24daeb7f4f0_0_3930">State of AI Report 2023</a>!</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Oct 2023</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2305.14992">RAP</a> accepted to EMNLP 2023 Main: augmenting LLM reasoning with world models and planning.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Sep 2023</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2305.11554">ToolkenGPT</a> accepted as <strong>oral presentation</strong> at NeurIPS 2023: augmenting LLMs with efficient tool learning.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Feb 2023</span>
-              <div class="news-content">Started postdoc at UCSD, collaborating with teams from CMU and MBZUAI on large language models research.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jan 2023</span>
-              <div class="news-content"><a href="https://arxiv.org/abs/2303.02861">Multitask Prompt Tuning</a> accepted to ICLR 2023.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Nov 2022</span>
-              <div class="news-content">Passed PhD defense: "Toward Knowledge-centric Natural Language Processing: Acquisition, Representation, Transfer, and Reasoning."</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Jun 2022</span>
-              <div class="news-content">TacoBot earned <strong>3rd place</strong> in inaugural <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Alexa Prize TaskBot Challenge</a>.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">May 2022</span>
-              <div class="news-content">Joined <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab</a> as research intern on efficient LLM adaptation.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Mar 2022</span>
-              <div class="news-content">Received <strong>2022 Graduate Research Award</strong> from the CSE department.</div>
-            </div>
-            <div class="news-item">
-              <span class="news-date">Dec 2021</span>
-              <div class="news-content">Selected as <a href="https://datascience.uchicago.edu/research/postdoctoral-programs/rising-stars/">Rising Stars in Data Science</a> at the University of Chicago CDAC.</div>
-            </div>
+            <details class="news-older">
+              <summary>Older news (2024 and earlier)</summary>
+              <div class="news-item">
+                <span class="news-date">Oct 2024</span>
+                <div class="news-content">Released <a href="https://de-arena.maitrix.org/">Decentralized Arena</a>: democratic LLM benchmarking where models judge each other. <a href="https://de-arena.maitrix.org/">HF Leaderboard</a></div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Oct 2024</span>
+                <div class="news-content">Released <a href="https://huggingface.co/spaces/LLM360/TxT360">TxT360</a>: first dataset to globally deduplicate 99 CommonCrawl snapshots. <a href="https://huggingface.co/datasets/LLM360/TxT360">Dataset</a></div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Sep 2024</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2411.08733">DRPO</a> accepted to EMNLP 2024: first tuning-free method for self-aligning LLMs with human preferences.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jul 2024</span>
+                <div class="news-content">Selected for <a href="https://datascience.uchicago.edu/events/ai-science-summer-school-2024/">2024 AI+Science Summer School</a> at University of Chicago.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jul 2024</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2404.05221">LLM Reasoners</a> accepted to COLM 2024. Check the 2.3k+ star <a href="https://github.com/maitrix-org/llm-reasoners">GitHub package</a>!</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Feb 2024</span>
+                <div class="news-content">Received <strong>OpenAI research grant</strong> to support agentic systems research.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jan 2024</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2310.16427">PromptAgent</a> accepted to ICLR 2024: first principled framework for API-based prompt optimization.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Nov 2023</span>
+                <div class="news-content">Received <strong>Top Reviewer Award</strong> at NeurIPS 2023.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Nov 2023</span>
+                <div class="news-content"><span class="news-highlight">Best Paper Award</span> at <a href="https://socalnlp.github.io/symp23/index.html">SoCal NLP 2023</a>.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Oct 2023</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2305.14992">Reasoning via Planning</a> featured in <a href="https://docs.google.com/presentation/d/156WpBF_rGvf4Ecg19oM1fyR51g4FAmHV3Zs0WLukrLQ/edit#slide=id.g24daeb7f4f0_0_3930">State of AI Report 2023</a>!</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Oct 2023</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2305.14992">RAP</a> accepted to EMNLP 2023 Main: augmenting LLM reasoning with world models and planning.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Sep 2023</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2305.11554">ToolkenGPT</a> accepted as <strong>oral presentation</strong> at NeurIPS 2023: augmenting LLMs with efficient tool learning.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Feb 2023</span>
+                <div class="news-content">Started postdoc at UCSD, collaborating with teams from CMU and MBZUAI on large language models research.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jan 2023</span>
+                <div class="news-content"><a href="https://arxiv.org/abs/2303.02861">Multitask Prompt Tuning</a> accepted to ICLR 2023.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Nov 2022</span>
+                <div class="news-content">Passed PhD defense: "Toward Knowledge-centric Natural Language Processing: Acquisition, Representation, Transfer, and Reasoning."</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Jun 2022</span>
+                <div class="news-content">TacoBot earned <strong>3rd place</strong> in inaugural <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Alexa Prize TaskBot Challenge</a>.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">May 2022</span>
+                <div class="news-content">Joined <a href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab</a> as research intern on efficient LLM adaptation.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Mar 2022</span>
+                <div class="news-content">Received <strong>2022 Graduate Research Award</strong> from the CSE department.</div>
+              </div>
+              <div class="news-item">
+                <span class="news-date">Dec 2021</span>
+                <div class="news-content">Selected as <a href="https://datascience.uchicago.edu/research/postdoctoral-programs/rising-stars/">Rising Stars in Data Science</a> at the University of Chicago CDAC.</div>
+              </div>
+            </details>
           </div>
-          <div class="news-fade" id="newsFade"></div>
+          <div id="newsFade"></div>
         </div>
       </section>
 
