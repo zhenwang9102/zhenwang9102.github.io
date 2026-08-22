@@ -189,6 +189,16 @@
     .join-list li { padding: 5px 0; font-size: 14px; line-height: 1.62; }
     .join-list li strong { color: #000000; }
 
+    /* Funder logo strip */
+    .funder-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 24px; margin-top: 24px; }
+    .funder-logos img { height: 30px; width: auto; transition: opacity .2s ease; }
+    .funder-logos a:nth-child(1) img { height: 26px; }
+    .funder-logos a:nth-child(2) img { height: 32px; }
+    .funder-logos a:nth-child(4) img { height: 27px; }
+    .funder-logos a:nth-child(5) img { height: 24px; }
+    .funder-logos a:nth-child(6) img { height: 40px; }
+    .funder-logos a:hover img { opacity: .75; }
+
     /* Footer */
     .footer { margin-top: 24px; padding: 26px 0 8px; text-align: center; border-top: 1px solid #e9ecee; }
     .footer-meta { font-size: 13px; color: #6d757d; margin-bottom: 12px; }
@@ -338,16 +348,15 @@
         <li><span class="alumni-name">Somanshu Singla</span><span class="alumni-path">M.S. student at UCSD → AI Research at Essential → Microsoft AI (MAI)</span></li>
         <li><span class="alumni-name">Enze Ma</span><span class="alumni-path">M.S. student at UCSD → PhD student at UIC</span></li>
         <li><span class="alumni-name">Janvijay Singh</span><span class="alumni-path">M.S. student at GaTech → PhD student at UIUC</span></li>
+        <li><span class="alumni-name">Jinzhou Tang</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Jieyuan Liu</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Xinle Yu</span><span class="alumni-path">M.S. student at UCSD</span></li>
+        <li><span class="alumni-name">Abdullah Ashfaq</span><span class="alumni-path">M.S. student at UCSD</span></li>
         <li><span class="alumni-name">Yanbin Yin</span><span class="alumni-path">Undergraduate at Renmin University of China → PhD student at GaTech</span></li>
         <li><span class="alumni-name">Ana Jojic</span><span class="alumni-path">Undergraduate at UW → PhD student at UIUC</span></li>
         <li><span class="alumni-name">Yiming Gao</span><span class="alumni-path">Undergraduate at UCSD → PhD student at TAMU</span></li>
         <li><span class="alumni-name">Chenxi Li</span><span class="alumni-path">Undergraduate at UCSD → M.S. student at UChicago</span></li>
         <li><span class="alumni-name">Zhongyan Luo</span><span class="alumni-path">Undergraduate at UCSD → CMU MSML</span></li>
-        <li><span class="alumni-name">Jinzhou Tang</span><span class="alumni-path">M.S. student at UCSD</span></li>
-        <li><span class="alumni-name">Jieyuan Liu</span><span class="alumni-path">M.S. student at UCSD</span></li>
-        <li><span class="alumni-name">Xinle Yu</span><span class="alumni-path">M.S. student at UCSD</span></li>
-        <li><span class="alumni-name">Ayushi Mishra</span><span class="alumni-path">M.S. student at UCSD</span></li>
-        <li><span class="alumni-name">Abdullah Ashfaq</span><span class="alumni-path">M.S. student at UCSD</span></li>
         <li><span class="alumni-name">Jefferson Chen</span><span class="alumni-path">Undergraduate at UCSD → PhD student at UCLA</span></li>
         <li><span class="alumni-name">Zixuan Wang</span><span class="alumni-path">Undergraduate at Tsinghua University</span></li>
       </ul>
@@ -356,8 +365,16 @@
     <section class="section">
       <h2 class="section-title">Support</h2>
       <p>
-        My group is supported by UTA's <a href="https://www.uta.edu/administration/president/strategic-plan/rise100">RISE 100</a> initiative and the UT System <a href="https://www.utsystem.edu/offices/academic-affairs/research/stars-program">STARs Award</a>.
+        My group is supported by UTA's <a href="https://www.uta.edu/administration/president/strategic-plan/rise100">RISE 100</a> initiative and the UT System <a href="https://www.utsystem.edu/offices/academic-affairs/research/stars-program">STARs Award</a>. Previously, I was fortunate to have my research supported by a <a href="https://today.ucsd.edu/story/national-foundations-advance-research-at-uc-san-diego-with-philanthropic-support">Gordon and Betty Moore Foundation Fellowship</a>, an <a href="https://openai.com/index/practices-for-governing-agentic-ai-systems/">OpenAI Research Grant</a>, an <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a> award, and the University of California Office of the President (UCOP) through <a href="https://sites.google.com/view/uc-leap/home">the UC-LEAP project</a>.
       </p>
+      <div class="funder-logos">
+        <a href="https://www.uta.edu/administration/president/strategic-plan/rise100"><img src="/images/funder_rise100.png" alt="UTA RISE 100"></a>
+        <a href="https://www.utsystem.edu/"><img src="/images/funder_utsystem.svg" alt="The University of Texas System"></a>
+        <a href="https://www.moore.org/"><img src="/images/funder_moore.svg" alt="Gordon and Betty Moore Foundation"></a>
+        <a href="https://openai.com/"><img src="/images/funder_openai.svg" alt="OpenAI"></a>
+        <a href="https://www.amazon.science/"><img src="/images/funder_amazon.svg" alt="Amazon"></a>
+        <a href="https://www.universityofcalifornia.edu/"><img src="/images/funder_uc.svg" alt="University of California"></a>
+      </div>
     </section>
 
     <!-- Join Us: hidden for now, kept for possible fallback
