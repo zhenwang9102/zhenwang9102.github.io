@@ -197,6 +197,7 @@
     .funder-logos a:nth-child(4) img { height: 27px; }
     .funder-logos a:nth-child(5) img { height: 24px; }
     .funder-logos a:nth-child(6) img { height: 40px; }
+    .funder-logos .funder-tacc img { height: 40px; }
     .funder-logos a:hover img { opacity: .75; }
 
     /* Footer */
@@ -315,7 +316,8 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- Keep this section hidden until member profiles are ready. -->
+    <section class="section" hidden>
       <h2 class="section-title">Members &amp; Mentees</h2>
       <div class="people-grid">
         <!--
@@ -331,16 +333,11 @@
             </div>
           </div>
         -->
-        <div class="person-card placeholder">
-          <div class="ph-icon">+</div>
-          <p>Founding members<br>coming soon</p>
-        </div>
       </div>
     </section>
 
     <section class="section">
       <h2 class="section-title">Past Mentees</h2>
-      <p class="alumni-note">All students listed have published peer-reviewed publications under my supervision.</p>
       <ul class="alumni-list">
         <li><span class="alumni-name">Lingbo Mo</span><span class="alumni-path">PhD student at OSU → Research Scientist at Amazon</span></li>
         <li><span class="alumni-name">Yufan Zhou</span><span class="alumni-path">PhD student at KU Leuven</span></li>
@@ -369,10 +366,10 @@
       </ul>
     </section>
 
-    <section class="section">
+    <section class="section" id="support">
       <h2 class="section-title">Support</h2>
       <p>
-        My group is supported by UTA's <a href="https://www.uta.edu/administration/president/strategic-plan/rise100">RISE 100</a> initiative and the UT System <a href="https://www.utsystem.edu/offices/academic-affairs/research/stars-program">STARs Award</a>. Previously, I was fortunate to have my research supported by a <a href="https://today.ucsd.edu/story/national-foundations-advance-research-at-uc-san-diego-with-philanthropic-support">Gordon and Betty Moore Foundation Fellowship</a>, an <a href="https://openai.com/index/practices-for-governing-agentic-ai-systems/">OpenAI Research Grant</a>, an <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a> award, and the University of California Office of the President (UCOP) through <a href="https://sites.google.com/view/uc-leap/home">the UC-LEAP project</a>.
+        My group is supported by UTA's <a href="https://www.uta.edu/administration/president/strategic-plan/rise100">RISE 100</a> initiative and the UT System <a href="https://www.utsystem.edu/offices/academic-affairs/research/stars-program">STARs Award</a>. We also receive computing support on <a href="https://tacc.utexas.edu/systems/lonestar6/">Lonestar6</a> at the Texas Advanced Computing Center (TACC). Previously, I was fortunate to have my research supported by a <a href="https://today.ucsd.edu/story/national-foundations-advance-research-at-uc-san-diego-with-philanthropic-support">Gordon and Betty Moore Foundation Fellowship</a>, an <a href="https://openai.com/index/practices-for-governing-agentic-ai-systems/">OpenAI Research Grant</a>, an <a href="https://www.amazon.science/alexa-prize/three-top-performers-emerge-in-inaugural-alexa-prize-taskbot-challenge">Amazon Alexa Prize</a> award, and the University of California Office of the President (UCOP) through <a href="https://sites.google.com/view/uc-leap/home">the UC-LEAP project</a>.
       </p>
       <div class="funder-logos">
         <a href="https://www.uta.edu/administration/president/strategic-plan/rise100"><img src="/images/funder_rise100.png" alt="UTA RISE 100"></a>
@@ -381,6 +378,8 @@
         <a href="https://openai.com/"><img src="/images/funder_openai.svg" alt="OpenAI"></a>
         <a href="https://www.amazon.science/"><img src="/images/funder_amazon.svg" alt="Amazon"></a>
         <a href="https://www.universityofcalifornia.edu/"><img src="/images/funder_uc.svg" alt="University of California"></a>
+        <!-- Official TACC logo: https://docs.tacc.utexas.edu/imgs/tacc-logo-with-words.svg -->
+        <a class="funder-tacc" href="https://tacc.utexas.edu/"><img src="/images/funder_tacc.svg" alt="Texas Advanced Computing Center (TACC)"></a>
       </div>
     </section>
 
